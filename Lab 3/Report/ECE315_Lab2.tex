@@ -1,0 +1,135 @@
+\documentclass[11pt, letterpaper, titlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{color,graphicx,overpic} 
+\usepackage{fancyhdr}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{float}
+\usepackage{blindtext}
+\usepackage{longtable}
+\usepackage{scrextend}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{calc}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage[normalem]{ulem}
+\usepackage{tabularx}
+\usepackage{mathrsfs}
+\usepackage{bookmark}
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage{ltablex}
+\usepackage{enumitem}
+\usepackage{minted}
+\usepackage[simplified]{pgf
+-umlcd}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\mathtoolsset{showonlyrefs}  
+\allowdisplaybreaks
+\definecolor{mycolor}{rgb}{0, 0, 0}
+
+\geometry{top=2.54cm, left=2.54cm, right=2.54cm, bottom=2.54cm}
+
+% Indentation/space between paragraphs
+\setlength{\headheight}{15pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Line spacing
+\renewcommand{\baselinestretch}{1.5} 
+
+% Line spacing
+\renewcommand{\baselinestretch}{1.3} 
+
+% Title page
+\title{\textbf{\Huge{ 
+\begin{center}
+ECE 315 Lab 2% Document name
+\end{center} 
+}}}
+
+\author{Lora Ma \\ Benjamin Kong \\ \\ECE 315 Lab Section H41}
+
+% Header/Footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thepage}
+\lhead{\textit{ECE 315 - Lab 2}}
+\rfoot{}
+
+% Hyperlink colors
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+}
+
+\begin{document}
+\maketitle
+
+\thispagestyle{empty}
+\tableofcontents 
+\newpage
+\pagenumbering{arabic}
+
+\section{Abstract}
+
+The purpose of this lab was to
+\begin{itemize}
+  \item gain experience using an ASCII-encoded serial communications connection between a PC host and a Zybo Z7 microcomputer board
+  \item gain experience with the UART interface on the Zynq-7000 SoC
+  \item gain experience interfacing using hardware and polling interrupts
+  \item gain experience using queues to decouple the execution of software tasks
+\end{itemize}
+
+We will be using the Zybo Z7 development board by Digilent. The board is built
+around the Xilinx Zynq-7010 System-on-Chip silicon chip and contains two 667 MHz ARM
+Cortex A9 32-bit CPUs. For this lab, we will only be using one of the CPUs, CPU0, to run the FreeRTOS real-time kernel. CPU1 will be left disabled. \\
+
+In this lab, we will complete two exercises. In exercise 1, we will design a morse code decoder system using polled UART interfacing. The user may enter Morse code messages (up to 500 characters long) using only a dot, dash, and a vertical bar into the console terminal on the host PC over the serial connection. Then, this will be decoded back into its original alphanumeric message and sent back to the console. Once the user has finished typing their Morse code message, the user must press the Enter key, press the \# key, and then press the Enter key once again. Then, the morse encoded message is processed by the FreeRTOS task and the decoded message is returned by the Zybo Z7 board over the serial connection and displayed on the PC console. \\ 
+
+In exercise 2, we will be modifying and enhancing an interrupt-driven driver for UART1 in the
+Zynq-7000 SoC. The purpose of this exercise is to gain experience using the interrupt-driven method to transmit bytes to the SDK console through the same UART. We want to abstract the driver for the queues and provide a more efficient interrupt-driven operation in the receive and transmit directions. We are given a driver file where we need to fill out 4 driver functions (\mintinline{text}{MyIsReceiveData()}, \mintinline{text}{MyReceiveByte()}, \mintinline{text}{MyIsTransmitFull()}, and \mintinline{text}{MySendByte()}). Additionally, we want to change the capitalization of characters received from the SDK console and implement a mechanism that detects \mintinline{text}{"\r%\r"} to clear the variables \mintinline{text}{CountRxIrq}, \mintinline{text}{CountTxIrq}, and \mintinline{text}{Countbytes}. We also need a mechanism to detect \mintinline{text}{"\r#\r"} that prints three status messages
+\begin{minted}[]{text}
+Number of bytes processed: 40
+Number of Rx interrupts: 32
+Number of Tx interrupts: 25 
+\end{minted}
+\newpage
+\section{Design}
+\subsection{Exercise 1 Design}
+Please refer to Appendix \ref{e1} for the completed source code and line numbers. \\
+
+For this exercise, we have three tasks -- \mintinline{text}{taskMorseMsgReceiver}, \mintinline{text}{TaskMorseMsgProcessor}, and \mintinline{text}{TaskDecodedMsgTransmitter}. For \mintinline{text}{taskMorseMsgReceiver}, 
+\newpage
+\section{Appendix}
+\subsection{Exercise 1 Source Code}
+\label{e1}
+
+\end{document}
