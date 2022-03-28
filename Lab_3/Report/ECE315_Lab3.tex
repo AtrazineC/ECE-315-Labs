@@ -1,0 +1,134 @@
+\documentclass[11pt, letterpaper, titlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{color,graphicx,overpic} 
+\usepackage{fancyhdr}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{float}
+\usepackage{blindtext}
+\usepackage{longtable}
+\usepackage{scrextend}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{calc}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage[normalem]{ulem}
+\usepackage{tabularx}
+\usepackage{mathrsfs}
+\usepackage{bookmark}
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage{ltablex}
+\usepackage{enumitem}
+\usepackage{minted}
+\usepackage[simplified]{pgf
+-umlcd}
+
+\mathtoolsset{showonlyrefs}  
+\allowdisplaybreaks
+\definecolor{mycolor}{rgb}{0, 0, 0}
+
+\geometry{top=2.54cm, left=2.54cm, right=2.54cm, bottom=2.54cm}
+\setlength{\headheight}{20pt}
+\setlength{\parskip}{0.5cm}
+\setlength{\parindent}{0pt}
+
+
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+
+\usemintedstyle{vs}
+\setminted{linenos, fontsize=\footnotesize}
+\setmintedinline{bgcolor=bg,style=bw}
+
+% Line spacing
+\renewcommand{\baselinestretch}{1.5} 
+
+% Line spacing
+\renewcommand{\baselinestretch}{1.3} 
+
+% Title page
+\title{\textbf{\Huge{ 
+\begin{center}
+ECE 315 Lab 3% Document name
+\end{center} 
+}}}
+
+\author{Lora Ma \\ Benjamin Kong \\ \\ECE 315 Lab Section H41}
+
+% Header/Footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thepage}
+\lhead{\textit{ECE 315 - Lab 3}}
+\rfoot{}
+
+% Hyperlink colors
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\tableofcontents 
+\newpage
+\pagenumbering{arabic}
+
+\section{Abstract}
+The purpose of this lab was to 
+\begin{itemize}
+  \item gain experience using the serial peripheral interface in both the master and slave modes
+  \item gain experience creating artificial load on a CPU and then measuring the resulting load using \mintinline{text}{vTaskGetRunTimeStats()}.
+\end{itemize}
+We will be using the Zybo Z7 development board by Digilent. The board is built around the Xilinx Zynq-7010 System-on-Chip silicon chip and contains two 667 MHz ARM Cortex A9 32-bit CPUs. For this lab, we will be using CPU0 to run the FreeRTOS real-time kernel which will have three non-idle tasks for the SPI interface. 
+
+In this lab, we will be completing two exercises. Exercise 1 is to verify the given system and add the byte count message. The program will echo characters that are type on the keyboard until the termination sequence \mintinline{text}{\r#\r} is detected. Then, a string will be generated and sent over SPI which will look something like \mintinline{text}{The number of characters received over SPI: <number> \n} where \mintinline{text}{<number>} is the total bytes that were received over the SPI1 interface.
+
+In exercise 2, we will be calibrating the load generator experimentally. The program prints the percentage values of time consumed by the tasks \mintinline{text}{TaskCPULoadGen}, \mintinline{text}{TaskLoopCountProcessor}, and \mintinline{text}{TaskPrintRunTimeStats}. It will be displayed in a tabular format on the terminal. We will the utilize this program to experimentally determine the value of \mintinline{text}{loop_count}. 
+
+\section{Design}
+
+\subsection{Exercise 1 Design}
+
+\inputminted[]{text}{E1_output.txt}
+
+\subsection{Exercise 2 Design}
+
+
+\section{Testing}
+
+\subsection{Exercise 1 Tests}
+
+\subsection{Exercise 2 Tests}
+
+\section{Conclusion}
+The purpose of this lab was to 
+\begin{itemize}
+  \item gain experience using the serial peripheral interface in both the master and slave modes
+  \item gain experience creating artificial load on a CPU and then measuring the resulting load using \mintinline{text}{vTaskGetRunTimeStats()}.
+\end{itemize}
+
+We believe we have fully completed the objectives of this lab.
+
+In exercise 1, we gained experience using the SPI interface. The program echos characters that are typed on the keyboard until the termination sequence is detected. Then, it will generate a string to be sent over SPI where it will print the number of total bytes that were received over the SPI interface.
+
+In exercise 2, we created a program that prints the percentage values of time consumed by three tasks. We summarized this information to be printed in a tabular format in the terminal. This program was then used to experimentally determine the value of \mintinline{text}{loop_count}.
+
+We were able to gain experience using the serial peripheral interface (SPI) in both master and slave modes. We were also able to gain experience creating artificial load on a CPU and then measuring the resulting load using \mintinline{text}{vTaskGetRunTimeStats()}.
+
+\section{Appendix}
+
+\subsection{Exercise 1 Source Code}
+
+\subsection{Exercise 2 Source Code}
+
+
+\end{document}

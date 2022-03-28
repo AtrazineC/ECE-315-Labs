@@ -1,0 +1,7 @@
+The number of characters received over SPI: 3.
+TASK3	4460		20%
+TASK2	0		<1%
+TASK4	0		<1%
+IDLE	16996		79%
+TASK1	24		<1%
+Tmr Svc	0		<1%

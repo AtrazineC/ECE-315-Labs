@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+The number of characters received over SPI: 3.
+TASK3	4460		20\PYGZpc{}
+TASK2	0		\PYGZlt{}1\PYGZpc{}
+TASK4	0		\PYGZlt{}1\PYGZpc{}
+IDLE	16996		79\PYGZpc{}
+TASK1	24		\PYGZlt{}1\PYGZpc{}
+Tmr Svc	0		\PYGZlt{}1\PYGZpc{}
+\end{Verbatim}
