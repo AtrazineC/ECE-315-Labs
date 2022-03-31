@@ -24,6 +24,7 @@
 \usepackage{setspace}
 \usepackage{tabularx}
 \usepackage{ltablex}
+\usepackage{siunitx}
 \usepackage{enumitem}
 \usepackage{minted}
 \usepackage[simplified]{pgf-umlcd}
@@ -82,14 +83,15 @@ ECE 315 Lab 4 🧀
 \section{Abstract}
 The purpose of this lab was to 
 \begin{itemize}
-  \item gain experience using the serial peripheral interface in both the master and slave modes
-  \item gain experience creating artificial load on a CPU and then measuring the resulting load using \mintinline{text}{vTaskGetRunTimeStats()}.
+  \item gain experience using a microcontroller, running the FreeRTOS real-time kernel, to control the operation of a small stepper motor
+  \item to enhance the user interface of a stepper motor control application on the Zybo Z7.
+  \item gain experience with measuring experimentally the speed and acceleration limits of a small stepper motor.
 \end{itemize}
-We will be using the Zybo Z7 development board by Digilent. The board is built around the Xilinx Zynq-7010 System-on-Chip silicon chip and contains two 667 MHz ARM Cortex A9 32-bit CPUs. For this lab, we will be using CPU0 to run the FreeRTOS real-time kernel which will have three non-idle tasks for the SPI interface. 
+We will be using the Zybo Z7 development board by Digilent. The board is built around the Xilinx Zynq-7010 System-on-Chip silicon chip and contains two 667 MHz ARM Cortex A9 32-bit CPUs. For this lab, we will be using CPU0 to run the FreeRTOS real-time kernel. We will also be using one 28BYJ-48 stepper motor with unipolar drive windings, one 5-V DV power supply, one ULN2003-based driver module, one breadboard, one LTV-847 opto-isolator transistor array, four 220-ohm resistors, four $\SI{10}{k\ohm}$ resistors, and wires
 
-In this lab, we will be completing two exercises. Exercise 1 is to verify the given system and add the byte count message. The program will echo characters that are type on the keyboard until the termination sequence \mintinline{text}{\r#\r} is detected. Then, a string will be generated and sent over SPI which will look something like \mintinline{text}{The number of characters received over SPI: <number> \n} where \mintinline{text}{<number>} is the total bytes that were received over the SPI1 interface.
+In this lab, we will be completing two exercises. In exercise 1, we will be completing the FreeRTOS task \mintinline{text}{_Task_Motor()}, to rotate the stepper motor. This task is responsible for calling the necessary stepper functions to move the motor.
 
-In exercise 2, we will be calibrating the load generator experimentally. The program prints the percentage values of time consumed by the tasks \mintinline{text}{TaskCPULoadGen}, \mintinline{text}{TaskLoopCountProcessor}, and \mintinline{text}{TaskPrintRunTimeStats}. It will be displayed in a tabular format on the terminal. We will the utilize this program to experimentally determine the value of \mintinline{text}{loop_count}. 
+In exercise 2, we will be providing an emergency stop command for the stepper motor. We are implementing this function using one of the Zybo Z7 board's pushbuttons BTN0.
 
 \section{Design}
 
@@ -111,17 +113,14 @@ We first completed the \mintinline{text}{_Task_Motor} function in \mintinline{te
 \section{Conclusion}
 The purpose of this lab was to 
 \begin{itemize}
-  \item gain experience using the serial peripheral interface in both the master and slave modes
-  \item gain experience creating artificial load on a CPU and then measuring the resulting load using \mintinline{text}{vTaskGetRunTimeStats()}.
+  \item gain experience using a microcontroller, running the FreeRTOS real-time kernel, to control the operation of a small stepper motor
+  \item to enhance the user interface of a stepper motor control application on the Zybo Z7.
+  \item gain experience with measuring experimentally the speed and acceleration limits of a small stepper motor.
 \end{itemize}
 
 We believe we have fully completed the objectives of this lab.
 
-In exercise 1, we gained experience using the SPI interface. The program echos characters that are typed on the keyboard until the termination sequence is detected. Then, it will generate a string to be sent over SPI where it will print the number of total bytes that were received over the SPI interface.
-
-In exercise 2, we created a program that prints the percentage values of time consumed by three tasks. We summarized this information to be printed in a tabular format in the terminal. This program was then used to experimentally determine the value of \mintinline{text}{loop_count}.
-
-We were able to gain experience using the serial peripheral interface (SPI) in both master and slave modes. We were also able to gain experience creating artificial load on a CPU and then measuring the resulting load using \mintinline{text}{vTaskGetRunTimeStats()}.
+In exercise 1 and 2, we gained experience using a microcontroller, running the FreeRTOS real-time kernel, to control the operation of a small stepper motor. We did this through setting up the microcontroller and stepper motor. We also wrote the \mintinline{text}{_Task_motor()} task which was responsible for calling the necessary stepper functions to move the motor. We also gained experience enhancing the user interface of a stepper motor control application on the Zybo Z7. We also gained experience in exercise 2 with measuring experimentally the speed and acceleration limits of a small stepper motor. We using BTN0 on the Zybo Z7 board's pushbuttons to initiate an emergency stop.
 
 \section{Appendix}
 
