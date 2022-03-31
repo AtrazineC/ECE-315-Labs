@@ -26,8 +26,8 @@
 \usepackage{ltablex}
 \usepackage{enumitem}
 \usepackage{minted}
-\usepackage[simplified]{pgf
--umlcd}
+\usepackage[simplified]{pgf-umlcd}
+\usepackage{apple_emoji}
 
 \mathtoolsset{showonlyrefs}  
 \allowdisplaybreaks
@@ -51,11 +51,11 @@
 % Title page
 \title{\textbf{\Huge{ 
 \begin{center}
-ECE 315 Lab 4% Document name
+ECE 315 Lab 4 🧀
 \end{center} 
 }}}
 
-\author{Lora Ma \\ Benjamin Kong \\ \\ECE 315 Lab Section H41}
+\author{For Ahmed and Shyama 🎁💯🙏 \\ \\ 🚙 Lora Ma \\ 🌎 Benjamin Kong \\ \\ECE 315 Lab Section H41}
 
 % Header/Footer
 \pagestyle{fancy}
@@ -93,6 +93,9 @@ In exercise 2, we will be calibrating the load generator experimentally. The pro
 
 \section{Design}
 
+\subsection{Hardware Design}
+We first got the hardware set up. We first set up the wire connections from the Zybo to our breadboard according to the schematics in the lab handout. We connected the appropriate wires and resistors to the slots of the chip. We then connected the motor/motor control to the breadboard as well. It is important to note that the motor is powered by an external 5V connection, not by the Zybo. We verified that 5V was running through the system using a voltmeter.
+
 \subsection{Exercise 1 Design}
 We first completed the \mintinline{text}{_Task_Motor} function in \mintinline{text}{lab4_main.c}. Inside of the \mintinline{text}{while} loop, we wait until we read some motor parameters from FIFO1.
 
@@ -123,9 +126,9 @@ We were able to gain experience using the serial peripheral interface (SPI) in b
 \section{Appendix}
 
 \subsection{Exercise 1 Source Code}
-The source code is in the file \mintinline{text}{spi_lab3_main.c} that was submitted along with this report.
+The source code is in the file \mintinline{text}{lab4_main.c} that was submitted along with this report.
 
 \subsection{Exercise 2 Source Code}
-The source code is in the file \mintinline{text}{load_gen_main.c} that was submitted along with this report.
+The source code is in the file \mintinline{text}{lab4_main.c} that was submitted along with this report.
 
 \end{document}

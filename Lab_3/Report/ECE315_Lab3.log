@@ -1,11 +1,14 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.12.6)  28 MAR 2022 16:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.10 NEXT) (preloaded format=pdflatex 2021.11.23)  31 MAR 2022 15:32
 entering extended mode
-**c:/Users/Ben/Documents/ECE315/Reports/Lab_3/Report/ECE315_Lab3.tex
-(c:/Users/Ben/Documents/ECE315/Reports/Lab_3/Report/ECE315_Lab3.tex
+ \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"c:/Users/benja/Documents/ECE 315 Labs/Lab_3/Report/ECE315_Lab3.tex"
+(c:/Users/benja/Documents/ECE 315 Labs/Lab_3/Report/ECE315_Lab3.tex
 LaTeX2e <2021-11-15>
-L3 programming layer <2021-11-22> (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+L3 programming layer <2021-11-12> (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
-(C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo
+(C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size11.clo
 File: size11.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count183
@@ -19,18 +22,18 @@ File: size11.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks18
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
 \Gm@cnth=\count191
@@ -45,30 +48,30 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@layouthoffset=\dimen145
 \Gm@layoutvoffset=\dimen146
 \Gm@dimlist=\toks19
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.cfg)) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\color.sty
 Package: color 2021/10/11 v1.3b Standard LaTeX Color (DPC)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
-)) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+)) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.sty
 Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
 )
 \Gin@req@height=\dimen147
 \Gin@req@width=\dimen148
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/overpic\overpic.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/overpic\overpic.sty
 Package: overpic 2020/02/22 1.3 picture overlays (RN)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/epic\epic.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epic\epic.sty
 Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
 \@@multicnt=\count194
 \d@lta=\count195
@@ -88,7 +91,7 @@ Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
 \@datafile=\read2
 )
 \OVP@box=\box51
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footers
 \f@nch@headwidth=\skip49
 \f@nch@O@elh=\skip50
@@ -99,21 +102,21 @@ Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footer
 \f@nch@O@erf=\skip55
 \f@nch@O@olf=\skip56
 \f@nch@O@orf=\skip57
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2021/10/15 v2.17l AMS math features
 \@mathmargin=\skip58
 
 For additional information on amsmath, use the `?' option.
-(C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks20
 \ex@=\dimen155
-)) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+)) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen156
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2021/08/26 v2.02 operator names
 )
 \inf@bad=\count268
@@ -153,7 +156,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \mathdisplay@stack=\toks24
 LaTeX Info: Redefining \[ on input line 2938.
 LaTeX Info: Redefining \] on input line 2939.
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amscls\amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks25
 \thm@bodyfont=\toks26
@@ -164,18 +167,18 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@postskip=\skip62
 \thm@headsep=\skip63
 \dth@everypar=\toks30
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\mathtools.sty
 Package: mathtools 2021/04/12 v1.27 mathematical typesetting tools
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count280
 \calc@Bcount=\count281
@@ -187,7 +190,7 @@ LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count282
 \calc@Cskip=\skip66
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
 LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
@@ -205,49 +208,49 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 \l_MT_below_shortintertext_sep=\dimen172
 \xmathstrut@box=\box54
 \xmathstrut@dim=\dimen173
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pdftexcmds\pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/infwarerr\infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/kvdefinekeys\kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pdfescape\pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/letltxmacro\letltxmacro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/auxhook\auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen174
 \Hy@linkcounter=\count284
 \Hy@pagecounter=\count285
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref-langpatches.def
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref-langpatches.def
 File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel languages
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/etexcmds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count286
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\puenc.def
 File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -260,15 +263,15 @@ Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
 \c@Hy@tempcnt=\count287
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4804.
 \XeTeXLinkMargin=\dimen175
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bigintcalc\bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count288
@@ -283,7 +286,7 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6101.
 Package hyperref Info: PDF/A mode OFF on input line 6106.
 LaTeX Info: Redefining \ref on input line 6146.
 LaTeX Info: Redefining \pageref on input line 6150.
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
@@ -292,23 +295,23 @@ package with kernel methods
 \c@Hfootnote=\count291
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
 \Fld@listcount=\count292
 \c@bookmark@seq@number=\count293
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/rerunfilecheck\rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/uniquecounter\uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip68
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\multicol.sty
 Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
 \c@tracingmulticols=\count294
 \mult@box=\box55
@@ -376,7 +379,7 @@ Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
 \mult@nat@firstbox=\box98
 \colbreak@box=\box99
 \mc@col@check@num=\count303
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.sty
 Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \col@sep=\dimen187
 \ar@mcellbox=\box100
@@ -385,16 +388,16 @@ Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \extratabsurround=\skip71
 \backup@length=\skip72
 \ar@cellbox=\box101
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count304
 \float@exts=\toks32
 \float@box=\box102
 \@float@everytoks=\toks33
 \@floatcapt=\box103
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/blindtext\blindtext.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/blindtext\blindtext.sty
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
 \c@blindtext=\count305
@@ -415,7 +418,7 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 \c@blind@randommax=\count320
 \c@blind@pangramcount=\count321
 \c@blind@pangrammax=\count322
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\longtable.sty
 Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
 \LTleft=\skip73
 \LTright=\skip74
@@ -433,17 +436,17 @@ Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
 \c@LT@tables=\count326
 \c@LT@chunks=\count327
 \LT@p@ftn=\toks34
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrextend.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrextend.sty
 Package: scrextend 2021/11/13 v3.35 KOMA-Script package (extend other classes with features of KOMA-Script classes)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrkbase.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrkbase.sty
 Package: scrkbase 2021/11/13 v3.35 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrbase.sty
 Package: scrbase 2021/11/13 v3.35 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrlfile.sty
 Package: scrlfile 2021/11/13 v3.35 KOMA-Script package (file load hooks)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-hook.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrlfile-hook.sty
 Package: scrlfile-hook 2021/11/13 v3.35 KOMA-Script package (using LaTeX hooks)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrlogo.sty
 Package: scrlogo 2021/11/13 v3.35 KOMA-Script package (logo)
 )))
 Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
@@ -453,9 +456,9 @@ Already applied: [0000/00/00] Usage of raw or classic option list on input line 
 LaTeX Warning: Command \@footnotemark  has changed.
                Check if current package is valid.
 
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \captionmargin=\dimen190
 \captionmargin@=\dimen191
@@ -471,24 +474,24 @@ Package caption Info: Standard document class detected.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\ltcaption.sty
 Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
-)) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/mdframed\mdframed.sty
+)) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mdframed\mdframed.sty
 Package: mdframed 2013/07/01 1.9b: mdframed
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2021-11-22 L3 programming layer (loader) 
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/xparse\xparse.sty (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\expl3.sty
+Package: expl3 2021-11-12 L3 programming layer (loader) 
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count330
 \l__pdf_internal_box=\box109
 ))
 Package: xparse 2021-11-12 L3 Experimental document command parser
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count331
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-abspage.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/zref\zref-abspage.sty
 Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-base.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/zref\zref-base.sty
 Package: zref-base 2020-07-03 v2.32 Module base for zref (HO)
 Package zref Info: New property list: main on input line 764.
 Package zref Info: New property: default on input line 765.
@@ -496,7 +499,7 @@ Package zref Info: New property: page on input line 766.
 )
 \c@abspage=\count332
 Package zref Info: New property: abspage on input line 66.
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/needspace\needspace.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/needspace\needspace.sty
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
 \mdf@templength=\skip77
@@ -540,22 +543,22 @@ Package: needspace 2010/09/12 v1.3d reserve vertical space
 \mdf@subsubtitlebelowskip@length=\skip114
 \mdf@subsubtitleinneraboveskip@length=\skip115
 \mdf@subsubtitleinnerbelowskip@length=\skip116
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-common.tex
 \pgfutil@everybye=\toks35
 \pgfutil@tempdima=\dimen197
 \pgfutil@tempdimb=\dimen198
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common-lists.tex)) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-common-lists.tex)) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-latex.def
 \pgfutil@abb=\box110
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf\pgf.revision.tex)
 Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
 ))
 Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgfcore.sty (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys.code.tex
 Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks36
 \pgfkeys@temptoks=\toks37
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex
 \pgfkeys@tmptoks=\toks38
 ))
 \pgf@x=\dimen199
@@ -578,23 +581,23 @@ Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
 \t@pgf@tokb=\toks40
 \t@pgf@tokc=\toks41
 \pgf@sys@id@count=\count338
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
 )
 Driver file for pgf: pgfsys-pdftex.def
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-pdftex.def
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys-pdftex.def
 File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
-))) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
+))) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfsyssoftpath@smallbuffer@items=\count339
 \pgfsyssoftpath@bigbuffer@items=\count340
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+)) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 227.
@@ -608,18 +611,18 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcore.code.tex
 Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathcalc.code.tex (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathutil.code.tex) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathparser.code.tex
 \pgfmath@dimen=\dimen265
 \pgfmath@count=\count341
 \pgfmath@box=\box111
 \pgfmath@toks=\toks42
 \pgfmath@stack@operand=\toks43
 \pgfmath@stack@operation=\toks44
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex))) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.code.tex (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex))) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count342
-)) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
+)) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@picminx=\dimen266
 \pgf@picmaxx=\dimen267
@@ -635,76 +638,76 @@ File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@yy=\dimen277
 \pgf@zx=\dimen278
 \pgf@zy=\dimen279
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@path@lastx=\dimen280
 \pgf@path@lasty=\dimen281
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@shorten@end@additional=\dimen282
 \pgf@shorten@start@additional=\dimen283
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfpic=\box112
 \pgf@hbox=\box113
 \pgf@layerbox@main=\box114
 \pgf@picture@serial@count=\count343
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgflinewidth=\dimen284
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@pt@x=\dimen285
 \pgf@pt@y=\dimen286
 \pgf@pt@temp=\dimen287
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
 File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.tex
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.tex
 File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfarrowsep=\dimen288
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@max=\dimen289
 \pgf@sys@shading@range@num=\count344
 \pgf@shadingcount=\count345
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfexternal@startupbox=\box115
-)) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
+)) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex
 File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex
 File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex
 File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-))) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
+))) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfnodeparttextbox=\box116
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@nodesepstart=\dimen290
 \pgf@nodesepend=\dimen291
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
-)) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex)) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
+)) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgffor.sty (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeys.code.tex)) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/math\pgfmath.sty (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex)) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgffor.code.tex
 Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex)
 \pgffor@iter=\dimen292
 \pgffor@skip=\dimen293
 \pgffor@stack=\toks45
 \pgffor@toks=\toks46
-)) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
+)) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@plot@mark@count=\count346
 \pgfplotmarksize=\dimen294
@@ -725,16 +728,16 @@ File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \tikznumberofchildren=\count348
 \tikznumberofcurrentchild=\count349
 \tikz@fig@count=\count350
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfmatrixcurrentrow=\count351
 \pgfmatrixcurrentcolumn=\count352
 \pgf@matrix@numberofcolumns=\count353
 )
 \tikz@expandcount=\count354
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-))) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/mdframed\md-frame-1.mdf
+))) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mdframed\md-frame-1.mdf
 File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 )
 \mdf@frametitlebox=\box121
@@ -780,7 +783,7 @@ File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 \c@mdf@env@ii=\count358
 \c@mdf@zref@counter=\count359
 Package zref Info: New property: mdf@pagevalue on input line 895.
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/titlesec\titlesec.sty
 Package: titlesec 2021/07/05 v2.14 Sectioning titles
 \ttl@box=\box126
 \beforetitleunit=\skip144
@@ -791,7 +794,7 @@ Package: titlesec 2021/07/05 v2.14 Sectioning titles
 \titlewidth=\dimen305
 \titlewidthlast=\dimen306
 \titlewidthfirst=\dimen307
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.sty
 \lst@mode=\count360
 \lst@gtempboxa=\box127
 \lst@token=\toks48
@@ -804,16 +807,16 @@ Package: titlesec 2021/07/05 v2.14 Sectioning titles
 \lst@newlines=\count364
 \lst@lineno=\count365
 \lst@maxwidth=\dimen311
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 \c@lstnumber=\count366
 \lst@skipnumbers=\count367
 \lst@framebox=\box128
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/ulem\ulem.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ulem\ulem.sty
 \UL@box=\box129
 \UL@hyphenbox=\box130
 \UL@skip=\skip146
@@ -824,7 +827,7 @@ Package: listings 2020/03/24 1.8d (Carsten Heinz)
 \ULC@box=\box131
 Package: ulem 2019/11/18
 \ULdepth=\dimen314
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@col@width=\dimen315
 \TX@old@table=\dimen316
@@ -833,19 +836,19 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@delta=\dimen319
 \TX@cols=\count369
 \TX@ftn=\toks50
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\mathrsfs.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/jknappen\mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/bookmark\bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
 \BKM@id=\count370
-)) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+)) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/setspace\setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/ltablex\ltablex.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ltablex\ltablex.sty
 Package: ltablex 2014/08/13 v1.1 Modified tabularx
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip147
 \enit@outerparindent=\dimen320
@@ -853,23 +856,23 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@inbox=\box132
 \enit@count@id=\count371
 \enitdp@description=\count372
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/minted\minted.sty
-Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/fvextra\fvextra.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/minted\minted.sty
+Package: minted 2021/12/24 v2.6 Yet another Pygments shim for LaTeX
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fvextra\fvextra.sty
 Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
-Package: fancyvrb 2021/11/24\nobreakspace {} 4.1a\nobreakspace {}verbatim text (tvz,hv)
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyvrb\fancyvrb.sty
+Package: fancyvrb 2021/12/21 4.1b verbatim text (tvz,hv)
 \FV@CodeLineNo=\count373
 \FV@InFile=\read4
 \FV@TabBox=\box133
 \c@FancyVerbLine=\count374
 \FV@StepNumber=\count375
 \FV@OutFile=\write4
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/upquote\upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lineno\lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \linenopenalty=\count376
 \output=\toks52
@@ -909,21 +912,21 @@ LaTeX Info: Redefining \\ on input line 3056.
 \FV@LineBox=\box137
 \FV@LineIndentBox=\box138
 \FV@LineWidth=\dimen331
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
 Package shellesc Info: Unrestricted shell escape enabled on input line 75.
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/ifplatform\ifplatform.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ifplatform\ifplatform.sty
 Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/catchfile\catchfile.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/catchfile\catchfile.sty
 Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifluatex.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-)) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
+)) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xstring\xstring.sty (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xstring\xstring.tex
 \integerpart=\count394
 \decimalpart=\count395
 )
 Package: xstring 2021/07/21 v1.84 String manipulations (CT)
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/framed\framed.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/framed\framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip149
 \fb@frw=\dimen332
@@ -941,16 +944,17 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 )
 runsystem(if not exist _minted-ECE315_Lab3 mkdir _minted-ECE315_Lab3)...executed.
 
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/pgf-umlcd\pgf-umlcd.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf-umlcd\pgf-umlcd.sty
 Package: pgf-umlcd 2011/10/01 v0.3dev Some LaTeX macros for UML Class Diagrams.
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryarrows.code.tex
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.code.tex
+
+(C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \arrowsize=\dimen336
-)) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.multipart.code.tex
+)) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.multipart.code.tex
 File: tikzlibraryshapes.multipart.code.tex 2021/05/15 v3.1.9a (3.1.9a)
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.multipart.code.tex
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries/shapes\pgflibraryshapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfnodepartlowerbox=\box140
 \pgfnodeparttwobox=\box141
@@ -972,11 +976,11 @@ File: pgflibraryshapes.multipart.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfnodepartsevenbox=\box157
 \pgfnodepartsixbox=\box158
 \pgfnodepartfivebox=\box159
-)) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarybackgrounds.code.tex
+)) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarybackgrounds.code.tex
 File: tikzlibrarybackgrounds.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@layerbox@background=\box160
 \pgf@layerboxsaved@background=\box161
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryfit.code.tex
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryfit.code.tex
 File: tikzlibraryfit.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
 \pgf@layerbox@connectionlayers=\box162
@@ -986,33 +990,1094 @@ File: tikzlibraryfit.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \c@umlcdClassAbstractClassNum=\count401
 \c@umlcdClassInterfaceNum=\count402
 \c@umlcdClassSplitPartNum=\count403
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/apple_emoji\apple_emoji.sty
+Package: apple_emoji 
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/adjustbox\adjustbox.sty
+Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkeyval.tex (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks54
+\XKV@tempa@toks=\toks55
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 73.
+\XKV@depth=\count404
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/adjustbox\adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/adjustbox\trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/collectbox\collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box164
+)
+\tc@llx=\dimen337
+\tc@lly=\dimen338
+\tc@urx=\dimen339
+\tc@ury=\dimen340
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/adjustbox\tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen341
+\adjbox@Height=\dimen342
+\adjbox@Depth=\dimen343
+\adjbox@Totalheight=\dimen344
+\adjbox@pwidth=\dimen345
+\adjbox@pheight=\dimen346
+\adjbox@pdepth=\dimen347
+\adjbox@ptotalheight=\dimen348
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ifoddpage\ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count405
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/varwidth\varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box165
+\sift@deathcycles=\count406
+\@vwid@loff=\dimen349
+\@vwid@roff=\dimen350
+))
+   defining Unicode char U+1F600 (decimal 128512)
+   defining Unicode char U+1F466 (decimal 128102)
+   defining Unicode char U+1F601 (decimal 128513)
+   defining Unicode char U+1F602 (decimal 128514)
+   defining Unicode char U+1F603 (decimal 128515)
+   defining Unicode char U+1F604 (decimal 128516)
+   defining Unicode char U+1F605 (decimal 128517)
+   defining Unicode char U+1F606 (decimal 128518)
+   defining Unicode char U+1F609 (decimal 128521)
+   defining Unicode char U+1F60A (decimal 128522)
+   defining Unicode char U+1F60B (decimal 128523)
+   defining Unicode char U+1F60E (decimal 128526)
+   defining Unicode char U+1F60D (decimal 128525)
+   defining Unicode char U+1F618 (decimal 128536)
+   defining Unicode char U+1F617 (decimal 128535)
+   defining Unicode char U+1F619 (decimal 128537)
+   defining Unicode char U+1F61A (decimal 128538)
+   defining Unicode char U+263A (decimal 9786)
+   defining Unicode char U+1F642 (decimal 128578)
+   defining Unicode char U+1F917 (decimal 129303)
+   defining Unicode char U+1F607 (decimal 128519)
+   defining Unicode char U+1F914 (decimal 129300)
+   defining Unicode char U+1F610 (decimal 128528)
+   defining Unicode char U+1F611 (decimal 128529)
+   defining Unicode char U+1F636 (decimal 128566)
+   defining Unicode char U+1F644 (decimal 128580)
+   defining Unicode char U+1F60F (decimal 128527)
+   defining Unicode char U+1F623 (decimal 128547)
+   defining Unicode char U+1F625 (decimal 128549)
+   defining Unicode char U+1F62E (decimal 128558)
+   defining Unicode char U+1F910 (decimal 129296)
+   defining Unicode char U+1F62F (decimal 128559)
+   defining Unicode char U+1F62A (decimal 128554)
+   defining Unicode char U+1F62B (decimal 128555)
+   defining Unicode char U+1F634 (decimal 128564)
+   defining Unicode char U+1F60C (decimal 128524)
+   defining Unicode char U+1F913 (decimal 129299)
+   defining Unicode char U+1F61B (decimal 128539)
+   defining Unicode char U+1F61C (decimal 128540)
+   defining Unicode char U+1F61D (decimal 128541)
+   defining Unicode char U+2639 (decimal 9785)
+   defining Unicode char U+1F641 (decimal 128577)
+   defining Unicode char U+1F612 (decimal 128530)
+   defining Unicode char U+1F613 (decimal 128531)
+   defining Unicode char U+1F614 (decimal 128532)
+   defining Unicode char U+1F615 (decimal 128533)
+   defining Unicode char U+1F616 (decimal 128534)
+   defining Unicode char U+1F643 (decimal 128579)
+   defining Unicode char U+1F637 (decimal 128567)
+   defining Unicode char U+1F912 (decimal 129298)
+   defining Unicode char U+1F915 (decimal 129301)
+   defining Unicode char U+1F911 (decimal 129297)
+   defining Unicode char U+1F632 (decimal 128562)
+   defining Unicode char U+1F61E (decimal 128542)
+   defining Unicode char U+1F61F (decimal 128543)
+   defining Unicode char U+1F624 (decimal 128548)
+   defining Unicode char U+1F622 (decimal 128546)
+   defining Unicode char U+1F62D (decimal 128557)
+   defining Unicode char U+1F626 (decimal 128550)
+   defining Unicode char U+1F627 (decimal 128551)
+   defining Unicode char U+1F628 (decimal 128552)
+   defining Unicode char U+1F629 (decimal 128553)
+   defining Unicode char U+1F62C (decimal 128556)
+   defining Unicode char U+1F630 (decimal 128560)
+   defining Unicode char U+1F631 (decimal 128561)
+   defining Unicode char U+1F633 (decimal 128563)
+   defining Unicode char U+1F635 (decimal 128565)
+   defining Unicode char U+1F621 (decimal 128545)
+   defining Unicode char U+1F620 (decimal 128544)
+   defining Unicode char U+1F608 (decimal 128520)
+   defining Unicode char U+1F47F (decimal 128127)
+   defining Unicode char U+1F479 (decimal 128121)
+   defining Unicode char U+1F47A (decimal 128122)
+   defining Unicode char U+1F480 (decimal 128128)
+   defining Unicode char U+2620 (decimal 9760)
+   defining Unicode char U+1F47B (decimal 128123)
+   defining Unicode char U+1F47D (decimal 128125)
+   defining Unicode char U+1F47E (decimal 128126)
+   defining Unicode char U+1F916 (decimal 129302)
+   defining Unicode char U+1F4A9 (decimal 128169)
+   defining Unicode char U+1F63A (decimal 128570)
+   defining Unicode char U+1F638 (decimal 128568)
+   defining Unicode char U+1F639 (decimal 128569)
+   defining Unicode char U+1F63B (decimal 128571)
+   defining Unicode char U+1F63C (decimal 128572)
+   defining Unicode char U+1F63D (decimal 128573)
+   defining Unicode char U+1F640 (decimal 128576)
+   defining Unicode char U+1F63F (decimal 128575)
+   defining Unicode char U+1F63E (decimal 128574)
+   defining Unicode char U+1F648 (decimal 128584)
+   defining Unicode char U+1F649 (decimal 128585)
+   defining Unicode char U+1F64A (decimal 128586)
+   defining Unicode char U+1F467 (decimal 128103)
+   defining Unicode char U+1F468 (decimal 128104)
+   defining Unicode char U+1F469 (decimal 128105)
+   defining Unicode char U+1F474 (decimal 128116)
+   defining Unicode char U+1F475 (decimal 128117)
+   defining Unicode char U+1F476 (decimal 128118)
+   defining Unicode char U+1F471 (decimal 128113)
+   defining Unicode char U+1F46E (decimal 128110)
+   defining Unicode char U+1F472 (decimal 128114)
+   defining Unicode char U+1F473 (decimal 128115)
+   defining Unicode char U+1F477 (decimal 128119)
+   defining Unicode char U+26D1 (decimal 9937)
+   defining Unicode char U+1F478 (decimal 128120)
+   defining Unicode char U+1F482 (decimal 128130)
+   defining Unicode char U+1F575 (decimal 128373)
+   defining Unicode char U+1F385 (decimal 127877)
+   defining Unicode char U+1F47C (decimal 128124)
+   defining Unicode char U+1F486 (decimal 128134)
+   defining Unicode char U+1F487 (decimal 128135)
+   defining Unicode char U+1F470 (decimal 128112)
+   defining Unicode char U+1F64D (decimal 128589)
+   defining Unicode char U+1F64E (decimal 128590)
+   defining Unicode char U+1F645 (decimal 128581)
+   defining Unicode char U+1F646 (decimal 128582)
+   defining Unicode char U+1F481 (decimal 128129)
+   defining Unicode char U+1F64B (decimal 128587)
+   defining Unicode char U+1F647 (decimal 128583)
+   defining Unicode char U+1F64C (decimal 128588)
+   defining Unicode char U+1F64F (decimal 128591)
+   defining Unicode char U+1F5E3 (decimal 128483)
+   defining Unicode char U+1F464 (decimal 128100)
+   defining Unicode char U+1F465 (decimal 128101)
+   defining Unicode char U+1F6B6 (decimal 128694)
+   defining Unicode char U+1F3C3 (decimal 127939)
+   defining Unicode char U+1F46F (decimal 128111)
+   defining Unicode char U+1F483 (decimal 128131)
+   defining Unicode char U+1F574 (decimal 128372)
+   defining Unicode char U+1F48F (decimal 128143)
+   defining Unicode char U+1F491 (decimal 128145)
+   defining Unicode char U+1F46A (decimal 128106)
+   defining Unicode char U+1F46B (decimal 128107)
+   defining Unicode char U+1F46C (decimal 128108)
+   defining Unicode char U+1F46D (decimal 128109)
+   defining Unicode char U+1F3FB (decimal 127995)
+   defining Unicode char U+1F3FC (decimal 127996)
+   defining Unicode char U+1F3FD (decimal 127997)
+   defining Unicode char U+1F3FE (decimal 127998)
+   defining Unicode char U+1F3FF (decimal 127999)
+   defining Unicode char U+1F4AA (decimal 128170)
+   defining Unicode char U+1F448 (decimal 128072)
+   defining Unicode char U+1F449 (decimal 128073)
+   defining Unicode char U+261D (decimal 9757)
+   defining Unicode char U+1F446 (decimal 128070)
+   defining Unicode char U+1F595 (decimal 128405)
+   defining Unicode char U+1F447 (decimal 128071)
+   defining Unicode char U+270C (decimal 9996)
+   defining Unicode char U+1F596 (decimal 128406)
+   defining Unicode char U+1F918 (decimal 129304)
+   defining Unicode char U+1F590 (decimal 128400)
+   defining Unicode char U+270B (decimal 9995)
+   defining Unicode char U+1F44C (decimal 128076)
+   defining Unicode char U+1F44D (decimal 128077)
+   defining Unicode char U+1F44E (decimal 128078)
+   defining Unicode char U+270A (decimal 9994)
+   defining Unicode char U+1F44A (decimal 128074)
+   defining Unicode char U+1F44B (decimal 128075)
+   defining Unicode char U+1F44F (decimal 128079)
+   defining Unicode char U+1F450 (decimal 128080)
+   defining Unicode char U+270D (decimal 9997)
+   defining Unicode char U+1F485 (decimal 128133)
+   defining Unicode char U+1F442 (decimal 128066)
+   defining Unicode char U+1F443 (decimal 128067)
+   defining Unicode char U+1F463 (decimal 128099)
+   defining Unicode char U+1F440 (decimal 128064)
+   defining Unicode char U+1F441 (decimal 128065)
+   defining Unicode char U+1F445 (decimal 128069)
+   defining Unicode char U+1F444 (decimal 128068)
+   defining Unicode char U+1F48B (decimal 128139)
+   defining Unicode char U+1F498 (decimal 128152)
+   defining Unicode char U+2764 (decimal 10084)
+   defining Unicode char U+1F493 (decimal 128147)
+   defining Unicode char U+1F494 (decimal 128148)
+   defining Unicode char U+1F495 (decimal 128149)
+   defining Unicode char U+1F496 (decimal 128150)
+   defining Unicode char U+1F497 (decimal 128151)
+   defining Unicode char U+1F499 (decimal 128153)
+   defining Unicode char U+1F49A (decimal 128154)
+   defining Unicode char U+1F49B (decimal 128155)
+   defining Unicode char U+1F49C (decimal 128156)
+   defining Unicode char U+1F49D (decimal 128157)
+   defining Unicode char U+1F49E (decimal 128158)
+   defining Unicode char U+1F49F (decimal 128159)
+   defining Unicode char U+2763 (decimal 10083)
+   defining Unicode char U+1F48C (decimal 128140)
+   defining Unicode char U+1F4A4 (decimal 128164)
+   defining Unicode char U+1F4A2 (decimal 128162)
+   defining Unicode char U+1F4A3 (decimal 128163)
+   defining Unicode char U+1F4A5 (decimal 128165)
+   defining Unicode char U+1F4A6 (decimal 128166)
+   defining Unicode char U+1F4A8 (decimal 128168)
+   defining Unicode char U+1F4AB (decimal 128171)
+   defining Unicode char U+1F4AC (decimal 128172)
+   defining Unicode char U+1F5E8 (decimal 128488)
+   defining Unicode char U+1F5EF (decimal 128495)
+   defining Unicode char U+1F4AD (decimal 128173)
+   defining Unicode char U+1F573 (decimal 128371)
+   defining Unicode char U+1F453 (decimal 128083)
+   defining Unicode char U+1F576 (decimal 128374)
+   defining Unicode char U+1F454 (decimal 128084)
+   defining Unicode char U+1F455 (decimal 128085)
+   defining Unicode char U+1F456 (decimal 128086)
+   defining Unicode char U+1F457 (decimal 128087)
+   defining Unicode char U+1F458 (decimal 128088)
+   defining Unicode char U+1F459 (decimal 128089)
+   defining Unicode char U+1F45A (decimal 128090)
+   defining Unicode char U+1F45B (decimal 128091)
+   defining Unicode char U+1F45C (decimal 128092)
+   defining Unicode char U+1F45D (decimal 128093)
+   defining Unicode char U+1F6CD (decimal 128717)
+   defining Unicode char U+1F392 (decimal 127890)
+   defining Unicode char U+1F45E (decimal 128094)
+   defining Unicode char U+1F45F (decimal 128095)
+   defining Unicode char U+1F460 (decimal 128096)
+   defining Unicode char U+1F461 (decimal 128097)
+   defining Unicode char U+1F462 (decimal 128098)
+   defining Unicode char U+1F451 (decimal 128081)
+   defining Unicode char U+1F452 (decimal 128082)
+   defining Unicode char U+1F3A9 (decimal 127913)
+   defining Unicode char U+1F393 (decimal 127891)
+   defining Unicode char U+1F4FF (decimal 128255)
+   defining Unicode char U+1F484 (decimal 128132)
+   defining Unicode char U+1F48D (decimal 128141)
+   defining Unicode char U+1F48E (decimal 128142)
+   defining Unicode char U+1F435 (decimal 128053)
+   defining Unicode char U+1F412 (decimal 128018)
+   defining Unicode char U+1F436 (decimal 128054)
+   defining Unicode char U+1F415 (decimal 128021)
+   defining Unicode char U+1F429 (decimal 128041)
+   defining Unicode char U+1F43A (decimal 128058)
+   defining Unicode char U+1F431 (decimal 128049)
+   defining Unicode char U+1F408 (decimal 128008)
+   defining Unicode char U+1F981 (decimal 129409)
+   defining Unicode char U+1F42F (decimal 128047)
+   defining Unicode char U+1F405 (decimal 128005)
+   defining Unicode char U+1F406 (decimal 128006)
+   defining Unicode char U+1F434 (decimal 128052)
+   defining Unicode char U+1F40E (decimal 128014)
+   defining Unicode char U+1F984 (decimal 129412)
+   defining Unicode char U+1F42E (decimal 128046)
+   defining Unicode char U+1F402 (decimal 128002)
+   defining Unicode char U+1F403 (decimal 128003)
+   defining Unicode char U+1F404 (decimal 128004)
+   defining Unicode char U+1F437 (decimal 128055)
+   defining Unicode char U+1F416 (decimal 128022)
+   defining Unicode char U+1F417 (decimal 128023)
+   defining Unicode char U+1F43D (decimal 128061)
+   defining Unicode char U+1F40F (decimal 128015)
+   defining Unicode char U+1F411 (decimal 128017)
+   defining Unicode char U+1F410 (decimal 128016)
+   defining Unicode char U+1F42A (decimal 128042)
+   defining Unicode char U+1F42B (decimal 128043)
+   defining Unicode char U+1F418 (decimal 128024)
+   defining Unicode char U+1F42D (decimal 128045)
+   defining Unicode char U+1F401 (decimal 128001)
+   defining Unicode char U+1F400 (decimal 128000)
+   defining Unicode char U+1F439 (decimal 128057)
+   defining Unicode char U+1F430 (decimal 128048)
+   defining Unicode char U+1F407 (decimal 128007)
+   defining Unicode char U+1F43F (decimal 128063)
+   defining Unicode char U+1F43B (decimal 128059)
+   defining Unicode char U+1F428 (decimal 128040)
+   defining Unicode char U+1F43C (decimal 128060)
+   defining Unicode char U+1F43E (decimal 128062)
+   defining Unicode char U+1F983 (decimal 129411)
+   defining Unicode char U+1F414 (decimal 128020)
+   defining Unicode char U+1F413 (decimal 128019)
+   defining Unicode char U+1F423 (decimal 128035)
+   defining Unicode char U+1F424 (decimal 128036)
+   defining Unicode char U+1F425 (decimal 128037)
+   defining Unicode char U+1F426 (decimal 128038)
+   defining Unicode char U+1F427 (decimal 128039)
+   defining Unicode char U+1F54A (decimal 128330)
+   defining Unicode char U+1F438 (decimal 128056)
+   defining Unicode char U+1F40A (decimal 128010)
+   defining Unicode char U+1F422 (decimal 128034)
+   defining Unicode char U+1F40D (decimal 128013)
+   defining Unicode char U+1F432 (decimal 128050)
+   defining Unicode char U+1F409 (decimal 128009)
+   defining Unicode char U+1F433 (decimal 128051)
+   defining Unicode char U+1F40B (decimal 128011)
+   defining Unicode char U+1F42C (decimal 128044)
+   defining Unicode char U+1F41F (decimal 128031)
+   defining Unicode char U+1F420 (decimal 128032)
+   defining Unicode char U+1F421 (decimal 128033)
+   defining Unicode char U+1F419 (decimal 128025)
+   defining Unicode char U+1F41A (decimal 128026)
+   defining Unicode char U+1F980 (decimal 129408)
+   defining Unicode char U+1F40C (decimal 128012)
+   defining Unicode char U+1F41B (decimal 128027)
+   defining Unicode char U+1F41C (decimal 128028)
+   defining Unicode char U+1F41D (decimal 128029)
+   defining Unicode char U+1F41E (decimal 128030)
+   defining Unicode char U+1F577 (decimal 128375)
+   defining Unicode char U+1F578 (decimal 128376)
+   defining Unicode char U+1F982 (decimal 129410)
+   defining Unicode char U+1F490 (decimal 128144)
+   defining Unicode char U+1F338 (decimal 127800)
+   defining Unicode char U+1F4AE (decimal 128174)
+   defining Unicode char U+1F3F5 (decimal 127989)
+   defining Unicode char U+1F339 (decimal 127801)
+   defining Unicode char U+1F33A (decimal 127802)
+   defining Unicode char U+1F33B (decimal 127803)
+   defining Unicode char U+1F33C (decimal 127804)
+   defining Unicode char U+1F337 (decimal 127799)
+   defining Unicode char U+1F331 (decimal 127793)
+   defining Unicode char U+1F332 (decimal 127794)
+   defining Unicode char U+1F333 (decimal 127795)
+   defining Unicode char U+1F334 (decimal 127796)
+   defining Unicode char U+1F335 (decimal 127797)
+   defining Unicode char U+1F33E (decimal 127806)
+   defining Unicode char U+1F33F (decimal 127807)
+   defining Unicode char U+2618 (decimal 9752)
+   defining Unicode char U+1F340 (decimal 127808)
+   defining Unicode char U+1F341 (decimal 127809)
+   defining Unicode char U+1F342 (decimal 127810)
+   defining Unicode char U+1F343 (decimal 127811)
+   defining Unicode char U+1F347 (decimal 127815)
+   defining Unicode char U+1F348 (decimal 127816)
+   defining Unicode char U+1F349 (decimal 127817)
+   defining Unicode char U+1F34A (decimal 127818)
+   defining Unicode char U+1F34B (decimal 127819)
+   defining Unicode char U+1F34C (decimal 127820)
+   defining Unicode char U+1F34D (decimal 127821)
+   defining Unicode char U+1F34E (decimal 127822)
+   defining Unicode char U+1F34F (decimal 127823)
+   defining Unicode char U+1F350 (decimal 127824)
+   defining Unicode char U+1F351 (decimal 127825)
+   defining Unicode char U+1F352 (decimal 127826)
+   defining Unicode char U+1F353 (decimal 127827)
+   defining Unicode char U+1F345 (decimal 127813)
+   defining Unicode char U+1F346 (decimal 127814)
+   defining Unicode char U+1F33D (decimal 127805)
+   defining Unicode char U+1F336 (decimal 127798)
+   defining Unicode char U+1F344 (decimal 127812)
+   defining Unicode char U+1F330 (decimal 127792)
+   defining Unicode char U+1F35E (decimal 127838)
+   defining Unicode char U+1F9C0 (decimal 129472)
+   defining Unicode char U+1F356 (decimal 127830)
+   defining Unicode char U+1F357 (decimal 127831)
+   defining Unicode char U+1F354 (decimal 127828)
+   defining Unicode char U+1F35F (decimal 127839)
+   defining Unicode char U+1F355 (decimal 127829)
+   defining Unicode char U+1F32D (decimal 127789)
+   defining Unicode char U+1F32E (decimal 127790)
+   defining Unicode char U+1F32F (decimal 127791)
+   defining Unicode char U+1F37F (decimal 127871)
+   defining Unicode char U+1F372 (decimal 127858)
+   defining Unicode char U+1F371 (decimal 127857)
+   defining Unicode char U+1F358 (decimal 127832)
+   defining Unicode char U+1F359 (decimal 127833)
+   defining Unicode char U+1F35A (decimal 127834)
+   defining Unicode char U+1F35B (decimal 127835)
+   defining Unicode char U+1F35C (decimal 127836)
+   defining Unicode char U+1F35D (decimal 127837)
+   defining Unicode char U+1F360 (decimal 127840)
+   defining Unicode char U+1F362 (decimal 127842)
+   defining Unicode char U+1F363 (decimal 127843)
+   defining Unicode char U+1F364 (decimal 127844)
+   defining Unicode char U+1F365 (decimal 127845)
+   defining Unicode char U+1F361 (decimal 127841)
+   defining Unicode char U+1F366 (decimal 127846)
+   defining Unicode char U+1F367 (decimal 127847)
+   defining Unicode char U+1F368 (decimal 127848)
+   defining Unicode char U+1F369 (decimal 127849)
+   defining Unicode char U+1F36A (decimal 127850)
+   defining Unicode char U+1F382 (decimal 127874)
+   defining Unicode char U+1F370 (decimal 127856)
+   defining Unicode char U+1F36B (decimal 127851)
+   defining Unicode char U+1F36C (decimal 127852)
+   defining Unicode char U+1F36D (decimal 127853)
+   defining Unicode char U+1F36E (decimal 127854)
+   defining Unicode char U+1F36F (decimal 127855)
+   defining Unicode char U+1F37C (decimal 127868)
+   defining Unicode char U+2615 (decimal 9749)
+   defining Unicode char U+1F375 (decimal 127861)
+   defining Unicode char U+1F376 (decimal 127862)
+   defining Unicode char U+1F37E (decimal 127870)
+   defining Unicode char U+1F377 (decimal 127863)
+   defining Unicode char U+1F378 (decimal 127864)
+   defining Unicode char U+1F379 (decimal 127865)
+   defining Unicode char U+1F37A (decimal 127866)
+   defining Unicode char U+1F37B (decimal 127867)
+   defining Unicode char U+1F37D (decimal 127869)
+   defining Unicode char U+1F374 (decimal 127860)
+   defining Unicode char U+1F373 (decimal 127859)
+   defining Unicode char U+1F3FA (decimal 127994)
+   defining Unicode char U+1F30D (decimal 127757)
+   defining Unicode char U+1F30E (decimal 127758)
+   defining Unicode char U+1F30F (decimal 127759)
+   defining Unicode char U+1F310 (decimal 127760)
+   defining Unicode char U+1F5FA (decimal 128506)
+   defining Unicode char U+1F3D4 (decimal 127956)
+   defining Unicode char U+26F0 (decimal 9968)
+   defining Unicode char U+1F30B (decimal 127755)
+   defining Unicode char U+1F5FB (decimal 128507)
+   defining Unicode char U+1F3D5 (decimal 127957)
+   defining Unicode char U+1F3D6 (decimal 127958)
+   defining Unicode char U+1F3DC (decimal 127964)
+   defining Unicode char U+1F3DD (decimal 127965)
+   defining Unicode char U+1F3DE (decimal 127966)
+   defining Unicode char U+1F3DF (decimal 127967)
+   defining Unicode char U+1F3DB (decimal 127963)
+   defining Unicode char U+1F3D7 (decimal 127959)
+   defining Unicode char U+1F3D8 (decimal 127960)
+   defining Unicode char U+1F3D9 (decimal 127961)
+   defining Unicode char U+1F3DA (decimal 127962)
+   defining Unicode char U+1F3E0 (decimal 127968)
+   defining Unicode char U+1F3E1 (decimal 127969)
+   defining Unicode char U+26EA (decimal 9962)
+   defining Unicode char U+1F54B (decimal 128331)
+   defining Unicode char U+1F54C (decimal 128332)
+   defining Unicode char U+1F54D (decimal 128333)
+   defining Unicode char U+26E9 (decimal 9961)
+   defining Unicode char U+1F3E2 (decimal 127970)
+   defining Unicode char U+1F3E3 (decimal 127971)
+   defining Unicode char U+1F3E4 (decimal 127972)
+   defining Unicode char U+1F3E5 (decimal 127973)
+   defining Unicode char U+1F3E6 (decimal 127974)
+   defining Unicode char U+1F3E8 (decimal 127976)
+   defining Unicode char U+1F3E9 (decimal 127977)
+   defining Unicode char U+1F3EA (decimal 127978)
+   defining Unicode char U+1F3EB (decimal 127979)
+   defining Unicode char U+1F3EC (decimal 127980)
+   defining Unicode char U+1F3ED (decimal 127981)
+   defining Unicode char U+1F3EF (decimal 127983)
+   defining Unicode char U+1F3F0 (decimal 127984)
+   defining Unicode char U+1F492 (decimal 128146)
+   defining Unicode char U+1F5FC (decimal 128508)
+   defining Unicode char U+1F5FD (decimal 128509)
+   defining Unicode char U+1F5FE (decimal 128510)
+   defining Unicode char U+26F2 (decimal 9970)
+   defining Unicode char U+26FA (decimal 9978)
+   defining Unicode char U+1F301 (decimal 127745)
+   defining Unicode char U+1F303 (decimal 127747)
+   defining Unicode char U+1F304 (decimal 127748)
+   defining Unicode char U+1F305 (decimal 127749)
+   defining Unicode char U+1F306 (decimal 127750)
+   defining Unicode char U+1F307 (decimal 127751)
+   defining Unicode char U+1F309 (decimal 127753)
+   defining Unicode char U+2668 (decimal 9832)
+   defining Unicode char U+1F30C (decimal 127756)
+   defining Unicode char U+1F3A0 (decimal 127904)
+   defining Unicode char U+1F3A1 (decimal 127905)
+   defining Unicode char U+1F3A2 (decimal 127906)
+   defining Unicode char U+1F488 (decimal 128136)
+   defining Unicode char U+1F3AA (decimal 127914)
+   defining Unicode char U+1F3AD (decimal 127917)
+   defining Unicode char U+1F5BC (decimal 128444)
+   defining Unicode char U+1F3A8 (decimal 127912)
+   defining Unicode char U+1F3B0 (decimal 127920)
+   defining Unicode char U+1F682 (decimal 128642)
+   defining Unicode char U+1F683 (decimal 128643)
+   defining Unicode char U+1F684 (decimal 128644)
+   defining Unicode char U+1F685 (decimal 128645)
+   defining Unicode char U+1F686 (decimal 128646)
+   defining Unicode char U+1F687 (decimal 128647)
+   defining Unicode char U+1F688 (decimal 128648)
+   defining Unicode char U+1F689 (decimal 128649)
+   defining Unicode char U+1F68A (decimal 128650)
+   defining Unicode char U+1F69D (decimal 128669)
+   defining Unicode char U+1F69E (decimal 128670)
+   defining Unicode char U+1F68B (decimal 128651)
+   defining Unicode char U+1F68C (decimal 128652)
+   defining Unicode char U+1F68D (decimal 128653)
+   defining Unicode char U+1F68E (decimal 128654)
+   defining Unicode char U+1F68F (decimal 128655)
+   defining Unicode char U+1F690 (decimal 128656)
+   defining Unicode char U+1F691 (decimal 128657)
+   defining Unicode char U+1F692 (decimal 128658)
+   defining Unicode char U+1F693 (decimal 128659)
+   defining Unicode char U+1F694 (decimal 128660)
+   defining Unicode char U+1F695 (decimal 128661)
+   defining Unicode char U+1F696 (decimal 128662)
+   defining Unicode char U+1F697 (decimal 128663)
+   defining Unicode char U+1F698 (decimal 128664)
+   defining Unicode char U+1F699 (decimal 128665)
+   defining Unicode char U+1F69A (decimal 128666)
+   defining Unicode char U+1F69B (decimal 128667)
+   defining Unicode char U+1F69C (decimal 128668)
+   defining Unicode char U+1F6B2 (decimal 128690)
+   defining Unicode char U+26FD (decimal 9981)
+   defining Unicode char U+1F6E3 (decimal 128739)
+   defining Unicode char U+1F6E4 (decimal 128740)
+   defining Unicode char U+1F6A8 (decimal 128680)
+   defining Unicode char U+1F6A5 (decimal 128677)
+   defining Unicode char U+1F6A6 (decimal 128678)
+   defining Unicode char U+1F6A7 (decimal 128679)
+   defining Unicode char U+2693 (decimal 9875)
+   defining Unicode char U+26F5 (decimal 9973)
+   defining Unicode char U+1F6A3 (decimal 128675)
+   defining Unicode char U+1F6A4 (decimal 128676)
+   defining Unicode char U+1F6F3 (decimal 128755)
+   defining Unicode char U+26F4 (decimal 9972)
+   defining Unicode char U+1F6E5 (decimal 128741)
+   defining Unicode char U+1F6A2 (decimal 128674)
+   defining Unicode char U+2708 (decimal 9992)
+   defining Unicode char U+1F6E9 (decimal 128745)
+   defining Unicode char U+1F6EB (decimal 128747)
+   defining Unicode char U+1F6EC (decimal 128748)
+   defining Unicode char U+1F4BA (decimal 128186)
+   defining Unicode char U+1F681 (decimal 128641)
+   defining Unicode char U+1F69F (decimal 128671)
+   defining Unicode char U+1F6A0 (decimal 128672)
+   defining Unicode char U+1F6A1 (decimal 128673)
+   defining Unicode char U+1F680 (decimal 128640)
+   defining Unicode char U+1F6F0 (decimal 128752)
+   defining Unicode char U+1F6CE (decimal 128718)
+   defining Unicode char U+1F6AA (decimal 128682)
+   defining Unicode char U+1F6CC (decimal 128716)
+   defining Unicode char U+1F6CF (decimal 128719)
+   defining Unicode char U+1F6CB (decimal 128715)
+   defining Unicode char U+1F6BD (decimal 128701)
+   defining Unicode char U+1F6BF (decimal 128703)
+   defining Unicode char U+1F6C0 (decimal 128704)
+   defining Unicode char U+1F6C1 (decimal 128705)
+   defining Unicode char U+231B (decimal 8987)
+   defining Unicode char U+23F3 (decimal 9203)
+   defining Unicode char U+231A (decimal 8986)
+   defining Unicode char U+23F0 (decimal 9200)
+   defining Unicode char U+23F1 (decimal 9201)
+   defining Unicode char U+23F2 (decimal 9202)
+   defining Unicode char U+1F570 (decimal 128368)
+   defining Unicode char U+1F55B (decimal 128347)
+   defining Unicode char U+1F567 (decimal 128359)
+   defining Unicode char U+1F550 (decimal 128336)
+   defining Unicode char U+1F55C (decimal 128348)
+   defining Unicode char U+1F551 (decimal 128337)
+   defining Unicode char U+1F55D (decimal 128349)
+   defining Unicode char U+1F552 (decimal 128338)
+   defining Unicode char U+1F55E (decimal 128350)
+   defining Unicode char U+1F553 (decimal 128339)
+   defining Unicode char U+1F55F (decimal 128351)
+   defining Unicode char U+1F554 (decimal 128340)
+   defining Unicode char U+1F560 (decimal 128352)
+   defining Unicode char U+1F555 (decimal 128341)
+   defining Unicode char U+1F561 (decimal 128353)
+   defining Unicode char U+1F556 (decimal 128342)
+   defining Unicode char U+1F562 (decimal 128354)
+   defining Unicode char U+1F557 (decimal 128343)
+   defining Unicode char U+1F563 (decimal 128355)
+   defining Unicode char U+1F558 (decimal 128344)
+   defining Unicode char U+1F564 (decimal 128356)
+   defining Unicode char U+1F559 (decimal 128345)
+   defining Unicode char U+1F565 (decimal 128357)
+   defining Unicode char U+1F55A (decimal 128346)
+   defining Unicode char U+1F566 (decimal 128358)
+   defining Unicode char U+1F311 (decimal 127761)
+   defining Unicode char U+1F312 (decimal 127762)
+   defining Unicode char U+1F313 (decimal 127763)
+   defining Unicode char U+1F314 (decimal 127764)
+   defining Unicode char U+1F315 (decimal 127765)
+   defining Unicode char U+1F316 (decimal 127766)
+   defining Unicode char U+1F317 (decimal 127767)
+   defining Unicode char U+1F318 (decimal 127768)
+   defining Unicode char U+1F319 (decimal 127769)
+   defining Unicode char U+1F31A (decimal 127770)
+   defining Unicode char U+1F31B (decimal 127771)
+   defining Unicode char U+1F31C (decimal 127772)
+   defining Unicode char U+1F321 (decimal 127777)
+   defining Unicode char U+2600 (decimal 9728)
+   defining Unicode char U+1F31D (decimal 127773)
+   defining Unicode char U+1F31E (decimal 127774)
+   defining Unicode char U+2B50 (decimal 11088)
+   defining Unicode char U+1F31F (decimal 127775)
+   defining Unicode char U+1F320 (decimal 127776)
+   defining Unicode char U+2601 (decimal 9729)
+   defining Unicode char U+26C5 (decimal 9925)
+   defining Unicode char U+26C8 (decimal 9928)
+   defining Unicode char U+1F324 (decimal 127780)
+   defining Unicode char U+1F325 (decimal 127781)
+   defining Unicode char U+1F326 (decimal 127782)
+   defining Unicode char U+1F327 (decimal 127783)
+   defining Unicode char U+1F328 (decimal 127784)
+   defining Unicode char U+1F329 (decimal 127785)
+   defining Unicode char U+1F32A (decimal 127786)
+   defining Unicode char U+1F32B (decimal 127787)
+   defining Unicode char U+1F32C (decimal 127788)
+   defining Unicode char U+1F300 (decimal 127744)
+   defining Unicode char U+1F308 (decimal 127752)
+   defining Unicode char U+1F302 (decimal 127746)
+   defining Unicode char U+2602 (decimal 9730)
+   defining Unicode char U+2614 (decimal 9748)
+   defining Unicode char U+26F1 (decimal 9969)
+   defining Unicode char U+26A1 (decimal 9889)
+   defining Unicode char U+2744 (decimal 10052)
+   defining Unicode char U+2603 (decimal 9731)
+   defining Unicode char U+26C4 (decimal 9924)
+   defining Unicode char U+2604 (decimal 9732)
+   defining Unicode char U+1F525 (decimal 128293)
+   defining Unicode char U+1F4A7 (decimal 128167)
+   defining Unicode char U+1F30A (decimal 127754)
+   defining Unicode char U+1F383 (decimal 127875)
+   defining Unicode char U+1F384 (decimal 127876)
+   defining Unicode char U+1F386 (decimal 127878)
+   defining Unicode char U+1F387 (decimal 127879)
+   defining Unicode char U+2728 (decimal 10024)
+   defining Unicode char U+1F388 (decimal 127880)
+   defining Unicode char U+1F389 (decimal 127881)
+   defining Unicode char U+1F38A (decimal 127882)
+   defining Unicode char U+1F38B (decimal 127883)
+   defining Unicode char U+1F38C (decimal 127884)
+   defining Unicode char U+1F38D (decimal 127885)
+   defining Unicode char U+1F38E (decimal 127886)
+   defining Unicode char U+1F38F (decimal 127887)
+   defining Unicode char U+1F390 (decimal 127888)
+   defining Unicode char U+1F391 (decimal 127889)
+   defining Unicode char U+1F380 (decimal 127872)
+   defining Unicode char U+1F381 (decimal 127873)
+   defining Unicode char U+1F396 (decimal 127894)
+   defining Unicode char U+1F397 (decimal 127895)
+   defining Unicode char U+1F39E (decimal 127902)
+   defining Unicode char U+1F39F (decimal 127903)
+   defining Unicode char U+1F3AB (decimal 127915)
+   defining Unicode char U+1F3F7 (decimal 127991)
+   defining Unicode char U+26BD (decimal 9917)
+   defining Unicode char U+26BE (decimal 9918)
+   defining Unicode char U+1F3C0 (decimal 127936)
+   defining Unicode char U+1F3C8 (decimal 127944)
+   defining Unicode char U+1F3C9 (decimal 127945)
+   defining Unicode char U+1F3BE (decimal 127934)
+   defining Unicode char U+1F3B1 (decimal 127921)
+   defining Unicode char U+1F3B3 (decimal 127923)
+   defining Unicode char U+26F3 (decimal 9971)
+   defining Unicode char U+1F3CC (decimal 127948)
+   defining Unicode char U+26F8 (decimal 9976)
+   defining Unicode char U+1F3A3 (decimal 127907)
+   defining Unicode char U+1F3BD (decimal 127933)
+   defining Unicode char U+1F3BF (decimal 127935)
+   defining Unicode char U+26F7 (decimal 9975)
+   defining Unicode char U+1F3C2 (decimal 127938)
+   defining Unicode char U+1F3C4 (decimal 127940)
+   defining Unicode char U+1F3C7 (decimal 127943)
+   defining Unicode char U+1F3CA (decimal 127946)
+   defining Unicode char U+26F9 (decimal 9977)
+   defining Unicode char U+1F3CB (decimal 127947)
+   defining Unicode char U+1F6B4 (decimal 128692)
+   defining Unicode char U+1F6B5 (decimal 128693)
+   defining Unicode char U+1F3CE (decimal 127950)
+   defining Unicode char U+1F3CD (decimal 127949)
+   defining Unicode char U+1F3C5 (decimal 127941)
+   defining Unicode char U+1F3C6 (decimal 127942)
+   defining Unicode char U+1F3CF (decimal 127951)
+   defining Unicode char U+1F3D0 (decimal 127952)
+   defining Unicode char U+1F3D1 (decimal 127953)
+   defining Unicode char U+1F3D2 (decimal 127954)
+   defining Unicode char U+1F3D3 (decimal 127955)
+   defining Unicode char U+1F3F8 (decimal 127992)
+   defining Unicode char U+1F3AF (decimal 127919)
+   defining Unicode char U+1F3AE (decimal 127918)
+   defining Unicode char U+1F579 (decimal 128377)
+   defining Unicode char U+1F3B2 (decimal 127922)
+   defining Unicode char U+2660 (decimal 9824)
+   defining Unicode char U+2665 (decimal 9829)
+   defining Unicode char U+2666 (decimal 9830)
+   defining Unicode char U+2663 (decimal 9827)
+   defining Unicode char U+1F0CF (decimal 127183)
+   defining Unicode char U+1F004 (decimal 126980)
+   defining Unicode char U+1F3B4 (decimal 127924)
+   defining Unicode char U+1F507 (decimal 128263)
+   defining Unicode char U+1F508 (decimal 128264)
+   defining Unicode char U+1F509 (decimal 128265)
+   defining Unicode char U+1F50A (decimal 128266)
+   defining Unicode char U+1F4E2 (decimal 128226)
+   defining Unicode char U+1F4E3 (decimal 128227)
+   defining Unicode char U+1F4EF (decimal 128239)
+   defining Unicode char U+1F514 (decimal 128276)
+   defining Unicode char U+1F515 (decimal 128277)
+   defining Unicode char U+1F3BC (decimal 127932)
+   defining Unicode char U+1F3B5 (decimal 127925)
+   defining Unicode char U+1F3B6 (decimal 127926)
+   defining Unicode char U+1F399 (decimal 127897)
+   defining Unicode char U+1F39A (decimal 127898)
+   defining Unicode char U+1F39B (decimal 127899)
+   defining Unicode char U+1F3A4 (decimal 127908)
+   defining Unicode char U+1F3A7 (decimal 127911)
+   defining Unicode char U+1F3B7 (decimal 127927)
+   defining Unicode char U+1F3B8 (decimal 127928)
+   defining Unicode char U+1F3B9 (decimal 127929)
+   defining Unicode char U+1F3BA (decimal 127930)
+   defining Unicode char U+1F3BB (decimal 127931)
+   defining Unicode char U+1F4FB (decimal 128251)
+   defining Unicode char U+1F4F1 (decimal 128241)
+   defining Unicode char U+1F4F2 (decimal 128242)
+   defining Unicode char U+260E (decimal 9742)
+   defining Unicode char U+1F4DE (decimal 128222)
+   defining Unicode char U+1F4DF (decimal 128223)
+   defining Unicode char U+1F4E0 (decimal 128224)
+   defining Unicode char U+1F50B (decimal 128267)
+   defining Unicode char U+1F50C (decimal 128268)
+   defining Unicode char U+1F4BB (decimal 128187)
+   defining Unicode char U+1F5A5 (decimal 128421)
+   defining Unicode char U+1F5A8 (decimal 128424)
+   defining Unicode char U+2328 (decimal 9000)
+   defining Unicode char U+1F5B1 (decimal 128433)
+   defining Unicode char U+1F5B2 (decimal 128434)
+   defining Unicode char U+1F4BD (decimal 128189)
+   defining Unicode char U+1F4BE (decimal 128190)
+   defining Unicode char U+1F4BF (decimal 128191)
+   defining Unicode char U+1F4C0 (decimal 128192)
+   defining Unicode char U+1F3A5 (decimal 127909)
+   defining Unicode char U+1F3AC (decimal 127916)
+   defining Unicode char U+1F4FD (decimal 128253)
+   defining Unicode char U+1F4FA (decimal 128250)
+   defining Unicode char U+1F4F7 (decimal 128247)
+   defining Unicode char U+1F4F8 (decimal 128248)
+   defining Unicode char U+1F4F9 (decimal 128249)
+   defining Unicode char U+1F4FC (decimal 128252)
+   defining Unicode char U+1F50D (decimal 128269)
+   defining Unicode char U+1F50E (decimal 128270)
+   defining Unicode char U+1F52C (decimal 128300)
+   defining Unicode char U+1F52D (decimal 128301)
+   defining Unicode char U+1F4E1 (decimal 128225)
+   defining Unicode char U+1F56F (decimal 128367)
+   defining Unicode char U+1F4A1 (decimal 128161)
+   defining Unicode char U+1F526 (decimal 128294)
+   defining Unicode char U+1F3EE (decimal 127982)
+   defining Unicode char U+1F4D4 (decimal 128212)
+   defining Unicode char U+1F4D5 (decimal 128213)
+   defining Unicode char U+1F4D6 (decimal 128214)
+   defining Unicode char U+1F4D7 (decimal 128215)
+   defining Unicode char U+1F4D8 (decimal 128216)
+   defining Unicode char U+1F4D9 (decimal 128217)
+   defining Unicode char U+1F4DA (decimal 128218)
+   defining Unicode char U+1F4D3 (decimal 128211)
+   defining Unicode char U+1F4D2 (decimal 128210)
+   defining Unicode char U+1F4C3 (decimal 128195)
+   defining Unicode char U+1F4DC (decimal 128220)
+   defining Unicode char U+1F4C4 (decimal 128196)
+   defining Unicode char U+1F4F0 (decimal 128240)
+   defining Unicode char U+1F5DE (decimal 128478)
+   defining Unicode char U+1F4D1 (decimal 128209)
+   defining Unicode char U+1F516 (decimal 128278)
+   defining Unicode char U+1F4B0 (decimal 128176)
+   defining Unicode char U+1F4B4 (decimal 128180)
+   defining Unicode char U+1F4B5 (decimal 128181)
+   defining Unicode char U+1F4B6 (decimal 128182)
+   defining Unicode char U+1F4B7 (decimal 128183)
+   defining Unicode char U+1F4B8 (decimal 128184)
+   defining Unicode char U+1F4B3 (decimal 128179)
+   defining Unicode char U+1F4B9 (decimal 128185)
+   defining Unicode char U+2709 (decimal 9993)
+   defining Unicode char U+1F4E7 (decimal 128231)
+   defining Unicode char U+1F4E8 (decimal 128232)
+   defining Unicode char U+1F4E9 (decimal 128233)
+   defining Unicode char U+1F4E4 (decimal 128228)
+   defining Unicode char U+1F4E5 (decimal 128229)
+   defining Unicode char U+1F4E6 (decimal 128230)
+   defining Unicode char U+1F4EB (decimal 128235)
+   defining Unicode char U+1F4EA (decimal 128234)
+   defining Unicode char U+1F4EC (decimal 128236)
+   defining Unicode char U+1F4ED (decimal 128237)
+   defining Unicode char U+1F4EE (decimal 128238)
+   defining Unicode char U+1F5F3 (decimal 128499)
+   defining Unicode char U+270F (decimal 9999)
+   defining Unicode char U+2712 (decimal 10002)
+   defining Unicode char U+1F58B (decimal 128395)
+   defining Unicode char U+1F58A (decimal 128394)
+   defining Unicode char U+1F58C (decimal 128396)
+   defining Unicode char U+1F58D (decimal 128397)
+   defining Unicode char U+1F4DD (decimal 128221)
+   defining Unicode char U+1F4BC (decimal 128188)
+   defining Unicode char U+1F4C1 (decimal 128193)
+   defining Unicode char U+1F4C2 (decimal 128194)
+   defining Unicode char U+1F5C2 (decimal 128450)
+   defining Unicode char U+1F4C5 (decimal 128197)
+   defining Unicode char U+1F4C6 (decimal 128198)
+   defining Unicode char U+1F5D2 (decimal 128466)
+   defining Unicode char U+1F5D3 (decimal 128467)
+   defining Unicode char U+1F4C7 (decimal 128199)
+   defining Unicode char U+1F4C8 (decimal 128200)
+   defining Unicode char U+1F4C9 (decimal 128201)
+   defining Unicode char U+1F4CA (decimal 128202)
+   defining Unicode char U+1F4CB (decimal 128203)
+   defining Unicode char U+1F4CC (decimal 128204)
+   defining Unicode char U+1F4CD (decimal 128205)
+   defining Unicode char U+1F4CE (decimal 128206)
+   defining Unicode char U+1F587 (decimal 128391)
+   defining Unicode char U+1F4CF (decimal 128207)
+   defining Unicode char U+1F4D0 (decimal 128208)
+   defining Unicode char U+2702 (decimal 9986)
+   defining Unicode char U+1F5C3 (decimal 128451)
+   defining Unicode char U+1F5C4 (decimal 128452)
+   defining Unicode char U+1F5D1 (decimal 128465)
+   defining Unicode char U+1F512 (decimal 128274)
+   defining Unicode char U+1F513 (decimal 128275)
+   defining Unicode char U+1F50F (decimal 128271)
+   defining Unicode char U+1F510 (decimal 128272)
+   defining Unicode char U+1F511 (decimal 128273)
+   defining Unicode char U+1F5DD (decimal 128477)
+   defining Unicode char U+1F528 (decimal 128296)
+   defining Unicode char U+26CF (decimal 9935)
+   defining Unicode char U+2692 (decimal 9874)
+   defining Unicode char U+1F6E0 (decimal 128736)
+   defining Unicode char U+1F527 (decimal 128295)
+   defining Unicode char U+1F529 (decimal 128297)
+   defining Unicode char U+2699 (decimal 9881)
+   defining Unicode char U+1F5DC (decimal 128476)
+   defining Unicode char U+2697 (decimal 9879)
+   defining Unicode char U+2696 (decimal 9878)
+   defining Unicode char U+1F517 (decimal 128279)
+   defining Unicode char U+26D3 (decimal 9939)
+   defining Unicode char U+1F489 (decimal 128137)
+   defining Unicode char U+1F48A (decimal 128138)
+   defining Unicode char U+1F5E1 (decimal 128481)
+   defining Unicode char U+1F52A (decimal 128298)
+   defining Unicode char U+2694 (decimal 9876)
+   defining Unicode char U+1F52B (decimal 128299)
+   defining Unicode char U+1F6E1 (decimal 128737)
+   defining Unicode char U+1F3F9 (decimal 127993)
+   defining Unicode char U+1F3C1 (decimal 127937)
+   defining Unicode char U+1F3F3 (decimal 127987)
+   defining Unicode char U+1F3F4 (decimal 127988)
+   defining Unicode char U+1F6A9 (decimal 128681)
+   defining Unicode char U+1F6AC (decimal 128684)
+   defining Unicode char U+26B0 (decimal 9904)
+   defining Unicode char U+26B1 (decimal 9905)
+   defining Unicode char U+1F5FF (decimal 128511)
+   defining Unicode char U+1F6E2 (decimal 128738)
+   defining Unicode char U+1F52E (decimal 128302)
+   defining Unicode char U+1F3E7 (decimal 127975)
+   defining Unicode char U+1F6AE (decimal 128686)
+   defining Unicode char U+1F6B0 (decimal 128688)
+   defining Unicode char U+267F (decimal 9855)
+   defining Unicode char U+1F6B9 (decimal 128697)
+   defining Unicode char U+1F6BA (decimal 128698)
+   defining Unicode char U+1F6BB (decimal 128699)
+   defining Unicode char U+1F6BC (decimal 128700)
+   defining Unicode char U+1F6BE (decimal 128702)
+   defining Unicode char U+1F6C2 (decimal 128706)
+   defining Unicode char U+1F6C3 (decimal 128707)
+   defining Unicode char U+1F6C4 (decimal 128708)
+   defining Unicode char U+1F6C5 (decimal 128709)
+   defining Unicode char U+26A0 (decimal 9888)
+   defining Unicode char U+1F6B8 (decimal 128696)
+   defining Unicode char U+26D4 (decimal 9940)
+   defining Unicode char U+1F6AB (decimal 128683)
+   defining Unicode char U+1F6B3 (decimal 128691)
+   defining Unicode char U+1F6AD (decimal 128685)
+   defining Unicode char U+1F6AF (decimal 128687)
+   defining Unicode char U+1F6B1 (decimal 128689)
+   defining Unicode char U+1F6B7 (decimal 128695)
+   defining Unicode char U+2622 (decimal 9762)
+   defining Unicode char U+2623 (decimal 9763)
+   defining Unicode char U+2B06 (decimal 11014)
+   defining Unicode char U+2197 (decimal 8599)
+   defining Unicode char U+27A1 (decimal 10145)
+   defining Unicode char U+2198 (decimal 8600)
+   defining Unicode char U+2B07 (decimal 11015)
+   defining Unicode char U+2199 (decimal 8601)
+   defining Unicode char U+2B05 (decimal 11013)
+   defining Unicode char U+2196 (decimal 8598)
+   defining Unicode char U+2195 (decimal 8597)
+   defining Unicode char U+2194 (decimal 8596)
+   defining Unicode char U+21A9 (decimal 8617)
+   defining Unicode char U+21AA (decimal 8618)
+   defining Unicode char U+2934 (decimal 10548)
+   defining Unicode char U+2935 (decimal 10549)
+   defining Unicode char U+1F503 (decimal 128259)
+   defining Unicode char U+1F504 (decimal 128260)
+   defining Unicode char U+1F519 (decimal 128281)
+   defining Unicode char U+1F51A (decimal 128282)
+   defining Unicode char U+1F51B (decimal 128283)
+   defining Unicode char U+1F51C (decimal 128284)
+   defining Unicode char U+1F51D (decimal 128285)
+   defining Unicode char U+1F6D0 (decimal 128720)
+   defining Unicode char U+269B (decimal 9883)
+   defining Unicode char U+1F549 (decimal 128329)
+   defining Unicode char U+2721 (decimal 10017)
+   defining Unicode char U+2638 (decimal 9784)
+   defining Unicode char U+262F (decimal 9775)
+   defining Unicode char U+271D (decimal 10013)
+   defining Unicode char U+2626 (decimal 9766)
+   defining Unicode char U+262A (decimal 9770)
+   defining Unicode char U+262E (decimal 9774)
+   defining Unicode char U+1F54E (decimal 128334)
+   defining Unicode char U+1F52F (decimal 128303)
+   defining Unicode char U+267B (decimal 9851)
+   defining Unicode char U+1F4DB (decimal 128219)
+   defining Unicode char U+269C (decimal 9884)
+   defining Unicode char U+1F530 (decimal 128304)
+   defining Unicode char U+1F531 (decimal 128305)
+   defining Unicode char U+2B55 (decimal 11093)
+   defining Unicode char U+2705 (decimal 9989)
+   defining Unicode char U+2611 (decimal 9745)
+   defining Unicode char U+2714 (decimal 10004)
+   defining Unicode char U+2716 (decimal 10006)
+   defining Unicode char U+274C (decimal 10060)
+   defining Unicode char U+274E (decimal 10062)
+   defining Unicode char U+2795 (decimal 10133)
+   defining Unicode char U+2796 (decimal 10134)
+   defining Unicode char U+2797 (decimal 10135)
+   defining Unicode char U+27B0 (decimal 10160)
+   defining Unicode char U+27BF (decimal 10175)
+   defining Unicode char U+303D (decimal 12349)
+   defining Unicode char U+2733 (decimal 10035)
+   defining Unicode char U+2734 (decimal 10036)
+   defining Unicode char U+2747 (decimal 10055)
+   defining Unicode char U+1F4B1 (decimal 128177)
+   defining Unicode char U+1F4B2 (decimal 128178)
+   defining Unicode char U+203C (decimal 8252)
+   defining Unicode char U+2049 (decimal 8265)
+   defining Unicode char U+2753 (decimal 10067)
+   defining Unicode char U+2754 (decimal 10068)
+   defining Unicode char U+2755 (decimal 10069)
+   defining Unicode char U+2757 (decimal 10071)
+   defining Unicode char U+3030 (decimal 12336)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2648 (decimal 9800)
+   defining Unicode char U+2649 (decimal 9801)
+   defining Unicode char U+264A (decimal 9802)
+   defining Unicode char U+264B (decimal 9803)
+   defining Unicode char U+264C (decimal 9804)
+   defining Unicode char U+264D (decimal 9805)
+   defining Unicode char U+264E (decimal 9806)
+   defining Unicode char U+264F (decimal 9807)
+   defining Unicode char U+2650 (decimal 9808)
+   defining Unicode char U+2651 (decimal 9809)
+   defining Unicode char U+2652 (decimal 9810)
+   defining Unicode char U+2653 (decimal 9811)
+   defining Unicode char U+26CE (decimal 9934)
+   defining Unicode char U+1F500 (decimal 128256)
+   defining Unicode char U+1F501 (decimal 128257)
+   defining Unicode char U+1F502 (decimal 128258)
+   defining Unicode char U+25B6 (decimal 9654)
+   defining Unicode char U+23E9 (decimal 9193)
+   defining Unicode char U+23ED (decimal 9197)
+   defining Unicode char U+23EF (decimal 9199)
+   defining Unicode char U+25C0 (decimal 9664)
+   defining Unicode char U+23EA (decimal 9194)
+   defining Unicode char U+23EE (decimal 9198)
+   defining Unicode char U+1F53C (decimal 128316)
+   defining Unicode char U+23EB (decimal 9195)
+   defining Unicode char U+1F53D (decimal 128317)
+   defining Unicode char U+23EC (decimal 9196)
+   defining Unicode char U+23F8 (decimal 9208)
+   defining Unicode char U+23F9 (decimal 9209)
+   defining Unicode char U+23FA (decimal 9210)
+   defining Unicode char U+1F3A6 (decimal 127910)
+   defining Unicode char U+1F505 (decimal 128261)
+   defining Unicode char U+1F506 (decimal 128262)
+   defining Unicode char U+1F4F6 (decimal 128246)
+   defining Unicode char U+1F4F5 (decimal 128245)
+   defining Unicode char U+1F4F3 (decimal 128243)
+   defining Unicode char U+1F4F4 (decimal 128244)
+   defining Unicode char U+1F51F (decimal 128287)
+   defining Unicode char U+1F4AF (decimal 128175)
+   defining Unicode char U+1F51E (decimal 128286)
+   defining Unicode char U+1F520 (decimal 128288)
+   defining Unicode char U+1F521 (decimal 128289)
+   defining Unicode char U+1F522 (decimal 128290)
+   defining Unicode char U+1F523 (decimal 128291)
+   defining Unicode char U+1F524 (decimal 128292)
+   defining Unicode char U+1F170 (decimal 127344)
+   defining Unicode char U+1F18E (decimal 127374)
+   defining Unicode char U+1F171 (decimal 127345)
+   defining Unicode char U+1F191 (decimal 127377)
+   defining Unicode char U+1F192 (decimal 127378)
+   defining Unicode char U+1F193 (decimal 127379)
+   defining Unicode char U+2139 (decimal 8505)
+   defining Unicode char U+1F194 (decimal 127380)
+   defining Unicode char U+24C2 (decimal 9410)
+   defining Unicode char U+1F195 (decimal 127381)
+   defining Unicode char U+1F196 (decimal 127382)
+   defining Unicode char U+1F17E (decimal 127358)
+   defining Unicode char U+1F197 (decimal 127383)
+   defining Unicode char U+1F17F (decimal 127359)
+   defining Unicode char U+1F198 (decimal 127384)
+   defining Unicode char U+1F199 (decimal 127385)
+   defining Unicode char U+1F19A (decimal 127386)
+   defining Unicode char U+1F201 (decimal 127489)
+   defining Unicode char U+1F202 (decimal 127490)
+   defining Unicode char U+1F237 (decimal 127543)
+   defining Unicode char U+1F236 (decimal 127542)
+   defining Unicode char U+1F22F (decimal 127535)
+   defining Unicode char U+1F250 (decimal 127568)
+   defining Unicode char U+1F239 (decimal 127545)
+   defining Unicode char U+1F21A (decimal 127514)
+   defining Unicode char U+1F232 (decimal 127538)
+   defining Unicode char U+1F251 (decimal 127569)
+   defining Unicode char U+1F238 (decimal 127544)
+   defining Unicode char U+1F234 (decimal 127540)
+   defining Unicode char U+1F233 (decimal 127539)
+   defining Unicode char U+3297 (decimal 12951)
+   defining Unicode char U+3299 (decimal 12953)
+   defining Unicode char U+1F23A (decimal 127546)
+   defining Unicode char U+1F235 (decimal 127541)
+   defining Unicode char U+25AA (decimal 9642)
+   defining Unicode char U+25AB (decimal 9643)
+   defining Unicode char U+25FB (decimal 9723)
+   defining Unicode char U+25FC (decimal 9724)
+   defining Unicode char U+25FD (decimal 9725)
+   defining Unicode char U+25FE (decimal 9726)
+   defining Unicode char U+2B1B (decimal 11035)
+   defining Unicode char U+2B1C (decimal 11036)
+   defining Unicode char U+1F536 (decimal 128310)
+   defining Unicode char U+1F537 (decimal 128311)
+   defining Unicode char U+1F538 (decimal 128312)
+   defining Unicode char U+1F539 (decimal 128313)
+   defining Unicode char U+1F53A (decimal 128314)
+   defining Unicode char U+1F53B (decimal 128315)
+   defining Unicode char U+1F4A0 (decimal 128160)
+   defining Unicode char U+1F518 (decimal 128280)
+   defining Unicode char U+1F532 (decimal 128306)
+   defining Unicode char U+1F533 (decimal 128307)
+   defining Unicode char U+26AA (decimal 9898)
+   defining Unicode char U+26AB (decimal 9899)
+   defining Unicode char U+1F534 (decimal 128308)
+   defining Unicode char U+1F535 (decimal 128309)
+)
+
+Package array Warning: Redefining primitive column m on input line 42.
+
+Package hyperref Info: Option `colorlinks' set `true' on input line 75.
 runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > ECE315_Lab3.aex <nul: /p x=^%~$PATH:i>> ECE315_Lab3.aex)...executed.
 
 runsystem(del ECE315_Lab3.aex)...executed.
 
- (ECE315_Lab3.aux)
+(ECE315_Lab3.aux)
 \openout1 = `ECE315_Lab3.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1048,268 +2113,450 @@ LaTeX Font Info:    ... okay on input line 75.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+(C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count404
-\scratchdimen=\dimen337
-\scratchbox=\box164
-\nofMPsegments=\count405
-\nofMParguments=\count406
-\everyMPshowfont=\toks54
-\MPscratchCnt=\count407
-\MPscratchDim=\dimen338
-\MPnumerator=\count408
-\makeMPintoPDFobject=\count409
-\everyMPtoPDFconversion=\toks55
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+\scratchcounter=\count407
+\scratchdimen=\dimen351
+\scratchbox=\box166
+\nofMPsegments=\count408
+\nofMParguments=\count409
+\everyMPshowfont=\toks56
+\MPscratchCnt=\count410
+\MPscratchDim=\dimen352
+\MPnumerator=\count411
+\makeMPintoPDFobject=\count412
+\everyMPtoPDFconversion=\toks57
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 75.
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package hyperref Info: Link coloring ON on input line 77.
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count410
+\c@section@level=\count413
 )
-LaTeX Info: Redefining \ref on input line 75.
-LaTeX Info: Redefining \pageref on input line 75.
-LaTeX Info: Redefining \nameref on input line 75.
+LaTeX Info: Redefining \ref on input line 77.
+LaTeX Info: Redefining \pageref on input line 77.
+LaTeX Info: Redefining \nameref on input line 77.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
-\c@lstlisting=\count411
-LaTeX Font Info:    Trying to load font information for U+msa on input line 77.
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+\c@lstlisting=\count414
+<emoji/1F9C0.png, id=6, 72.27pt x 72.27pt>
+File: emoji/1F9C0.png Graphic file (type png)
+<use emoji/1F9C0.png>
+Package pdftex.def Info: emoji/1F9C0.png  used on input line 79.
+(pdftex.def)             Requested size: 41.98499pt x 41.985pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 79.
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 77.
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+LaTeX Font Info:    Trying to load font information for U+msb on input line 79.
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 77.
- (C:\Users\Ben\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 79.
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [1
+)
+<emoji/1F381.png, id=7, 72.27pt x 72.27pt>
+File: emoji/1F381.png Graphic file (type png)
+<use emoji/1F381.png>
+Package pdftex.def Info: emoji/1F381.png  used on input line 79.
+(pdftex.def)             Requested size: 17.62415pt x 17.62482pt.
+<emoji/1F4AF.png, id=8, 72.27pt x 72.27pt>
+File: emoji/1F4AF.png Graphic file (type png)
+<use emoji/1F4AF.png>
+Package pdftex.def Info: emoji/1F4AF.png  used on input line 79.
+(pdftex.def)             Requested size: 17.62415pt x 17.62482pt.
+<emoji/1F64F.png, id=9, 72.27pt x 72.27pt>
+File: emoji/1F64F.png Graphic file (type png)
+<use emoji/1F64F.png>
+Package pdftex.def Info: emoji/1F64F.png  used on input line 79.
+(pdftex.def)             Requested size: 17.62415pt x 17.62482pt.
+<emoji/1F699.png, id=10, 72.27pt x 72.27pt>
+File: emoji/1F699.png Graphic file (type png)
+<use emoji/1F699.png>
+Package pdftex.def Info: emoji/1F699.png  used on input line 79.
+(pdftex.def)             Requested size: 17.62415pt x 17.62482pt.
+<emoji/1F30E.png, id=11, 72.27pt x 72.27pt>
+File: emoji/1F30E.png Graphic file (type png)
+<use emoji/1F30E.png>
+Package pdftex.def Info: emoji/1F30E.png  used on input line 79.
+(pdftex.def)             Requested size: 17.62415pt x 17.62482pt.
+ [1
 
-{C:/Users/Ben/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] (ECE315_Lab3.toc)
+{C:/Users/benja/AppData/Local/MiKTeX/2.9/fonts/map/pdftex/pdftex.map} <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F9C0.png> <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F381.png> <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F4AF.png> <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F64F.png> <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F699.png> <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F30E.png>] (ECE315_Lab3.toc)
 \tf@toc=\write6
 \openout6 = `ECE315_Lab3.toc'.
 
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.79 \newpage
+l.81 \newpage
               [1]
+<emoji/1F52C.png, id=50, 72.27pt x 72.27pt>
+File: emoji/1F52C.png Graphic file (type png)
+<use emoji/1F52C.png>
+Package pdftex.def Info: emoji/1F52C.png  used on input line 85.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+File: emoji/1F4AF.png Graphic file (type png)
+<use emoji/1F4AF.png>
+Package pdftex.def Info: emoji/1F4AF.png  used on input line 85.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/default-pyg-prefix.pygstyle) (_minted-ECE315_Lab3/bw.pygstyle) (_minted-ECE315_Lab3/8E722EC30A14B9D23F1BB0B3F227997C33732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/bw.pygstyle) (_minted-ECE315_Lab3/8E722EC30A14B9D23F1BB0B3F227997CFF6DBF8615C98426785B2DECD48138C8.pygtex)
+<emoji/1F3B1.png, id=51, 72.27pt x 72.27pt>
+File: emoji/1F3B1.png Graphic file (type png)
+<use emoji/1F3B1.png>
+Package pdftex.def Info: emoji/1F3B1.png  used on input line 90.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+<emoji/1F6B0.png, id=52, 72.27pt x 72.27pt>
+File: emoji/1F6B0.png Graphic file (type png)
+<use emoji/1F6B0.png>
+Package pdftex.def Info: emoji/1F6B0.png  used on input line 90.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+File: emoji/1F9C0.png Graphic file (type png)
+<use emoji/1F9C0.png>
+Package pdftex.def Info: emoji/1F9C0.png  used on input line 90.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+<emoji/1F4A4.png, id=53, 72.27pt x 72.27pt>
+File: emoji/1F4A4.png Graphic file (type png)
+<use emoji/1F4A4.png>
+Package pdftex.def Info: emoji/1F4A4.png  used on input line 90.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+<emoji/1F680.png, id=54, 72.27pt x 72.27pt>
+File: emoji/1F680.png Graphic file (type png)
+<use emoji/1F680.png>
+Package pdftex.def Info: emoji/1F680.png  used on input line 92.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+<emoji/1F3C6.png, id=55, 72.27pt x 72.27pt>
+File: emoji/1F3C6.png Graphic file (type png)
+<use emoji/1F3C6.png>
+Package pdftex.def Info: emoji/1F3C6.png  used on input line 92.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/BDDA96D977AAABBDC66650F8D494246733732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/BDDA96D977AAABBDC66650F8D4942467FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/CF391AF17297E18FB770C88C2E90FE9933732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/CF391AF17297E18FB770C88C2E90FE99FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/FC12500DF7D33F17F3093D899686926633732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/FC12500DF7D33F17F3093D8996869266FF6DBF8615C98426785B2DECD48138C8.pygtex)
+<emoji/1F3AF.png, id=56, 72.27pt x 72.27pt>
+File: emoji/1F3AF.png Graphic file (type png)
+<use emoji/1F3AF.png>
+Package pdftex.def Info: emoji/1F3AF.png  used on input line 94.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/1BE96054389EEBF8A216223B7DC1E4F533732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/1BE96054389EEBF8A216223B7DC1E4F5FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/FD983D9F5FEFFC6B94011F2EE42F279D33732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/FD983D9F5FEFFC6B94011F2EE42F279DFF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/C431E6F71B26672B053A051636A6C9EF33732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/C431E6F71B26672B053A051636A6C9EFFF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/624E129A68BB247E642136730D0A828333732D1BB2204F3A6698EA27C5AC760B.pygtex)
-<Diagram.png, id=40, 954.56625pt x 417.56pt>
+ (_minted-ECE315_Lab3/624E129A68BB247E642136730D0A8283FF6DBF8615C98426785B2DECD48138C8.pygtex)
+<emoji/1F345.png, id=57, 72.27pt x 72.27pt>
+File: emoji/1F345.png Graphic file (type png)
+<use emoji/1F345.png>
+Package pdftex.def Info: emoji/1F345.png  used on input line 99.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+<Diagram.png, id=58, 954.56625pt x 417.56pt>
 File: Diagram.png Graphic file (type png)
 <use Diagram.png>
-Package pdftex.def Info: Diagram.png  used on input line 100.
+Package pdftex.def Info: Diagram.png  used on input line 102.
 (pdftex.def)             Requested size: 469.75539pt x 205.48544pt.
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.103 B
-       elow, the block design for this exercise is shown. The confections be... [1]
+l.105 B
+       elow, the 😤 block design for this exercise is shown. The 😤 conf... [1 <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F52C.png> <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F3B1.png> <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F6B0.png> <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F4A4.png> <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F680.png> <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F3C6.png> <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F3AF.png> <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F345.png>]
+<emoji/1F624.png, id=74, 72.27pt x 72.27pt>
+File: emoji/1F624.png Graphic file (type png)
+<use emoji/1F624.png>
+Package pdftex.def Info: emoji/1F624.png  used on input line 105.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+File: emoji/1F624.png Graphic file (type png)
+<use emoji/1F624.png>
+Package pdftex.def Info: emoji/1F624.png  used on input line 105.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/C7678878380E055A00F480978B68C80133732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/C7678878380E055A00F480978B68C801FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/3ADAFC2F85278568160AECBDF38B631F33732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/3ADAFC2F85278568160AECBDF38B631FFF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/897898741F1005ED219139D05A308C4133732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/897898741F1005ED219139D05A308C41FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/A9F6FBA068AF72661FD1E7E469B9540133732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/A9F6FBA068AF72661FD1E7E469B95401FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/46F2A2F5F7C44C9DC0E7450293E1FBAB33732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/46F2A2F5F7C44C9DC0E7450293E1FBABFF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/E3F81D667911D1846B7B91DFD8B35FF733732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/E3F81D667911D1846B7B91DFD8B35FF7FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/DF48647988A4202239753B853D065E6433732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/DF48647988A4202239753B853D065E64FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/8E2909C24384035E40E230EE903163D133732D1BB2204F3A6698EA27C5AC760B.pygtex)
-<Diagram2.png, id=48, 409.53pt x 399.74344pt>
+ (_minted-ECE315_Lab3/8E2909C24384035E40E230EE903163D1FF6DBF8615C98426785B2DECD48138C8.pygtex)
+<Diagram2.png, id=75, 409.53pt x 399.74344pt>
 File: Diagram2.png Graphic file (type png)
 <use Diagram2.png>
-Package pdftex.def Info: Diagram2.png  used on input line 106.
+Package pdftex.def Info: Diagram2.png  used on input line 108.
 (pdftex.def)             Requested size: 281.8561pt x 275.134pt.
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/4C8F7249E2427CA9FB299B27B2A8454233732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/4C8F7249E2427CA9FB299B27B2A84542FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/7E88D5374F1D3080DB8F04CE225AA29F33732D1BB2204F3A6698EA27C5AC760B.pygtex) [2 <./Diagram.png> <./Diagram2.png>]
+ (_minted-ECE315_Lab3/7E88D5374F1D3080DB8F04CE225AA29FFF6DBF8615C98426785B2DECD48138C8.pygtex)
+<emoji/1F4B0.png, id=76, 72.27pt x 72.27pt>
+File: emoji/1F4B0.png Graphic file (type png)
+<use emoji/1F4B0.png>
+Package pdftex.def Info: emoji/1F4B0.png  used on input line 112.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+ [2 <./Diagram.png> <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F624.png> <./Diagram2.png>]
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/7E88D5374F1D3080DB8F04CE225AA29F33732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/7E88D5374F1D3080DB8F04CE225AA29FFF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/83A692DD84E4716905C4B6CCBB07534933732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/83A692DD84E4716905C4B6CCBB075349FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/3A6A11D94253F465B5D5E882840F017333732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/3A6A11D94253F465B5D5E882840F0173FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/83A692DD84E4716905C4B6CCBB07534933732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/83A692DD84E4716905C4B6CCBB075349FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/0835D502B549AA41378626566EE3412533732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/0835D502B549AA41378626566EE34125FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/A3A03F5FC77900B0A1C9EC31DED7D7B233732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/A3A03F5FC77900B0A1C9EC31DED7D7B2FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/9C80796C47AB5DBF66E66D4AB760376133732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/9C80796C47AB5DBF66E66D4AB7603761FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/3A6A11D94253F465B5D5E882840F017333732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/3A6A11D94253F465B5D5E882840F0173FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/1FED1482F22F9C6C86ED2E72463F1E8B33732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/1FED1482F22F9C6C86ED2E72463F1E8BFF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/BDDA96D977AAABBDC66650F8D494246733732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/BDDA96D977AAABBDC66650F8D4942467FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/FEC809A759371D260763E193EB7201A933732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/FEC809A759371D260763E193EB7201A9FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/BDDA96D977AAABBDC66650F8D494246733732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/BDDA96D977AAABBDC66650F8D4942467FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/6470E394CBF6DAB6A91682CC8585059B33732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/6470E394CBF6DAB6A91682CC8585059BFF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/5D922E0CC2982B544A7EAA0AE76AA9AE33732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/5D922E0CC2982B544A7EAA0AE76AA9AEFF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/A613B3318F42753611055F9830866B0733732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/A613B3318F42753611055F9830866B07FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/624E129A68BB247E642136730D0A828333732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/624E129A68BB247E642136730D0A8283FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/624E129A68BB247E642136730D0A828333732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/624E129A68BB247E642136730D0A8283FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/624E129A68BB247E642136730D0A828333732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/624E129A68BB247E642136730D0A8283FF6DBF8615C98426785B2DECD48138C8.pygtex)
+<emoji/1F35E.png, id=86, 72.27pt x 72.27pt>
+File: emoji/1F35E.png Graphic file (type png)
+<use emoji/1F35E.png>
+Package pdftex.def Info: emoji/1F35E.png  used on input line 123.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/624E129A68BB247E642136730D0A828333732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/624E129A68BB247E642136730D0A8283FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/624E129A68BB247E642136730D0A828333732D1BB2204F3A6698EA27C5AC760B.pygtex) [3]
+ (_minted-ECE315_Lab3/624E129A68BB247E642136730D0A8283FF6DBF8615C98426785B2DECD48138C8.pygtex) [3 <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F4B0.png> <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F35E.png>]
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/FD983D9F5FEFFC6B94011F2EE42F279D33732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/FD983D9F5FEFFC6B94011F2EE42F279DFF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/08724E740EC01BC83C0660A983527D9133732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/08724E740EC01BC83C0660A983527D91FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/624E129A68BB247E642136730D0A828333732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/624E129A68BB247E642136730D0A8283FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/624E129A68BB247E642136730D0A828333732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/624E129A68BB247E642136730D0A8283FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/624E129A68BB247E642136730D0A828333732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/624E129A68BB247E642136730D0A8283FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/CA05E53C2877AEBB101A5508144428A233732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/CA05E53C2877AEBB101A5508144428A2FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/624E129A68BB247E642136730D0A828333732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/624E129A68BB247E642136730D0A8283FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/2AA62EA697EF579FEC50FBB4542F67F133732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/2AA62EA697EF579FEC50FBB4542F67F1FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/C431E6F71B26672B053A051636A6C9EF33732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/C431E6F71B26672B053A051636A6C9EFFF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/9183AC7FB80636A0B8D3C47D170CB6B033732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/9183AC7FB80636A0B8D3C47D170CB6B0FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/9183AC7FB80636A0B8D3C47D170CB6B033732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/9183AC7FB80636A0B8D3C47D170CB6B0FF6DBF8615C98426785B2DECD48138C8.pygtex)
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/EA086616748423330B051813FA3A890133732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/EA086616748423330B051813FA3A8901FF6DBF8615C98426785B2DECD48138C8.pygtex)
+<emoji/1F697.png, id=94, 72.27pt x 72.27pt>
+File: emoji/1F697.png Graphic file (type png)
+<use emoji/1F697.png>
+Package pdftex.def Info: emoji/1F697.png  used on input line 138.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+<emoji/1F695.png, id=95, 72.27pt x 72.27pt>
+File: emoji/1F695.png Graphic file (type png)
+<use emoji/1F695.png>
+Package pdftex.def Info: emoji/1F695.png  used on input line 138.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+File: emoji/1F699.png Graphic file (type png)
+<use emoji/1F699.png>
+Package pdftex.def Info: emoji/1F699.png  used on input line 138.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+<emoji/1F4A8.png, id=96, 72.27pt x 72.27pt>
+File: emoji/1F4A8.png Graphic file (type png)
+<use emoji/1F4A8.png>
+Package pdftex.def Info: emoji/1F4A8.png  used on input line 138.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+
+Underfull \hbox (badness 1681) in paragraph at lines 162--162
+\OT1/cmr/m/n/10.95 dis-abled us-ing com-mand tog-
+ []
+
+[4 <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F697.png> <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F695.png> <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F4A8.png>] [5]
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/8E722EC30A14B9D23F1BB0B3F227997C33732D1BB2204F3A6698EA27C5AC760B.pygtex) [4]
+ (_minted-ECE315_Lab3/8E722EC30A14B9D23F1BB0B3F227997CFF6DBF8615C98426785B2DECD48138C8.pygtex)
+File: emoji/1F4B0.png Graphic file (type png)
+<use emoji/1F4B0.png>
+Package pdftex.def Info: emoji/1F4B0.png  used on input line 168.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+File: emoji/1F4B0.png Graphic file (type png)
+<use emoji/1F4B0.png>
+Package pdftex.def Info: emoji/1F4B0.png  used on input line 168.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+File: emoji/1F4B0.png Graphic file (type png)
+<use emoji/1F4B0.png>
+Package pdftex.def Info: emoji/1F4B0.png  used on input line 168.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+<emoji/1F692.png, id=110, 72.27pt x 72.27pt>
+File: emoji/1F692.png Graphic file (type png)
+<use emoji/1F692.png>
+Package pdftex.def Info: emoji/1F692.png  used on input line 171.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+<emoji/1F355.png, id=111, 72.27pt x 72.27pt>
+File: emoji/1F355.png Graphic file (type png)
+<use emoji/1F355.png>
+Package pdftex.def Info: emoji/1F355.png  used on input line 173.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/624E129A68BB247E642136730D0A828333732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/624E129A68BB247E642136730D0A8283FF6DBF8615C98426785B2DECD48138C8.pygtex)
+<emoji/1F610.png, id=112, 72.27pt x 72.27pt>
+File: emoji/1F610.png Graphic file (type png)
+<use emoji/1F610.png>
+Package pdftex.def Info: emoji/1F610.png  used on input line 175.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+<emoji/1F637.png, id=113, 72.27pt x 72.27pt>
+File: emoji/1F637.png Graphic file (type png)
+<use emoji/1F637.png>
+Package pdftex.def Info: emoji/1F637.png  used on input line 175.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/8E722EC30A14B9D23F1BB0B3F227997C33732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/8E722EC30A14B9D23F1BB0B3F227997CFF6DBF8615C98426785B2DECD48138C8.pygtex)
+File: emoji/1F692.png Graphic file (type png)
+<use emoji/1F692.png>
+Package pdftex.def Info: emoji/1F692.png  used on input line 177.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/7AFECB3A84E3FAAF721DC5F53DE6C77E33732D1BB2204F3A6698EA27C5AC760B.pygtex)
+ (_minted-ECE315_Lab3/7AFECB3A84E3FAAF721DC5F53DE6C77EFF6DBF8615C98426785B2DECD48138C8.pygtex)
+<emoji/1F4B5.png, id=114, 72.27pt x 72.27pt>
+File: emoji/1F4B5.png Graphic file (type png)
+<use emoji/1F4B5.png>
+Package pdftex.def Info: emoji/1F4B5.png  used on input line 182.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+File: emoji/1F4B5.png Graphic file (type png)
+<use emoji/1F4B5.png>
+Package pdftex.def Info: emoji/1F4B5.png  used on input line 182.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+File: emoji/1F4B5.png Graphic file (type png)
+<use emoji/1F4B5.png>
+Package pdftex.def Info: emoji/1F4B5.png  used on input line 182.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
 \openout5 = `ECE315_Lab3.pyg'.
 
- (_minted-ECE315_Lab3/9C494B9638842ACE0121FA1D21AEE7E233732D1BB2204F3A6698EA27C5AC760B.pygtex) [5] (ECE315_Lab3.aux)
+ (_minted-ECE315_Lab3/9C494B9638842ACE0121FA1D21AEE7E2FF6DBF8615C98426785B2DECD48138C8.pygtex)
+File: emoji/1F4B5.png Graphic file (type png)
+<use emoji/1F4B5.png>
+Package pdftex.def Info: emoji/1F4B5.png  used on input line 185.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+File: emoji/1F4B5.png Graphic file (type png)
+<use emoji/1F4B5.png>
+Package pdftex.def Info: emoji/1F4B5.png  used on input line 185.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+File: emoji/1F4B5.png Graphic file (type png)
+<use emoji/1F4B5.png>
+Package pdftex.def Info: emoji/1F4B5.png  used on input line 185.
+(pdftex.def)             Requested size: 16.42435pt x 16.42503pt.
+ [6 <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F692.png> <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F355.png> <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F610.png> <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F637.png> <C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/tex/latex/apple_emoji/emoji/1F4B5.png>] [7] (ECE315_Lab3.aux)
 runsystem(del ECE315_Lab3.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 32241 strings out of 478681
- 645088 string characters out of 2847483
- 982580 words of memory out of 3000000
- 49590 multiletter control sequences out of 15000+600000
+ 34511 strings out of 478678
+ 678554 string characters out of 2844426
+ 1034469 words of memory out of 3000000
+ 51784 multiletter control sequences out of 15000+600000
  413852 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,12n,111p,745b,758s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\Ben\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/Ben/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Ben/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Ben/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Ben/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Ben/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Ben/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on ECE315_Lab3.pdf (7 pages, 160814 bytes).
+ 108i,15n,111p,747b,900s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\benja\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on ECE315_Lab3.pdf (9 pages, 253055 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 20 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 195 PDF objects out of 1000 (max. 8388607)
+ 22 named destinations out of 1000 (max. 500000)
+ 228 words of extra memory for PDF output out of 10000 (max. 10000000)
 
