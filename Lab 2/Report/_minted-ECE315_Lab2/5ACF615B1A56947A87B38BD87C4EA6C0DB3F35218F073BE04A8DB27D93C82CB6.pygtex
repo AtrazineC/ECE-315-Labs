@@ -1,0 +1,258 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}xparameters.h\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}xplatform\PYGZus{}info.h\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}xuartps.h\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}xil\PYGZus{}exception.h\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}xil\PYGZus{}printf.h\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}xscugic.h\PYGZdq{}}
+
+\PYG{c+cm}{/* FreeRTOS includes. */}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}FreeRTOS.h\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}task.h\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}queue.h\PYGZdq{}}
+
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}stdio.h\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}string.h\PYGZdq{}}
+
+\PYG{c+c1}{// header file containing the morse code for different characters}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}morseTranslator.h\PYGZdq{}}
+
+\PYG{c+cm}{/************************** Constant Definitions *****************************/}
+
+\PYG{c+c1}{//UART definitions from xparameters.h}
+\PYG{c+cp}{\PYGZsh{}define UART\PYGZus{}DEVICE\PYGZus{}ID              XPAR\PYGZus{}XUARTPS\PYGZus{}0\PYGZus{}DEVICE\PYGZus{}ID}
+\PYG{c+cp}{\PYGZsh{}define UART\PYGZus{}BASEADDR                XPAR\PYGZus{}XUARTPS\PYGZus{}0\PYGZus{}BASEADDR}
+
+\PYG{c+c1}{//definitions for the terminating sequence characters}
+\PYG{c+cp}{\PYGZsh{}define CHAR\PYGZus{}HASH                0x23   }
+\PYG{c+cp}{\PYGZsh{}define CHAR\PYGZus{}CARRIAGE\PYGZus{}RETURN    0x0D   }
+
+\PYG{c+cp}{\PYGZsh{}define TASK\PYGZus{}PROCESS\PYGZus{}BUFFER    500}
+\PYG{c+cp}{\PYGZsh{}define RECEIVER\PYGZus{}POLL\PYGZus{}PERIOD\PYGZus{}MS 20 }
+
+\PYG{c+c1}{//queue limit definitions}
+\PYG{c+cp}{\PYGZsh{}define XQUEUE\PYGZus{}12\PYGZus{}CAPACITY        20}
+\PYG{c+cp}{\PYGZsh{}define XQUEUE\PYGZus{}23\PYGZus{}CAPACITY        30}
+\PYG{c+c1}{//error message}
+\PYG{c+cp}{\PYGZsh{}define ERROR\PYGZus{}MESSAGE \PYGZdq{}Maximum message length exceeded. \PYGZbs{}}
+\PYG{c+cp}{Message ignored.\PYGZbs{}rType in the termination sequence to \PYGZbs{}}
+\PYG{c+cp}{translate the \PYGZsq{}excess\PYGZsq{} characters that went above the array \PYGZbs{}}
+\PYG{c+cp}{limit and caused overflow.\PYGZbs{}r\PYGZbs{}r\PYGZbs{}n\PYGZdq{}}
+
+\PYG{c+cm}{/***************** Macros (Inline Functions) Definitions *********************/}
+
+\PYG{k}{static} \PYG{k+kt}{void} \PYG{n+nf}{TaskMorseMsgReceiver}\PYG{p}{(}\PYG{k+kt}{void}\PYG{o}{*} \PYG{n}{pvParameters}\PYG{p}{);}
+
+\PYG{k}{static} \PYG{n}{TaskHandle\PYGZus{}t} \PYG{n}{xTask\PYGZus{}msgreceive}\PYG{p}{;}
+
+\PYG{k}{static} \PYG{k+kt}{void} \PYG{n+nf}{TaskMorseMsgProcessor}\PYG{p}{(}\PYG{k+kt}{void}\PYG{o}{*} \PYG{n}{pvParameters}\PYG{p}{);}
+
+\PYG{k}{static} \PYG{n}{TaskHandle\PYGZus{}t} \PYG{n}{xTask\PYGZus{}msgprocess}\PYG{p}{;}
+
+\PYG{k}{static} \PYG{k+kt}{void} \PYG{n+nf}{TaskDecodedMsgTransmitter}\PYG{p}{(}\PYG{k+kt}{void}\PYG{o}{*} \PYG{n}{pvParameters}\PYG{p}{);}
+
+\PYG{k}{static} \PYG{n}{TaskHandle\PYGZus{}t} \PYG{n}{xTask\PYGZus{}msgtransmit}\PYG{p}{;}
+
+\PYG{k}{static} \PYG{k+kt}{void} \PYG{n+nf}{UART\PYGZus{}print\PYGZus{}queueerror\PYGZus{}msg}\PYG{p}{(}\PYG{k+kt}{char}\PYG{o}{*} \PYG{n}{str}\PYG{p}{);}
+
+\PYG{k}{static} \PYG{n}{QueueHandle\PYGZus{}t} \PYG{n}{xQueue\PYGZus{}12} \PYG{o}{=} \PYG{n+nb}{NULL}\PYG{p}{;}    
+\PYG{k}{static} \PYG{n}{QueueHandle\PYGZus{}t} \PYG{n}{xQueue\PYGZus{}23} \PYG{o}{=} \PYG{n+nb}{NULL}\PYG{p}{;}  
+
+\PYG{k+kt}{void} \PYG{n+nf}{morseToTextConverter}\PYG{p}{(}\PYG{k+kt}{char} \PYG{n}{input\PYGZus{}char}\PYG{p}{);}
+
+\PYG{c+cm}{/************************** Function Prototypes ******************************/}
+
+\PYG{k+kt}{int} \PYG{n+nf}{Intialize\PYGZus{}UART}\PYG{p}{(}\PYG{n}{u16} \PYG{n}{DeviceId}\PYG{p}{);}
+
+\PYG{c+cm}{/************************** Variable Definitions *****************************/}
+
+\PYG{n}{XUartPs} \PYG{n}{Uart\PYGZus{}PS}\PYG{p}{;}     
+\PYG{n}{XUartPs\PYGZus{}Config}\PYG{o}{*} \PYG{n}{Config}\PYG{p}{;}
+
+\PYG{k+kt}{char} \PYG{n}{char\PYGZus{}morse\PYGZus{}sequence}\PYG{p}{[}\PYG{l+m+mi}{10}\PYG{p}{];}
+\PYG{k+kt}{char} \PYG{n}{output\PYGZus{}text\PYGZus{}sequence}\PYG{p}{[}\PYG{l+m+mi}{500}\PYG{p}{];}
+\PYG{k+kt}{int} \PYG{n}{output\PYGZus{}length}\PYG{p}{;}
+\PYG{k+kt}{int} \PYG{n}{char\PYGZus{}seq\PYGZus{}length}\PYG{p}{;}
+
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{Status}\PYG{p}{;}
+
+    \PYG{n}{xTaskCreate}\PYG{p}{(}\PYG{n}{TaskMorseMsgReceiver}\PYG{p}{,}
+                \PYG{p}{(}\PYG{k}{const} \PYG{k+kt}{char}\PYG{o}{*}\PYG{p}{)} \PYG{l+s}{\PYGZdq{}T1\PYGZdq{}}\PYG{p}{,}
+                \PYG{n}{configMINIMAL\PYGZus{}STACK\PYGZus{}SIZE} \PYG{o}{*} \PYG{l+m+mi}{5}\PYG{p}{,}
+                \PYG{n+nb}{NULL}\PYG{p}{,}
+                \PYG{n}{tskIDLE\PYGZus{}PRIORITY}\PYG{p}{,}
+                \PYG{o}{\PYGZam{}}\PYG{n}{xTask\PYGZus{}msgreceive}\PYG{p}{);}
+
+    \PYG{n}{xTaskCreate}\PYG{p}{(}\PYG{n}{TaskMorseMsgProcessor}\PYG{p}{,}
+                \PYG{p}{(}\PYG{k}{const} \PYG{k+kt}{char}\PYG{o}{*}\PYG{p}{)} \PYG{l+s}{\PYGZdq{}T2\PYGZdq{}}\PYG{p}{,}
+                \PYG{n}{configMINIMAL\PYGZus{}STACK\PYGZus{}SIZE} \PYG{o}{*} \PYG{l+m+mi}{5}\PYG{p}{,}
+                \PYG{n+nb}{NULL}\PYG{p}{,}
+                \PYG{n}{tskIDLE\PYGZus{}PRIORITY}\PYG{p}{,}
+                \PYG{o}{\PYGZam{}}\PYG{n}{xTask\PYGZus{}msgprocess}\PYG{p}{);}
+
+    \PYG{n}{xTaskCreate}\PYG{p}{(}\PYG{n}{TaskDecodedMsgTransmitter}\PYG{p}{,}
+                \PYG{p}{(}\PYG{k}{const} \PYG{k+kt}{char}\PYG{o}{*}\PYG{p}{)} \PYG{l+s}{\PYGZdq{}T3\PYGZdq{}}\PYG{p}{,}
+                \PYG{n}{configMINIMAL\PYGZus{}STACK\PYGZus{}SIZE} \PYG{o}{*} \PYG{l+m+mi}{5}\PYG{p}{,}
+                \PYG{n+nb}{NULL}\PYG{p}{,}
+                \PYG{n}{tskIDLE\PYGZus{}PRIORITY}\PYG{p}{,}
+                \PYG{o}{\PYGZam{}}\PYG{n}{xTask\PYGZus{}msgtransmit}\PYG{p}{);}
+
+
+    \PYG{n}{Status} \PYG{o}{=} \PYG{n}{Intialize\PYGZus{}UART}\PYG{p}{(}\PYG{n}{UART\PYGZus{}DEVICE\PYGZus{}ID}\PYG{p}{);}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{Status} \PYG{o}{!=} \PYG{n}{XST\PYGZus{}SUCCESS}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{xil\PYGZus{}printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}UART Polled Mode Example Test Failed}\PYG{l+s+se}{\PYGZbs{}r\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{n}{xQueue\PYGZus{}12} \PYG{o}{=} \PYG{n}{xQueueCreate}\PYG{p}{(}\PYG{n}{XQUEUE\PYGZus{}12\PYGZus{}CAPACITY}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{u8}\PYG{p}{));}
+
+    \PYG{n}{xQueue\PYGZus{}23} \PYG{o}{=} \PYG{n}{xQueueCreate}\PYG{p}{(}\PYG{n}{XQUEUE\PYGZus{}23\PYGZus{}CAPACITY}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{u8}\PYG{p}{));}
+
+
+    \PYG{c+cm}{/* Check the queue was created. */}
+    \PYG{n}{configASSERT}\PYG{p}{(}\PYG{n}{xQueue\PYGZus{}12}\PYG{p}{);}
+    \PYG{n}{configASSERT}\PYG{p}{(}\PYG{n}{xQueue\PYGZus{}23}\PYG{p}{);}
+
+    \PYG{n}{xil\PYGZus{}printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Please type in your morse code below to be translated to text}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{xil\PYGZus{}printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Remember the following: }\PYG{l+s+se}{\PYGZbs{}r}\PYG{l+s}{	1) Add a \PYGZsq{}|\PYGZsq{} after every letter}\PYG{l+s+se}{\PYGZbs{}r}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{xil\PYGZus{}printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}	2) One space between each word}\PYG{l+s+se}{\PYGZbs{}r}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{xil\PYGZus{}printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}	3) One carriage return (ENTER) to write on a new line}\PYG{l+s+se}{\PYGZbs{}r}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{xil\PYGZus{}printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}	4) And when you are done, type in the termination sequence}\PYG{l+s+se}{\PYGZbs{}n\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+
+    \PYG{n}{vTaskStartScheduler}\PYG{p}{();}
+
+    \PYG{k}{while} \PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+
+\PYG{k+kt}{int} \PYG{n+nf}{Intialize\PYGZus{}UART}\PYG{p}{(}\PYG{n}{u16} \PYG{n}{DeviceId}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{Status}\PYG{p}{;}
+    \PYG{c+cm}{/*}
+\PYG{c+cm}{     * Initialize the UART driver so that it\PYGZsq{}s ready to use.}
+\PYG{c+cm}{     * Look up the configuration in the config table, then initialize it.}
+\PYG{c+cm}{     */}
+    \PYG{n}{Config} \PYG{o}{=} \PYG{n}{XUartPs\PYGZus{}LookupConfig}\PYG{p}{(}\PYG{n}{DeviceId}\PYG{p}{);}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n+nb}{NULL} \PYG{o}{==} \PYG{n}{Config}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{n}{XST\PYGZus{}FAILURE}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{n}{Status} \PYG{o}{=} \PYG{n}{XUartPs\PYGZus{}CfgInitialize}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{Uart\PYGZus{}PS}\PYG{p}{,} \PYG{n}{Config}\PYG{p}{,} \PYG{n}{Config}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{BaseAddress}\PYG{p}{);}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{Status} \PYG{o}{!=} \PYG{n}{XST\PYGZus{}SUCCESS}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{n}{XST\PYGZus{}FAILURE}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{c+cm}{/* Use NORMAL UART mode. */}
+    \PYG{n}{XUartPs\PYGZus{}SetOperMode}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{Uart\PYGZus{}PS}\PYG{p}{,} \PYG{n}{XUARTPS\PYGZus{}OPER\PYGZus{}MODE\PYGZus{}NORMAL}\PYG{p}{);}
+
+    \PYG{k}{return} \PYG{n}{XST\PYGZus{}SUCCESS}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{static} \PYG{k+kt}{void} \PYG{n+nf}{TaskMorseMsgReceiver}\PYG{p}{(}\PYG{k+kt}{void}\PYG{o}{*} \PYG{n}{pvParameters}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{u8} \PYG{n}{RecvChar}\PYG{p}{;}
+    \PYG{k}{const} \PYG{n}{TickType\PYGZus{}t} \PYG{n}{xPeriod} \PYG{o}{=} \PYG{n}{pdMS\PYGZus{}TO\PYGZus{}TICKS}\PYG{p}{(}\PYG{n}{RECEIVER\PYGZus{}POLL\PYGZus{}PERIOD\PYGZus{}MS}\PYG{p}{);}
+    \PYG{n}{TickType\PYGZus{}t} \PYG{n}{xLastWakeTime} \PYG{o}{=} \PYG{n}{xTaskGetTickCount}\PYG{p}{();}
+
+    \PYG{k}{for} \PYG{p}{(;;)} \PYG{p}{\PYGZob{}}
+    	\PYG{n}{vTaskDelayUntil}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{xLastWakeTime}\PYG{p}{,} \PYG{n}{xPeriod}\PYG{p}{);}
+
+        \PYG{c+c1}{// Receive characters over UART if there\PYGZsq{}s room in the queue}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{uxQueueMessagesWaiting}\PYG{p}{(}\PYG{n}{xQueue\PYGZus{}12}\PYG{p}{)} \PYG{o}{\PYGZlt{}} \PYG{n}{XQUEUE\PYGZus{}12\PYGZus{}CAPACITY}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        	\PYG{n}{RecvChar} \PYG{o}{=} \PYG{n}{XUartPs\PYGZus{}RecvByte}\PYG{p}{(}\PYG{n}{UART\PYGZus{}BASEADDR}\PYG{p}{);}
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{xQueueSendToBack}\PYG{p}{(}\PYG{n}{xQueue\PYGZus{}12}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{RecvChar}\PYG{p}{,} \PYG{n}{portMAX\PYGZus{}DELAY}\PYG{p}{)} \PYG{o}{!=} \PYG{n}{pdPASS}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{n}{UART\PYGZus{}print\PYGZus{}queueerror\PYGZus{}msg}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}xQueueSendToBack: Could not }
+                    \PYG{n}{write} \PYG{n}{character} \PYG{n}{to} \PYG{n}{xQueue\PYGZus{}12}\PYG{err}{\PYGZbs{}}\PYG{n}{n}\PYG{l+s}{\PYGZdq{});}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{static} \PYG{k+kt}{void} \PYG{n}{TaskMorseMsgProcessor}\PYG{p}{(}\PYG{k+kt}{void}\PYG{o}{*} \PYG{n}{pvParameters}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{static} \PYG{k+kt}{char} \PYG{n}{a}\PYG{p}{[}\PYG{n}{TASK\PYGZus{}PROCESS\PYGZus{}BUFFER}\PYG{p}{];}
+    \PYG{k+kt}{int} \PYG{n}{no\PYGZus{}of\PYGZus{}characters\PYGZus{}read}\PYG{p}{;}
+    \PYG{n}{BaseType\PYGZus{}t} \PYG{n}{break\PYGZus{}loop}\PYG{p}{;}
+    \PYG{k+kt}{int} \PYG{n}{error\PYGZus{}flag}\PYG{p}{;}
+
+    \PYG{k}{for} \PYG{p}{(;;)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{no\PYGZus{}of\PYGZus{}characters\PYGZus{}read} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{n}{break\PYGZus{}loop} \PYG{o}{=} \PYG{n}{FALSE}\PYG{p}{;}
+        \PYG{n}{output\PYGZus{}length} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{n}{error\PYGZus{}flag} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{n}{memset}\PYG{p}{(}\PYG{n}{output\PYGZus{}text\PYGZus{}sequence}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{TASK\PYGZus{}PROCESS\PYGZus{}BUFFER}\PYG{p}{);}
+    	\PYG{k+kt}{int} \PYG{n}{sucess} \PYG{o}{=} \PYG{n}{pdFALSE}\PYG{p}{;}
+
+    	\PYG{k}{while} \PYG{p}{(}\PYG{n}{no\PYGZus{}of\PYGZus{}characters\PYGZus{}read} \PYG{o}{\PYGZlt{}} \PYG{n}{TASK\PYGZus{}PROCESS\PYGZus{}BUFFER} \PYG{o}{||} \PYG{n}{sucess} \PYG{o}{!=} \PYG{n}{pdTRUE}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        	\PYG{n}{no\PYGZus{}of\PYGZus{}characters\PYGZus{}read}\PYG{o}{++}\PYG{p}{;}
+        	\PYG{n}{sucess} \PYG{o}{=} \PYG{n}{xQueueReceive}\PYG{p}{(}\PYG{n}{xQueue\PYGZus{}12}\PYG{p}{,} 
+                    \PYG{o}{\PYGZam{}}\PYG{n}{a}\PYG{p}{[}\PYG{n}{no\PYGZus{}of\PYGZus{}characters\PYGZus{}read}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{],} \PYG{n}{portMAX\PYGZus{}DELAY}\PYG{p}{);}
+			\PYG{k}{if} \PYG{p}{(}\PYG{n}{no\PYGZus{}of\PYGZus{}characters\PYGZus{}read} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{4} \PYG{o}{\PYGZam{}\PYGZam{}}
+				\PYG{n}{a}\PYG{p}{[}\PYG{n}{no\PYGZus{}of\PYGZus{}characters\PYGZus{}read} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{3}\PYG{p}{]} \PYG{o}{==} \PYG{n}{CHAR\PYGZus{}CARRIAGE\PYGZus{}RETURN} \PYG{o}{\PYGZam{}\PYGZam{}}
+				\PYG{n}{a}\PYG{p}{[}\PYG{n}{no\PYGZus{}of\PYGZus{}characters\PYGZus{}read} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{2}\PYG{p}{]} \PYG{o}{==} \PYG{n}{CHAR\PYGZus{}HASH} \PYG{o}{\PYGZam{}\PYGZam{}}
+				\PYG{n}{a}\PYG{p}{[}\PYG{n}{no\PYGZus{}of\PYGZus{}characters\PYGZus{}read}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{==} \PYG{n}{CHAR\PYGZus{}CARRIAGE\PYGZus{}RETURN}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+				\PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{no\PYGZus{}of\PYGZus{}characters\PYGZus{}read}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+					\PYG{k+kt}{char} \PYG{n}{c} \PYG{o}{=} \PYG{n}{a}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];}
+					\PYG{n}{morseToTextConverter}\PYG{p}{(}\PYG{n}{c}\PYG{p}{);}
+				\PYG{p}{\PYGZcb{}}
+				\PYG{n}{break\PYGZus{}loop} \PYG{o}{=} \PYG{n}{TRUE}\PYG{p}{;}
+				\PYG{k}{break}\PYG{p}{;}
+			\PYG{p}{\PYGZcb{}}
+
+        \PYG{p}{\PYGZcb{}}
+
+        \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{break\PYGZus{}loop}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        	\PYG{n}{strcpy}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{ERROR\PYGZus{}MESSAGE}\PYG{p}{);}
+			\PYG{n}{output\PYGZus{}length} \PYG{o}{=} \PYG{n}{strlen}\PYG{p}{(}\PYG{n}{ERROR\PYGZus{}MESSAGE}\PYG{p}{);}
+			\PYG{n}{error\PYGZus{}flag} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+
+        \PYG{k+kt}{char}\PYG{o}{*} \PYG{n}{queue}\PYG{p}{;}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{error\PYGZus{}flag} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{n}{queue} \PYG{o}{=} \PYG{n}{a}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}} \PYG{k}{else} \PYG{p}{\PYGZob{}}
+            \PYG{n}{queue} \PYG{o}{=} \PYG{n}{output\PYGZus{}text\PYGZus{}sequence}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+
+		\PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{output\PYGZus{}length}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+			\PYG{n}{xQueueSendToBack}\PYG{p}{(}\PYG{n}{xQueue\PYGZus{}23}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{queue}\PYG{p}{[}\PYG{n}{i}\PYG{p}{],} \PYG{n}{portMAX\PYGZus{}DELAY}\PYG{p}{);}
+		\PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{static} \PYG{k+kt}{void} \PYG{n}{TaskDecodedMsgTransmitter}\PYG{p}{(}\PYG{k+kt}{void}\PYG{o}{*} \PYG{n}{pvParameters}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+
+    \PYG{n}{u8} \PYG{n}{write\PYGZus{}to\PYGZus{}console}\PYG{p}{;}
+    \PYG{k}{const} \PYG{n}{TickType\PYGZus{}t} \PYG{n}{xPeriod} \PYG{o}{=} \PYG{n}{pdMS\PYGZus{}TO\PYGZus{}TICKS}\PYG{p}{(}\PYG{n}{RECEIVER\PYGZus{}POLL\PYGZus{}PERIOD\PYGZus{}MS}\PYG{p}{);}
+    \PYG{n}{TickType\PYGZus{}t} \PYG{n}{xLastWakeTime} \PYG{o}{=} \PYG{n}{xTaskGetTickCount}\PYG{p}{();}
+
+    \PYG{k}{for} \PYG{p}{(;;)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{while} \PYG{p}{(}\PYG{n}{xQueueReceive}\PYG{p}{(}\PYG{n}{xQueue\PYGZus{}23}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{write\PYGZus{}to\PYGZus{}console}\PYG{p}{,} 
+            \PYG{n}{portMAX\PYGZus{}DELAY}\PYG{p}{)} \PYG{o}{!=} \PYG{n}{pdTRUE}\PYG{p}{);}
+
+        \PYG{k}{while} \PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{XUartPs\PYGZus{}IsTransmitFull}\PYG{p}{(}\PYG{n}{UART\PYGZus{}BASEADDR}\PYG{p}{))} \PYG{p}{\PYGZob{}}
+                \PYG{n}{vTaskDelayUntil}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{xLastWakeTime}\PYG{p}{,} \PYG{n}{xPeriod}\PYG{p}{);}
+            \PYG{p}{\PYGZcb{}} \PYG{k}{else} \PYG{p}{\PYGZob{}}
+				\PYG{n}{XUartPs\PYGZus{}SendByte}\PYG{p}{(}\PYG{n}{UART\PYGZus{}BASEADDR}\PYG{p}{,} \PYG{n}{write\PYGZus{}to\PYGZus{}console}\PYG{p}{);}
+                \PYG{k}{break}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+cm}{/*}
+\PYG{c+cm}{ * Writes a null\PYGZhy{}terminated string to the UART device }
+\PYG{c+cm}{ * set by UART\PYGZus{}DEVICE\PYGZus{}ID.}
+\PYG{c+cm}{ */}
+\PYG{k}{static} \PYG{k+kt}{void} \PYG{n}{UART\PYGZus{}print\PYGZus{}queueerror\PYGZus{}msg}\PYG{p}{(}\PYG{k+kt}{char}\PYG{o}{*} \PYG{n}{str}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{k}{while} \PYG{p}{(}\PYG{n}{TRUE}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{XUartPs\PYGZus{}SendByte}\PYG{p}{(}\PYG{n}{UART\PYGZus{}BASEADDR}\PYG{p}{,} \PYG{n}{str}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]);}
+        \PYG{o}{++}\PYG{n}{i}\PYG{p}{;}
+
+        \PYG{c+c1}{// Do not print the null byte terminator}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{str}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{==} \PYG{l+s+sc}{\PYGZsq{}\PYGZbs{}0\PYGZsq{}}\PYG{p}{)}
+            \PYG{k}{return}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\end{Verbatim}

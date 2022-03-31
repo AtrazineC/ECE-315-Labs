@@ -53,15 +53,15 @@
 \allowdisplaybreaks
 \definecolor{mycolor}{rgb}{0, 0, 0}
 
+\newcolumntype{s}{>{\hsize=.25\hsize}X}
+\newcolumntype{m}{>{\hsize=.6\hsize}X}
+
 \geometry{top=2.54cm, left=2.54cm, right=2.54cm, bottom=2.54cm}
 
 % Indentation/space between paragraphs
 \setlength{\headheight}{15pt}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt}
-
-% Line spacing
-\renewcommand{\baselinestretch}{1.5} 
+\setlength{\parskip}{15pt}
 
 % Line spacing
 \renewcommand{\baselinestretch}{1.3} 
@@ -99,7 +99,6 @@ ECE 315 Lab 2% Document name
 \pagenumbering{arabic}
 
 \section{Abstract}
-
 The purpose of this lab was to
 \begin{itemize}
   \item gain experience using an ASCII-encoded serial communications connection between a PC host and a Zybo Z7 microcomputer board
@@ -110,9 +109,9 @@ The purpose of this lab was to
 
 We will be using the Zybo Z7 development board by Digilent. The board is built
 around the Xilinx Zynq-7010 System-on-Chip silicon chip and contains two 667 MHz ARM
-Cortex A9 32-bit CPUs. For this lab, we will only be using one of the CPUs, CPU0, to run the FreeRTOS real-time kernel. CPU1 will be left disabled. \\
+Cortex A9 32-bit CPUs. For this lab, we will only be using one of the CPUs, CPU0, to run the FreeRTOS real-time kernel. CPU1 will be left disabled. 
 
-In this lab, we will complete two exercises. In exercise 1, we will design a morse code decoder system using polled UART interfacing. The user may enter Morse code messages (up to 500 characters long) using only a dot, dash, and a vertical bar into the console terminal on the host PC over the serial connection. Then, this will be decoded back into its original alphanumeric message and sent back to the console. Once the user has finished typing their Morse code message, the user must press the Enter key, press the \# key, and then press the Enter key once again. Then, the morse encoded message is processed by the FreeRTOS task and the decoded message is returned by the Zybo Z7 board over the serial connection and displayed on the PC console. \\ 
+In this lab, we will complete two exercises. In exercise 1, we will design a morse code decoder system using polled UART interfacing. The user may enter Morse code messages (up to 500 characters long) using only a dot, dash, and a vertical bar into the console terminal on the host PC over the serial connection. Then, this will be decoded back into its original alphanumeric message and sent back to the console. Once the user has finished typing their Morse code message, the user must press the Enter key, press the \# key, and then press the Enter key once again. Then, the morse encoded message is processed by the FreeRTOS task and the decoded message is returned by the Zybo Z7 board over the serial connection and displayed on the PC console. 
 
 In exercise 2, we will be modifying and enhancing an interrupt-driven driver for UART1 in the
 Zynq-7000 SoC. The purpose of this exercise is to gain experience using the interrupt-driven method to transmit bytes to the SDK console through the same UART. We want to abstract the driver for the queues and provide a more efficient interrupt-driven operation in the receive and transmit directions. We are given a driver file where we need to fill out 4 driver functions (\mintinline{text}{MyIsReceiveData()}, \mintinline{text}{MyReceiveByte()}, \mintinline{text}{MyIsTransmitFull()}, and \mintinline{text}{MySendByte()}). Additionally, we want to change the capitalization of characters received from the SDK console and implement a mechanism that detects \mintinline{text}{"\r%\r"} to clear the variables \mintinline{text}{CountRxIrq}, \mintinline{text}{CountTxIrq}, and \mintinline{text}{Countbytes}. We also need a mechanism to detect \mintinline{text}{"\r#\r"} that prints three status messages
@@ -121,15 +120,128 @@ Number of bytes processed: 40
 Number of Rx interrupts: 32
 Number of Tx interrupts: 25 
 \end{minted}
+
 \newpage
+
 \section{Design}
 \subsection{Exercise 1 Design}
-Please refer to Appendix \ref{e1} for the completed source code and line numbers. \\
+Please refer to Appendix \ref{e1} for the completed source code and line numbers. 
 
-For this exercise, we have three tasks -- \mintinline{text}{taskMorseMsgReceiver}, \mintinline{text}{TaskMorseMsgProcessor}, and \mintinline{text}{TaskDecodedMsgTransmitter}. For \mintinline{text}{taskMorseMsgReceiver}, 
+For this exercise, we have three tasks -- \mintinline{text}{TaskMorseMsgReceiver}, \mintinline{text}{TaskMorseMsgProcessor}, and \mintinline{text}{TaskDecodedMsgTransmitter}. First, we create these tasks, initialize UART in normal mode, and create our queues \mintinline{text}{xQueue_12} and \mintinline{text}{xQueue_23}. \mintinline{text}{xQueue_12} is the queue between \mintinline{text}{TaskMorseMsgReceiver} and \mintinline{text}{TaskMorseMsgProcessor} while \mintinline{text}{xQueue_23} is the queue between \mintinline{text}{TaskMorseMsgProcessor} and \mintinline{text}{TaskDecodedMsgTransmitter}. In the task \mintinline{text}{TaskMorseMsgReceiver()}, we first calculate the cycle time period \mintinline{text}{xPeriod} and initialized the the time at which the task was last unblocked \mintinline{text}{xLastWakeTime} to the count of ticks since \mintinline{text}{vTaskStartScheduler} was called. Then, we have a for loop that runs for the duration of the task where we repeat the following:
+\begin{enumerate}
+  \item Delay task for a period of \mintinline{text}{xPeriod}
+  \item Check if there's room in the \mintinline{text}{xQueue_12} queue 
+  \item If there is room in the queue, we receive the UART character and send it the back of the queue
+\end{enumerate}
+
+For \mintinline{text}{TaskMorseMsgProcessor}, we initialize a char array \mintinline{text}{read_from_queue12_value}, a variable \mintinline{text}{no_of_characters_read} for the number of characters read, a variable \mintinline{text}{break_loop} for when the "\r\#\r" sequence is detected to break out of the while loop, and an integer variable for the \mintinline{text}{error_flag}. Then we have a for loop that initailizes the variables to 0 or False. Then we have a while loop that runs while we are within the 500 character limit and if an item was successfully received from the queue. Within this loop we 
+\begin{itemize}
+  \item increment the number of character read \mintinline{text}{no_of_characters_read}
+  \item try to receive a char from \mintinline{text}{xQueue_12} and put it into the char array \mintinline{text}{read_from_queue12_value}
+  \item check for the "\r\#\r" sequence. If it is detected, we run the characters in the char array \mintinline{text}{read_from_queue12_value} through the \mintinline{text}{morseToTextConverter()} and break out of the while loop.
+\end{itemize}
+Then, we send the translated message to \mintinline{text}{xQueue_23}. If we overflowed, we send the error message.
+
+For \mintinline{text}{TaskDecodedMsgTransmitter}, we first calculate the cycle time period \mintinline{text}{xPeriod} and initialized the time at which the task was last unblocked \mintinline{text}{xLastWakeTime} to the count of ticks since \mintinline{text}{vTaskStartScheduler} was called. Then, we have a for loop where:
+\begin{itemize}
+  \item while we are unable to successfully receive something from the queue, we wait 
+  \item if we receive something, check if the transmitter is full. If it is, delay task for a period of \mintinline{text}{xPeriod}, otherwise, sent the byte to the UART and break out of the loop.
+\end{itemize}
+
+\subsection{Exercise 2 Design}
+Please refer to Appendix \ref{e2} for the completed source code and line numbers. 
+
+The goal of this exercise is to use the interrupt-driven method to transmist bytes to the SDK console through the UART. In \mintinline{text}{uart_driver.h}, we completed some functions:
+\begin{itemize}
+  \item \mintinline{text}{Interrupt_Handler}: if the event is \mintinline{text}{XUARTPS_EVENT_RECV_DATA}, we increment the receive interrupt counter variable. We then check for bytes from the UART and send it to the receive queue if there are bytes. Otherwise, if the event is \mintinline{text}{XUARTPS_EVENT_SENT_DATA}, we increment the transmit interrupt counter variable. We then read data from the transmit queue and send it to the UART. 
+  \item \mintinline{text}{MyIsReceiveData}: we return \mintinline{text}{pdTRUE} if there are messages waiting in the receive queue. Otherwise, we return \mintinline{text}{pdFALSE}.
+  \item \mintinline{text}{MyReceiveByte}: we use \mintinline{text}{taskENTER_CRITICAL} and \mintinline{text}{taskEXIT_CRITICAL} since it is a critical section to read a value from the receive queue.
+  \item \mintinline{text}{MyIsTransmitFull}: if the transmit queue is full, we return \mintinline{text}{pdTRUE}; otherwise we return \mintinline{text}{pdFALSE}.
+  \item \mintinline{text}{MySendByte}: again we use \mintinline{text}{taskENTER_CRITICAL} and \mintinline{text}{taskEXIT_CRITICAL} since it is a critical section. We either use polling or insert to the queue. We use polling if the transmit FIFO is empty; otherwise we attempt to send to the transmit queue.
+\end{itemize}
+
+In \mintinline{text}{part2_lab2_main.c}, we have two tasks \mintinline{text}{uart_receive_task} and \mintinline{text}{uart_transmit_task}. We create two queues to handle communication between the two tasks. These two queues have a maximum size of 100 as defined in the \mintinline{text}{initialization.h} file. The queues store variables of type \mintinline{text}{u8} (basically the queues will store characters).
+
+\mintinline{text}{uart_receive_task}: this task first prompts the user to enter in the text. It then starts an infinite loop. Within the loop, we get the data (a character) and store it in a variable. We then invert the capitalization of the character. We then send the character to the UART. We may perform a context switch if there is a carriage return character. Otherwise, we attempt to detect the \mintinline{text}{\r%\r} sequence. 
+
+\mintinline{text}{uart_transmit_task}: when this task is running, it outputs information such as the number of bytes processed, number of Rx interrupts, and number of Tx interrupts. When it finishes, it gives up the CPU again.
+
+\newpage
+\section{Testing}
+\subsection{Exercise 1 Tests}
+\small
+\begin{tabularx}{\textwidth}{|X|m|m|s|}
+    \caption{Tests for exercise 1.} \\
+    \hline
+    \textbf{Description} & \textbf{Expected} & \textbf{Result} & \textbf{Success} \\ \hline
+    \texttt{...|-|.|...-|.|-.| .--|.-|...| -...|---|.-.|-.| ---|-.| .-|.--.|.-.|..|.-..| .----|--...|--..--| .----|----.|----.|---..|.-.-.-|} & STEVEN WAS BORN ON APRIL 17, 1998 & STEVEN WAS BORN ON APRIL 17, 1998 & Yes \\ \hline
+    \texttt{..|-|.----.|...| -.|..|-.-.|.| -|---| --|.|.|-| -.--|---|..-|} & IT'S NICE TO MEET YOU & IT'S NICE TO MEET YOU & Yes \\ \hline
+    \texttt{....|---|.--| .-|.-.|.| -.--|---|..-| -..|---|..|-.|--.|..--..|} & HOW ARE YOU DOING? & HOW ARE YOU DOING? & Yes \\ \hline
+    Inputting a sequence of more than 500 characters & Error message & Error message & Yes \\ \hline
+\end{tabularx}
+\normalsize
+
+\subsection{Exercise 2 Tests}
+\begin{tabularx}{\textwidth}{|m|X|X|s|}
+    \caption{Tests for exercise 2.} \\
+    \hline
+    \textbf{Description} & \textbf{Expected} & \textbf{Result} & \textbf{Success} \\ \hline
+    Lora and Ben like emojis & lORA AND bEN LIKE EMOJIS & lORA AND bEN LIKE EMOJIS & Yes \\ \hline
+    abc & ABC & ABC & Yes \\ \hline
+    abcD & ABCd & ABCd & Yes \\ \hline
+    \texttt{\textbackslash r\#\textbackslash r} & Number of bytes processed: 27, Number of Rx interrupts: 29, Number of Tx interrupts: 32 & Number of bytes processed: 27, Number of Rx interrupts: 29, Number of Tx interrupts: 32 & Yes \\ \hline
+    \texttt{\textbackslash r\%\textbackslash r} & Byte Counter, CountRxIrq and CountTxIrq set to zero, Number of bytes processed: 0, Number of Rx interrupts: 0, Number of Tx interrupts: 0 & CountTxIrq set to zero, Number of bytes processed: 0, Number of Rx interrupts: 0, Number of Tx interrupts: 0 & Yes \\ \hline
+\end{tabularx}
+
+\newpage
+\section{Questions}
+\begin{enumerate}
+  \item Critical sections prevent race conditions among processes. It helps synchronize cooperative processes. In our code, the critical sections are used to prevent race conditions when reading/writing from global variables and queues. This ensures that when a global variable or queue is being modified or read from, nothing else will corrupt it or overwrite it while it is being read. 
+  \item We do this to abstract away the implementation details so that we can focus on the main task at hand. The user task does not need to know about enabling and disabling interrupts in the receive and transmit directions.
+  \item The order does not matter. This is since the data is processed in the order it is receieved. It is therefore transmitted back in order too.
+  \item This prevents the interrupt from being triggered constantly due to the queue being empty.
+  \item The receive interrupts can be left on since they are not called if there is nothing to process.
+  \item When there aren't a lot of characters, the queue doesn't get full enough to send an interrupt; however, when a large number of characters are input, the queue gets full the the program uses the transmit queue instead. For example if we enter a small number of characters (ex. ``abc'') there are 6 of each number. However, if we enter more (ex. ``abcabcabcabcabcabcabc'') we get 24 bytes processed, 24 Rx interrupts, and 5 Tx interrupts.
+\end{enumerate}
+
+\newpage
+
+\section{Conclusion}
+In this lab, we
+\begin{itemize}
+  \item gained experience using an ASCII-encoded serial communications connection between a PC host and a Zybo Z7 microcomputer board
+  \item gained experience with the UART interface on the Zynq-7000 SoC
+  \item gained experience interfacing using hardware and polling interrupts
+  \item gained experience using queues to decouple the execution of software tasks
+\end{itemize}
+We successfully completed these objectives. 
+
+In exercise 1, we figured out how to implement a morse code decoder system using polled UART interfacing. We were able to successfully have our program interpret morse code and output text. This was done by having the terminal on the host PC send the morse code to the Zybo, having the Zybo decode the message into the alphanumeric message, and then having the Zybo send it back to the console. 
+
+In exercise 2, we successfully implemented an interrupt-driven driver for UART. We gained experience using the interrupt-driven method to transmit bytes to the SDK console through the UART. We also completed the four driver functions successfully in order to abstract implementation details away. We then completed the code in the main file to enable user input and output the correct results. We also implemented a way to clear the variables/counters.
+
+By completeing these exercise, we gained experience with serial communication between the host and the Zybo, gained experience using the UART interface, gained experience with interrupts, and gained experience using queues.
+
 \newpage
 \section{Appendix}
 \subsection{Exercise 1 Source Code}
 \label{e1}
+\footnotesize
+\inputminted{c}{lab2_part1.c}
+\normalsize
+
+\newpage
+
+\subsection{Exercise 2 Source Code}
+\label{e2}
+\subsubsection{main}
+\footnotesize
+\inputminted{c}{part2_lab2_main.c}
+\normalsize
+
+\subsubsection{uart driver}
+\footnotesize
+\inputminted{c}{uart_driver.h}
+\normalsize
 
 \end{document}

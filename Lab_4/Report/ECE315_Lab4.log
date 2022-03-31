@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.10 NEXT) (preloaded format=pdflatex 2021.11.23)  3 MAR 2022 22:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.10 NEXT) (preloaded format=pdflatex 2021.11.23)  31 MAR 2022 14:35
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/benja/Documents/ECE 315 Labs/Lab 2/Report/ECE315_Lab2.tex"
-(c:/Users/benja/Documents/ECE 315 Labs/Lab 2/Report/ECE315_Lab2.tex
+**"c:/Users/benja/Documents/ECE 315 Labs/Lab_4/Report/ECE315_Lab4.tex"
+(c:/Users/benja/Documents/ECE 315 Labs/Lab_4/Report/ECE315_Lab4.tex
 LaTeX2e <2021-11-15>
 L3 programming layer <2021-11-12> (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -942,7 +942,7 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \@float@every@listing=\toks53
 \c@listing=\count398
 )
-runsystem(if not exist _minted-ECE315_Lab2 mkdir _minted-ECE315_Lab2)...executed.
+runsystem(if not exist _minted-ECE315_Lab4 mkdir _minted-ECE315_Lab4)...executed.
 
  (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf-umlcd\pgf-umlcd.sty
 Package: pgf-umlcd 2011/10/01 v0.3dev Some LaTeX macros for UML Class Diagrams.
@@ -990,38 +990,33 @@ File: tikzlibraryfit.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \c@umlcdClassAbstractClassNum=\count401
 \c@umlcdClassInterfaceNum=\count402
 \c@umlcdClassSplitPartNum=\count403
-) (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
+Package hyperref Info: Option `colorlinks' set `true' on input line 73.
+runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > ECE315_Lab4.aex <nul: /p x=^%~$PATH:i>> ECE315_Lab4.aex)...executed.
 
-Package array Warning: Redefining primitive column m on input line 57.
+runsystem(del ECE315_Lab4.aex)...executed.
 
-Package hyperref Info: Option `colorlinks' set `true' on input line 91.
-runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > ECE315_Lab2.aex <nul: /p x=^%~$PATH:i>> ECE315_Lab2.aex)...executed.
+ (ECE315_Lab4.aux)
+\openout1 = `ECE315_Lab4.aux'.
 
-runsystem(del ECE315_Lab2.aex)...executed.
-
-(ECE315_Lab2.aux)
-\openout1 = `ECE315_Lab2.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1040,7 +1035,7 @@ LaTeX Font Info:    ... okay on input line 93.
 * \oddsidemargin=-0.00018pt
 * \evensidemargin=-0.00018pt
 * \topmargin=-37.00018pt
-* \headheight=15.0pt
+* \headheight=20.0pt
 * \headsep=25.0pt
 * \topskip=11.0pt
 * \footskip=30.0pt
@@ -1082,7 +1077,7 @@ Package grfext Info: Graphics extension search list:
  (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 93.
+Package hyperref Info: Link coloring ON on input line 75.
  (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/refcount\refcount.sty
@@ -1092,9 +1087,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count410
 )
-LaTeX Info: Redefining \ref on input line 93.
-LaTeX Info: Redefining \pageref on input line 93.
-LaTeX Info: Redefining \nameref on input line 93.
+LaTeX Info: Redefining \ref on input line 75.
+LaTeX Info: Redefining \pageref on input line 75.
+LaTeX Info: Redefining \nameref on input line 75.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -1102,324 +1097,97 @@ Package caption Info: End \AtBeginDocument code.
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
 \c@lstlisting=\count411
-LaTeX Font Info:    Trying to load font information for U+msa on input line 95.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 77.
  (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 95.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 77.
  (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 95.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 77.
  (C:\Users\benja\AppData\Local\Programs\MiKTeX 2.9\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
-{C:/Users/benja/AppData/Local/MiKTeX/2.9/fonts/map/pdftex/pdftex.map}] (ECE315_Lab2.toc)
+{C:/Users/benja/AppData/Local/MiKTeX/2.9/fonts/map/pdftex/pdftex.map}] (ECE315_Lab4.toc)
 \tf@toc=\write6
-\openout6 = `ECE315_Lab2.toc'.
+\openout6 = `ECE315_Lab4.toc'.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.98 \newpage
+l.79 \newpage
               [1]
-\openout5 = `ECE315_Lab2.pyg'.
+\openout5 = `ECE315_Lab4.pyg'.
 
- (_minted-ECE315_Lab2/default.pygstyle) (_minted-ECE315_Lab2/13D2E8BBFBF6224019CE40CDD1311920FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
+ (_minted-ECE315_Lab4/bw.pygstyle) (_minted-ECE315_Lab4/8E722EC30A14B9D23F1BB0B3F227997C1A2C0F2C25D4D6BACDA0B87AED0823E1.pygtex)
+\openout5 = `ECE315_Lab4.pyg'.
 
- (_minted-ECE315_Lab2/5BA7823B64ED829B9F6CFABA73842341FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
+ (_minted-ECE315_Lab4/BDDA96D977AAABBDC66650F8D49424671A2C0F2C25D4D6BACDA0B87AED0823E1.pygtex)
+\openout5 = `ECE315_Lab4.pyg'.
 
- (_minted-ECE315_Lab2/DE7EB341E474CC368C1FA27B78AE873CFAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
+ (_minted-ECE315_Lab4/CF391AF17297E18FB770C88C2E90FE991A2C0F2C25D4D6BACDA0B87AED0823E1.pygtex)
+\openout5 = `ECE315_Lab4.pyg'.
 
- (_minted-ECE315_Lab2/217CAF9B9E9C3A13F8AB78CD832CCAECFAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
+ (_minted-ECE315_Lab4/FC12500DF7D33F17F3093D89968692661A2C0F2C25D4D6BACDA0B87AED0823E1.pygtex)
+\openout5 = `ECE315_Lab4.pyg'.
 
- (_minted-ECE315_Lab2/217CF5E2FCAF65865D5AB39D41A5BB62FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
+ (_minted-ECE315_Lab4/1BE96054389EEBF8A216223B7DC1E4F51A2C0F2C25D4D6BACDA0B87AED0823E1.pygtex)
+\openout5 = `ECE315_Lab4.pyg'.
 
- (_minted-ECE315_Lab2/F255DC7BB3F9ED7D3542FC326C54C96FFAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
+ (_minted-ECE315_Lab4/FD983D9F5FEFFC6B94011F2EE42F279D1A2C0F2C25D4D6BACDA0B87AED0823E1.pygtex)
+\openout5 = `ECE315_Lab4.pyg'.
 
- (_minted-ECE315_Lab2/36032CD481EA823EB7D85ACAB68396FBFAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
+ (_minted-ECE315_Lab4/C431E6F71B26672B053A051636A6C9EF1A2C0F2C25D4D6BACDA0B87AED0823E1.pygtex)
+\openout5 = `ECE315_Lab4.pyg'.
 
- (_minted-ECE315_Lab2/C409D88F88790FB1A6397D15A2E66381FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
+ (_minted-ECE315_Lab4/624E129A68BB247E642136730D0A82831A2C0F2C25D4D6BACDA0B87AED0823E1.pygtex)
+\openout5 = `ECE315_Lab4.pyg'.
 
- (_minted-ECE315_Lab2/4BA2A0381275C0EF875BD6EB189565F5FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout4 = `ECE315_Lab2.pyg'.
+ (_minted-ECE315_Lab4/93564F56740BCEF2AE3B937CC37DE5821A2C0F2C25D4D6BACDA0B87AED0823E1.pygtex)
+\openout5 = `ECE315_Lab4.pyg'.
 
- (_minted-ECE315_Lab2/EC31E40D2390D3664DB4C55EC35950CEFAD3C121DA6517ABAE7F9B772DDAEF56.pygtex
+ (_minted-ECE315_Lab4/A6660AC6DD9AFF594F88B812332BEE591A2C0F2C25D4D6BACDA0B87AED0823E1.pygtex)
+\openout5 = `ECE315_Lab4.pyg'.
+
+ (_minted-ECE315_Lab4/304D82C0867E556F1B5E676E0D11F5201A2C0F2C25D4D6BACDA0B87AED0823E1.pygtex)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.5 \end{Verbatim}
-                   [1]) [2]
-\openout5 = `ECE315_Lab2.pyg'.
+l.111   \item g
+               ain experience using the serial peripheral interface in both ... [1]
+\openout5 = `ECE315_Lab4.pyg'.
 
- (_minted-ECE315_Lab2/A4ABFABEC68895FFE068F8E02B9F22F7FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
+ (_minted-ECE315_Lab4/8E722EC30A14B9D23F1BB0B3F227997C1A2C0F2C25D4D6BACDA0B87AED0823E1.pygtex)
+\openout5 = `ECE315_Lab4.pyg'.
 
- (_minted-ECE315_Lab2/81E2BFC00A0F8C94C5368302F3D72FCBFAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
+ (_minted-ECE315_Lab4/624E129A68BB247E642136730D0A82831A2C0F2C25D4D6BACDA0B87AED0823E1.pygtex)
+\openout5 = `ECE315_Lab4.pyg'.
 
- (_minted-ECE315_Lab2/2158A6C87084F40F4A56BFF732A0A612FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
+ (_minted-ECE315_Lab4/8E722EC30A14B9D23F1BB0B3F227997C1A2C0F2C25D4D6BACDA0B87AED0823E1.pygtex)
+\openout5 = `ECE315_Lab4.pyg'.
 
- (_minted-ECE315_Lab2/BDC37A77AE10E842E189BE0EB4B652FCFAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
+ (_minted-ECE315_Lab4/7AFECB3A84E3FAAF721DC5F53DE6C77E1A2C0F2C25D4D6BACDA0B87AED0823E1.pygtex) [2]
+\openout5 = `ECE315_Lab4.pyg'.
 
- (_minted-ECE315_Lab2/5F6F3A431597320A0F947B2520605816FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/BDC37A77AE10E842E189BE0EB4B652FCFAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/A4ABFABEC68895FFE068F8E02B9F22F7FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/81E2BFC00A0F8C94C5368302F3D72FCBFAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/5F6F3A431597320A0F947B2520605816FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/81E2BFC00A0F8C94C5368302F3D72FCBFAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/2158A6C87084F40F4A56BFF732A0A612FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/A9ECB359E6BC37CC1A2E98C375567756FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/879413CB6EFB33C941F8D6AFFC3BB868FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/B9E2F2C5F8791C8676A5EB48DE796866FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/52DC603FA0199834A77E61E0CEF1F029FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-Overfull \hbox (15.25589pt too wide) in paragraph at lines 130--132
-\OT1/cmr/m/n/10.95 cre-ate our queues [] and []. [] is the queue be-tween []
- []
-
-\openout5 = `ECE315_Lab2.pyg'.
-
-(_minted-ECE315_Lab2/879413CB6EFB33C941F8D6AFFC3BB868FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/BDC37A77AE10E842E189BE0EB4B652FCFAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/81E2BFC00A0F8C94C5368302F3D72FCBFAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/F57513017D50B394EF1282425DA8B343FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/0416AC617B7EAEEB1A3C2A7D7500F2B9FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/1F3D019B70A61CF954DE413F01338827FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/801C5F8274BD6E81AD164FCB68B8C662FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/0416AC617B7EAEEB1A3C2A7D7500F2B9FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/BDC37A77AE10E842E189BE0EB4B652FCFAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/F57513017D50B394EF1282425DA8B343FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-Overfull \hbox (0.63675pt too wide) in paragraph at lines 140--141
-[]\OT1/cmr/m/n/10.95 try to re-ceive a char from [] and put it into the char ar-ray [] 
- []
-
-\openout5 = `ECE315_Lab2.pyg'.
-
-(_minted-ECE315_Lab2/F57513017D50B394EF1282425DA8B343FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/CD175F8EE7AA5085FE4FF18D10A6D255FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/5F6F3A431597320A0F947B2520605816FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/2158A6C87084F40F4A56BFF732A0A612FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/879413CB6EFB33C941F8D6AFFC3BB868FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/B9E2F2C5F8791C8676A5EB48DE796866FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/52DC603FA0199834A77E61E0CEF1F029FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex) [3]
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/879413CB6EFB33C941F8D6AFFC3BB868FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/BD921CE2D334347D1E1365A8D175A6C3FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/CE4C6FDDDFADF9308D0F0B9A4EAEAC8EFAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/10BFD3C0518D024E45EECF613D84C468FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/707D9058323B06EADE146B8CF565DAF0FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/B660A8AD69CAE016DB012A22B9643838FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/4865E7D28B6D51BF7A0C7ADB66F6B700FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/98E743D064B8336960F255A0DAA96CF2FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/7AF12B90A2C8C424585CEC19666376A6FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/41E4D21E4B4D1F45AD223159DD510DE0FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/B6FDF602BA7D163879E7505886F92F79FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/44939C33235DDECDE55AA3C257FAA390FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/4865E7D28B6D51BF7A0C7ADB66F6B700FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/98E743D064B8336960F255A0DAA96CF2FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/55AE2ABD9F6B387D45E3A0640A836FB3FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/41E4D21E4B4D1F45AD223159DD510DE0FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/B6FDF602BA7D163879E7505886F92F79FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/7B1684C8A448362611F3C41F04C337B7FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/588258AA2C377E471C0F7AD4408232A9FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/DB9F3B6D310E3EFE7F026BBC7D39B48CFAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/DF6EF74909894956AF67AFF28A7767F0FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/C9C8133322433A044BDFECA4F40F5594FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex) [4]
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/588258AA2C377E471C0F7AD4408232A9FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/046945DC2559403177CE1B0CD85B8E18FAD3C121DA6517ABAE7F9B772DDAEF56.pygtex)
-\openout5 = `ECE315_Lab2.pyg'.
-
- (_minted-ECE315_Lab2/DB9F3B6D310E3EFE7F026BBC7D39B48CFAD3C121DA6517ABAE7F9B772DDAEF56.pygtex) [5]
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
-[]|\OT1/cmtt/m/n/10 ...|-|.|...-|.|-.| .--|.-|...|
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
-\OT1/cmtt/m/n/10 -...|---|.-.|-.| ---|-.|
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
-\OT1/cmtt/m/n/10 .-|.--.|.-.|..|.-..|
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
-\OT1/cmtt/m/n/10 .----|--...|--..--|
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
-[]|\OT1/cmtt/m/n/10 ..|-|.----.|...| -.|..|-.-.|.|
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
-[]|\OT1/cmtt/m/n/10 ....|---|.--| .-|.-.|.|
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
-\OT1/cmtt/m/n/10 -.--|---|..-|
- []
-
-
-Overfull \hbox (4.56233pt too wide) in paragraph at lines 194--194
-[]|\OT1/cmr/bx/n/10.95 Success| 
- []
-
-
-Underfull \hbox (badness 1448) in paragraph at lines 194--194
-[]|\OT1/cmr/m/n/10.95 Number of bytes pro-cessed:
- []
-
-
-Underfull \hbox (badness 1448) in paragraph at lines 194--194
-[]|\OT1/cmr/m/n/10.95 Number of bytes pro-cessed:
- []
-
-
-Underfull \hbox (badness 6220) in paragraph at lines 194--194
-[]|\OT1/cmr/m/n/10.95 Byte Counter, Coun-tRxIrq
- []
-
-
-Underfull \hbox (badness 1616) in paragraph at lines 194--194
-\OT1/cmr/m/n/10.95 ber of bytes pro-cessed: 0,
- []
-
-[6] [7] [8] [9] (_minted-ECE315_Lab2/5ACF615B1A56947A87B38BD87C4EA6C0DB3F35218F073BE04A8DB27D93C82CB6.pygtex [10]
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 44.
- [11] [12] [13] [14]) [15] (_minted-ECE315_Lab2/485C514E496439D9FC65D1202A94A4595DB3CD4A4EF35D6D2616018EB92FAAE8.pygtex [16] [17] [18] [19]) (_minted-ECE315_Lab2/D38B3F8DDA78A34EF5B2F48924FCED08023910CF48BB65A57EC4F4AF0FEA705F.pygtex [20] [21] [22]) [23] (ECE315_Lab2.aux)
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-runsystem(del ECE315_Lab2.pyg)...executed.
+ (_minted-ECE315_Lab4/9C494B9638842ACE0121FA1D21AEE7E21A2C0F2C25D4D6BACDA0B87AED0823E1.pygtex) [3] (ECE315_Lab4.aux)
+runsystem(del ECE315_Lab4.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 32392 strings out of 478678
- 655749 string characters out of 2844426
- 1169421 words of memory out of 3000000
- 49650 multiletter control sequences out of 15000+600000
- 416680 words of font info for 82 fonts, out of 8000000 for 9000
+ 32016 strings out of 478678
+ 630520 string characters out of 2844426
+ 973903 words of memory out of 3000000
+ 49459 multiletter control sequences out of 15000+600000
+ 413376 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,11n,111p,1174b,696s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\benja\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on ECE315_Lab2.pdf (25 pages, 202283 bytes).
+ 108i,11n,111p,683b,510s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\benja\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on ECE315_Lab4.pdf (5 pages, 109120 bytes).
 PDF statistics:
- 258 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 125 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 122 PDF objects out of 1000 (max. 8388607)
+ 15 named destinations out of 1000 (max. 500000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

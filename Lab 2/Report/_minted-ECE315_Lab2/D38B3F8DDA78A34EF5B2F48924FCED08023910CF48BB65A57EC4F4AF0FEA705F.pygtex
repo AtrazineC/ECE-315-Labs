@@ -1,0 +1,108 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}ifndef SRC\PYGZus{}UART\PYGZus{}DRIVER\PYGZus{}H\PYGZus{}}
+\PYG{c+cp}{\PYGZsh{}define SRC\PYGZus{}UART\PYGZus{}DRIVER\PYGZus{}H\PYGZus{}}
+
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}xil\PYGZus{}io.h\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}xuartps.h\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}xscugic.h\PYGZdq{}}
+
+\PYG{c+cm}{/* FreeRTOS includes. */}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}FreeRTOS.h\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}task.h\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}queue.h\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}semphr.h\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}initialization.h\PYGZdq{}}
+
+\PYG{k+kt}{void} \PYG{n+nf}{Task\PYGZus{}UART\PYGZus{}buffer\PYGZus{}receive}\PYG{p}{(}\PYG{k+kt}{void} \PYG{o}{*}\PYG{n}{p}\PYG{p}{);}
+
+\PYG{k+kt}{void} \PYG{n+nf}{Task\PYGZus{}UART\PYGZus{}buffer\PYGZus{}send}\PYG{p}{(}\PYG{k+kt}{void} \PYG{o}{*}\PYG{n}{p}\PYG{p}{);}
+
+\PYG{n}{QueueHandle\PYGZus{}t} \PYG{n}{xQueue\PYGZus{}for\PYGZus{}transmit}\PYG{p}{;}
+\PYG{n}{QueueHandle\PYGZus{}t} \PYG{n}{xQueue\PYGZus{}for\PYGZus{}receive}\PYG{p}{;}
+\PYG{k+kt}{int} \PYG{n}{CountRxIrq}\PYG{p}{;}
+\PYG{k+kt}{int} \PYG{n}{CountTxIrq}\PYG{p}{;}
+
+\PYG{c+cp}{\PYGZsh{}define UART\PYGZus{}BASEADDR       XPAR\PYGZus{}XUARTPS\PYGZus{}0\PYGZus{}BASEADDR}
+
+\PYG{k+kt}{void} \PYG{n+nf}{Interrupt\PYGZus{}Handler}\PYG{p}{(}\PYG{k+kt}{void} \PYG{o}{*}\PYG{n}{CallBackRef}\PYG{p}{,} \PYG{n}{u32} \PYG{n}{Event}\PYG{p}{,} \PYG{k+kt}{unsigned} \PYG{k+kt}{int} \PYG{n}{EventData}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{u8} \PYG{n}{receive\PYGZus{}buffer}\PYG{p}{;}
+    \PYG{n}{u8} \PYG{n}{transmit\PYGZus{}data}\PYG{p}{;}
+    \PYG{n}{u32} \PYG{n}{mask}\PYG{p}{;}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{Event} \PYG{o}{==} \PYG{n}{XUARTPS\PYGZus{}EVENT\PYGZus{}RECV\PYGZus{}DATA}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{BaseType\PYGZus{}t} \PYG{n}{xHigherPriorityTaskWoken}\PYG{p}{;}
+        \PYG{n}{xHigherPriorityTaskWoken} \PYG{o}{=} \PYG{n}{pdFALSE}\PYG{p}{;}
+
+        \PYG{n}{CountRxIrq}\PYG{o}{++}\PYG{p}{;}
+
+        \PYG{k}{while} \PYG{p}{(}\PYG{n}{XUartPs\PYGZus{}IsReceiveData}\PYG{p}{(}\PYG{n}{UART\PYGZus{}BASEADDR}\PYG{p}{))} \PYG{p}{\PYGZob{}}
+            \PYG{n}{receive\PYGZus{}buffer} \PYG{o}{=} \PYG{n}{XUartPs\PYGZus{}RecvByte}\PYG{p}{(}\PYG{n}{UART\PYGZus{}BASEADDR}\PYG{p}{);}
+            \PYG{n}{xQueueSendToBackFromISR}\PYG{p}{(}\PYG{n}{xQueue\PYGZus{}for\PYGZus{}receive}\PYG{p}{,} 
+					\PYG{o}{\PYGZam{}}\PYG{n}{receive\PYGZus{}buffer}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{xHigherPriorityTaskWoken}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{n}{portYIELD\PYGZus{}FROM\PYGZus{}ISR}\PYG{p}{(}\PYG{n}{xHigherPriorityTaskWoken}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}} \PYG{k}{else} \PYG{k}{if} \PYG{p}{(}\PYG{n}{Event} \PYG{o}{==} \PYG{n}{XUARTPS\PYGZus{}EVENT\PYGZus{}SENT\PYGZus{}DATA}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{BaseType\PYGZus{}t} \PYG{n}{xHigherPriorityTaskWoken}\PYG{p}{;}
+        \PYG{n}{xHigherPriorityTaskWoken} \PYG{o}{=} \PYG{n}{pdFALSE}\PYG{p}{;}
+        \PYG{n}{CountTxIrq}\PYG{o}{++}\PYG{p}{;}
+        \PYG{k}{while} \PYG{p}{(}\PYG{n}{uxQueueMessagesWaitingFromISR}\PYG{p}{(}\PYG{n}{xQueue\PYGZus{}for\PYGZus{}transmit}\PYG{p}{)} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0} \PYG{o}{\PYGZam{}\PYGZam{}}
+               \PYG{o}{!}\PYG{n}{XUartPs\PYGZus{}IsTransmitFull}\PYG{p}{(}\PYG{n}{XPAR\PYGZus{}XUARTPS\PYGZus{}0\PYGZus{}BASEADDR}\PYG{p}{))} \PYG{p}{\PYGZob{}}
+            \PYG{n}{xQueueReceiveFromISR}\PYG{p}{(}\PYG{n}{xQueue\PYGZus{}for\PYGZus{}transmit}\PYG{p}{,} 
+					\PYG{o}{\PYGZam{}}\PYG{n}{transmit\PYGZus{}data}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{xHigherPriorityTaskWoken}\PYG{p}{);}
+            \PYG{n}{XUartPs\PYGZus{}SendByte}\PYG{p}{(}\PYG{n}{UART\PYGZus{}BASEADDR}\PYG{p}{,} \PYG{n}{transmit\PYGZus{}data}\PYG{p}{);}
+
+        \PYG{p}{\PYGZcb{}}
+        \PYG{n}{portYIELD\PYGZus{}FROM\PYGZus{}ISR}\PYG{p}{(}\PYG{n}{xHigherPriorityTaskWoken}\PYG{p}{);}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{uxQueueMessagesWaitingFromISR}\PYG{p}{(}\PYG{n}{xQueue\PYGZus{}for\PYGZus{}transmit}\PYG{p}{)} \PYG{o}{\PYGZlt{}=} \PYG{l+m+mi}{0}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{n}{mask} \PYG{o}{=} \PYG{n}{XUartPs\PYGZus{}GetInterruptMask}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{UART}\PYG{p}{);}
+            \PYG{n}{XUartPs\PYGZus{}SetInterruptMask}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{UART}\PYG{p}{,} \PYG{n}{mask} \PYG{o}{\PYGZam{}} \PYG{o}{\PYGZti{}}\PYG{n}{XUARTPS\PYGZus{}IXR\PYGZus{}TXEMPTY}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}} \PYG{k}{else} \PYG{p}{\PYGZob{}}
+        \PYG{n}{xil\PYGZus{}printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Nor a RECEIVE event nor a SEND event}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{n}{BaseType\PYGZus{}t} \PYG{n+nf}{MyIsReceiveData}\PYG{p}{(}\PYG{k+kt}{void}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{uxQueueMessagesWaiting}\PYG{p}{(}\PYG{n}{xQueue\PYGZus{}for\PYGZus{}receive}\PYG{p}{)} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{n}{pdTRUE}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}} \PYG{k}{else} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{n}{pdFALSE}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{n}{u8} \PYG{n+nf}{MyReceiveByte}\PYG{p}{(}\PYG{k+kt}{void}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{u8} \PYG{n}{recv}\PYG{p}{;}
+    \PYG{n}{taskENTER\PYGZus{}CRITICAL}\PYG{p}{();}
+    \PYG{n}{xQueueReceive}\PYG{p}{(}\PYG{n}{xQueue\PYGZus{}for\PYGZus{}receive}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{recv}\PYG{p}{,} \PYG{n}{portMAX\PYGZus{}DELAY}\PYG{p}{);}
+    \PYG{n}{taskEXIT\PYGZus{}CRITICAL}\PYG{p}{();}
+    \PYG{k}{return} \PYG{n}{recv}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{n}{BaseType\PYGZus{}t} \PYG{n+nf}{MyIsTransmitFull}\PYG{p}{(}\PYG{k+kt}{void}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{uxQueueSpacesAvailable}\PYG{p}{(}\PYG{n}{xQueue\PYGZus{}for\PYGZus{}transmit}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{n}{pdTRUE}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}} \PYG{k}{else} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{n}{pdFALSE}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kt}{void} \PYG{n+nf}{MySendByte}\PYG{p}{(}\PYG{n}{u8} \PYG{n}{Data}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{u32} \PYG{n}{mask}\PYG{p}{;}
+    \PYG{c+c1}{//secure it}
+    \PYG{n}{taskENTER\PYGZus{}CRITICAL}\PYG{p}{();}
+
+    \PYG{n}{mask} \PYG{o}{=} \PYG{n}{XUartPs\PYGZus{}GetInterruptMask}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{UART}\PYG{p}{);}
+    \PYG{n}{XUartPs\PYGZus{}SetInterruptMask}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{UART}\PYG{p}{,} \PYG{n}{mask} \PYG{o}{|} \PYG{n}{XUARTPS\PYGZus{}IXR\PYGZus{}TXEMPTY}\PYG{p}{);}
+
+    \PYG{c+c1}{// if transmit FIFO empty, use polling,}
+    \PYG{c+c1}{// otherwise insert to queue for interrupt method}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{XUartPs\PYGZus{}IsTransmitEmpty}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{UART}\PYG{p}{)}
+        \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{uxQueueMessagesWaiting}\PYG{p}{(}\PYG{n}{xQueue\PYGZus{}for\PYGZus{}transmit}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{XUartPs\PYGZus{}WriteReg}\PYG{p}{(}\PYG{n}{XPAR\PYGZus{}XUARTPS\PYGZus{}0\PYGZus{}BASEADDR}\PYG{p}{,} \PYG{n}{XUARTPS\PYGZus{}FIFO\PYGZus{}OFFSET}\PYG{p}{,} \PYG{n}{Data}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}} \PYG{k}{else} \PYG{k}{if} \PYG{p}{(}\PYG{n}{xQueueSend}\PYG{p}{(}\PYG{n}{xQueue\PYGZus{}for\PYGZus{}transmit}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{Data}\PYG{p}{,} \PYG{l+m+mi}{0UL}\PYG{p}{)} \PYG{o}{!=} \PYG{n}{pdPASS}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{xil\PYGZus{}printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Fail to send the data}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{taskEXIT\PYGZus{}CRITICAL}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+cp}{\PYGZsh{}endif }\PYG{c+cm}{/* SRC\PYGZus{}UART\PYGZus{}DRIVER\PYGZus{}H\PYGZus{} */}
+\end{Verbatim}

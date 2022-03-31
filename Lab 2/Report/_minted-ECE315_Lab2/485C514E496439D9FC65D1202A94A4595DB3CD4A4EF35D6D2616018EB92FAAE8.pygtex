@@ -1,0 +1,203 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}stdio.h\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}xil\PYGZus{}printf.h\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}xparameters.h\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}xil\PYGZus{}types.h\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}xtime\PYGZus{}l.h\PYGZdq{}}
+
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}uart\PYGZus{}driver.h\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}initialization.h\PYGZdq{}}
+
+\PYG{c+cp}{\PYGZsh{}define CHAR\PYGZus{}ESC                0x23   }
+\PYG{c+cp}{\PYGZsh{}define CHAR\PYGZus{}CARRIAGE\PYGZus{}RETURN    0x0D   }
+\PYG{c+cp}{\PYGZsh{}define CHAR\PYGZus{}PERCENT    		0x25    }
+
+\PYG{k+kt}{void} \PYG{n+nf}{printString}\PYG{p}{(}\PYG{k+kt}{char} \PYG{n}{countMessage}\PYG{p}{[]);}
+
+\PYG{n}{TaskHandle\PYGZus{}t} \PYG{n}{task\PYGZus{}receiveuarthandle} \PYG{o}{=} \PYG{n+nb}{NULL}\PYG{p}{;}
+\PYG{n}{TaskHandle\PYGZus{}t} \PYG{n}{task\PYGZus{}transmituarthandle} \PYG{o}{=} \PYG{n+nb}{NULL}\PYG{p}{;}
+\PYG{n}{BaseType\PYGZus{}t} \PYG{n}{resetFlag}\PYG{p}{;}
+\PYG{n}{BaseType\PYGZus{}t} \PYG{n}{endingSeq}\PYG{p}{;}
+\PYG{k+kt}{int} \PYG{n}{Countbytes}\PYG{p}{;}                               
+\PYG{k}{extern} \PYG{n}{QueueHandle\PYGZus{}t} \PYG{n}{xQueue\PYGZus{}for\PYGZus{}transmit}\PYG{p}{;}
+\PYG{k}{extern} \PYG{n}{QueueHandle\PYGZus{}t} \PYG{n}{xQueue\PYGZus{}for\PYGZus{}receive}\PYG{p}{;}
+\PYG{k}{extern} \PYG{k+kt}{int} \PYG{n}{CountRxIrq}\PYG{p}{;}                            
+\PYG{k}{extern} \PYG{k+kt}{int} \PYG{n}{CountTxIrq}\PYG{p}{;}                            
+
+
+
+\PYG{c+c1}{//Function declaration for UART interrupt setup}
+\PYG{k}{extern} \PYG{k+kt}{int} \PYG{n+nf}{SetupInterruptSystem}\PYG{p}{(}\PYG{n}{INTC}\PYG{o}{*} \PYG{n}{IntcInstancePtr}\PYG{p}{,} 
+            \PYG{n}{XUartPs}\PYG{o}{*} \PYG{n}{UartInstancePtr}\PYG{p}{,} \PYG{n}{u16} \PYG{n}{UartIntrId}\PYG{p}{);}
+
+\PYG{c+c1}{//Initialization function for UART}
+\PYG{k}{extern} \PYG{k+kt}{int} \PYG{n+nf}{Initialize\PYGZus{}UART}\PYG{p}{();}
+
+\PYG{c+c1}{//the four driver functions whose definitions are in \PYGZdq{}uart\PYGZus{}driver.h\PYGZdq{} file.}
+\PYG{k}{extern} \PYG{n}{BaseType\PYGZus{}t} \PYG{n+nf}{MyIsReceiveData}\PYG{p}{(}\PYG{k+kt}{void}\PYG{p}{);}
+
+\PYG{k}{extern} \PYG{n}{u8} \PYG{n+nf}{MyReceiveByte}\PYG{p}{(}\PYG{k+kt}{void}\PYG{p}{);}
+
+\PYG{k}{extern} \PYG{n}{BaseType\PYGZus{}t} \PYG{n+nf}{MyIsTransmitFull}\PYG{p}{(}\PYG{k+kt}{void}\PYG{p}{);}
+
+\PYG{k}{extern} \PYG{k+kt}{void} \PYG{n+nf}{MySendByte}\PYG{p}{(}\PYG{n}{u8} \PYG{n}{Data}\PYG{p}{);}
+
+
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{Status}\PYG{p}{;}
+
+    \PYG{n}{xTaskCreate}\PYG{p}{(}\PYG{n}{Task\PYGZus{}UART\PYGZus{}buffer\PYGZus{}receive}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}uart\PYGZus{}receive\PYGZus{}task\PYGZdq{}}\PYG{p}{,} 
+                \PYG{l+m+mi}{1024}\PYG{p}{,} \PYG{p}{(}\PYG{k+kt}{void}\PYG{o}{*}\PYG{p}{)} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{tskIDLE\PYGZus{}PRIORITY}\PYG{p}{,}
+                \PYG{o}{\PYGZam{}}\PYG{n}{task\PYGZus{}receiveuarthandle}\PYG{p}{);}
+    \PYG{n}{xTaskCreate}\PYG{p}{(}\PYG{n}{Task\PYGZus{}UART\PYGZus{}buffer\PYGZus{}send}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}uart\PYGZus{}transmit\PYGZus{}task\PYGZdq{}}\PYG{p}{,} 
+                \PYG{l+m+mi}{1024}\PYG{p}{,} \PYG{p}{(}\PYG{k+kt}{void}\PYG{o}{*}\PYG{p}{)} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{tskIDLE\PYGZus{}PRIORITY}\PYG{p}{,}
+                \PYG{o}{\PYGZam{}}\PYG{n}{task\PYGZus{}transmituarthandle}\PYG{p}{);}
+
+    \PYG{n}{xQueue\PYGZus{}for\PYGZus{}transmit} \PYG{o}{=} \PYG{n}{xQueueCreate}\PYG{p}{(}\PYG{n}{SIZE\PYGZus{}OF\PYGZus{}QUEUE}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{u8}\PYG{p}{));}
+    \PYG{n}{xQueue\PYGZus{}for\PYGZus{}receive} \PYG{o}{=} \PYG{n}{xQueueCreate}\PYG{p}{(}\PYG{n}{SIZE\PYGZus{}OF\PYGZus{}QUEUE}\PYG{p}{,} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{u8}\PYG{p}{));}
+    \PYG{n}{CountRxIrq} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{n}{CountTxIrq} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{n}{Countbytes} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{n}{resetFlag} \PYG{o}{=} \PYG{n}{pdFALSE}\PYG{p}{;}
+    \PYG{n}{endingSeq} \PYG{o}{=} \PYG{n}{pdFALSE}\PYG{p}{;}
+
+    \PYG{n}{Status} \PYG{o}{=} \PYG{n}{Initialize\PYGZus{}UART}\PYG{p}{();}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{Status} \PYG{o}{!=} \PYG{n}{XST\PYGZus{}SUCCESS}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{xil\PYGZus{}printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}UART Initialization failed}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{n}{vTaskStartScheduler}\PYG{p}{();}
+
+    \PYG{k}{while} \PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{);}
+
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kt}{void} \PYG{n+nf}{Task\PYGZus{}UART\PYGZus{}buffer\PYGZus{}receive}\PYG{p}{(}\PYG{k+kt}{void}\PYG{o}{*} \PYG{n}{p}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+
+    \PYG{k+kt}{int} \PYG{n}{Status}\PYG{p}{;}
+
+    \PYG{n}{Status} \PYG{o}{=} \PYG{n}{SetupInterruptSystem}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{InterruptController}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{UART}\PYG{p}{,} 
+            \PYG{n}{UART\PYGZus{}INT\PYGZus{}IRQ\PYGZus{}ID}\PYG{p}{);}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{Status} \PYG{o}{!=} \PYG{n}{XST\PYGZus{}SUCCESS}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{xil\PYGZus{}printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}UART PS interrupt failed}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{n}{u8} \PYG{n}{returnFlag} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{n}{u8} \PYG{n}{restartFlag} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+
+    \PYG{n}{printString}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Please enter the text and then press ENTER}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{n}{printString}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}To display the status messages, }
+            \PYG{n}{enter} \PYG{n}{the} \PYG{n}{end}\PYG{o}{\PYGZhy{}}\PYG{n}{of}\PYG{o}{\PYGZhy{}}\PYG{n}{block} \PYG{n}{sequence}\PYG{p}{,} \PYG{err}{\PYGZbs{}\PYGZbs{}}\PYG{n}{r}\PYG{err}{\PYGZsh{}\PYGZbs{}\PYGZbs{}}\PYG{n}{r} \PYG{n}{and} \PYG{n}{then} 
+            \PYG{n}{press} \PYG{n}{ENTER}\PYG{err}{\PYGZbs{}}\PYG{n}{n}\PYG{l+s}{\PYGZdq{});}
+    \PYG{n}{printString}\PYG{p}{(}
+            \PYG{l+s}{\PYGZdq{}To reset the ISR transmit and receive global }
+            \PYG{n}{counters} \PYG{n}{as} \PYG{n}{well} \PYG{n}{as} \PYG{n}{byte} \PYG{n}{counter}\PYG{p}{,} \PYG{n}{enter} \PYG{n}{the} 
+            \PYG{n}{sequence} \PYG{err}{\PYGZbs{}\PYGZbs{}}\PYG{n}{r}\PYG{o}{\PYGZpc{}}\PYG{err}{\PYGZbs{}\PYGZbs{}}\PYG{n}{r} \PYG{n}{and} \PYG{n}{then} \PYG{n}{press} \PYG{n}{ENTER}\PYG{err}{\PYGZbs{}}\PYG{n}{n}\PYG{l+s}{\PYGZdq{});}
+
+    \PYG{k}{for} \PYG{p}{(;;)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{while} \PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{n}{u8} \PYG{n}{pcString}\PYG{p}{;}
+            \PYG{k+kt}{char} \PYG{n}{write\PYGZus{}to\PYGZus{}queue\PYGZus{}value}\PYG{p}{;}
+
+            \PYG{k}{while} \PYG{p}{(}\PYG{n}{MyIsReceiveData}\PYG{p}{()} \PYG{o}{==} \PYG{n}{pdFALSE}\PYG{p}{)} \PYG{p}{\PYGZob{}\PYGZcb{};}
+			\PYG{n}{pcString} \PYG{o}{=} \PYG{n}{MyReceiveByte}\PYG{p}{();}
+			\PYG{k}{while} \PYG{p}{(}\PYG{n}{MyIsTransmitFull}\PYG{p}{()} \PYG{o}{==} \PYG{n}{pdTRUE}\PYG{p}{)} \PYG{p}{\PYGZob{}\PYGZcb{};}
+
+            \PYG{n}{write\PYGZus{}to\PYGZus{}queue\PYGZus{}value} \PYG{o}{=} \PYG{p}{(}\PYG{k+kt}{char}\PYG{p}{)} \PYG{n}{pcString}\PYG{p}{;}    \PYG{c+c1}{//casted to \PYGZdq{}char\PYGZdq{} type.}
+
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{islower}\PYG{p}{(}\PYG{n}{write\PYGZus{}to\PYGZus{}queue\PYGZus{}value}\PYG{p}{))} \PYG{p}{\PYGZob{}}
+            	\PYG{n}{write\PYGZus{}to\PYGZus{}queue\PYGZus{}value} \PYG{o}{=} \PYG{n}{toupper}\PYG{p}{(}\PYG{n}{write\PYGZus{}to\PYGZus{}queue\PYGZus{}value}\PYG{p}{);}
+            \PYG{p}{\PYGZcb{}} \PYG{k}{else} \PYG{p}{\PYGZob{}}
+            	\PYG{n}{write\PYGZus{}to\PYGZus{}queue\PYGZus{}value} \PYG{o}{=} \PYG{n}{tolower}\PYG{p}{(}\PYG{n}{write\PYGZus{}to\PYGZus{}queue\PYGZus{}value}\PYG{p}{);}
+            \PYG{p}{\PYGZcb{}}
+
+            \PYG{n}{Countbytes}\PYG{o}{++}\PYG{p}{;}
+            \PYG{n}{MySendByte}\PYG{p}{(}\PYG{n}{write\PYGZus{}to\PYGZus{}queue\PYGZus{}value}\PYG{p}{);}
+
+            \PYG{c+c1}{//detect \PYGZbs{}r\PYGZsh{}\PYGZbs{}r}
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{returnFlag} \PYG{o}{==} \PYG{l+m+mi}{2} 
+                    \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{write\PYGZus{}to\PYGZus{}queue\PYGZus{}value} \PYG{o}{==} \PYG{n}{CHAR\PYGZus{}CARRIAGE\PYGZus{}RETURN}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{n}{returnFlag} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+                \PYG{n}{taskYIELD}\PYG{p}{();} \PYG{c+c1}{//force context switch}
+            \PYG{p}{\PYGZcb{}} \PYG{k}{else} \PYG{k}{if} \PYG{p}{(}\PYG{n}{returnFlag} \PYG{o}{==} \PYG{l+m+mi}{1} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{write\PYGZus{}to\PYGZus{}queue\PYGZus{}value} \PYG{o}{==} \PYG{n}{CHAR\PYGZus{}ESC}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{n}{returnFlag} \PYG{o}{=} \PYG{l+m+mi}{2}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}} \PYG{k}{else} \PYG{k}{if} \PYG{p}{(}\PYG{n}{write\PYGZus{}to\PYGZus{}queue\PYGZus{}value} \PYG{o}{==} \PYG{n}{CHAR\PYGZus{}CARRIAGE\PYGZus{}RETURN}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{n}{returnFlag} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}} \PYG{k}{else} \PYG{p}{\PYGZob{}}
+                \PYG{n}{returnFlag} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}}
+
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{restartFlag} \PYG{o}{==} \PYG{l+m+mi}{2} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{write\PYGZus{}to\PYGZus{}queue\PYGZus{}value} \PYG{o}{==} \PYG{n}{CHAR\PYGZus{}CARRIAGE\PYGZus{}RETURN}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            	\PYG{n}{restartFlag} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+                \PYG{n}{CountRxIrq} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    			\PYG{n}{CountTxIrq} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    			\PYG{n}{Countbytes} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    			\PYG{n}{xil\PYGZus{}printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{Byte Counter, CountRxIrq \PYGZam{}\PYGZam{} }
+                            \PYG{n}{CountTxIrq} \PYG{n}{set} \PYG{n}{to} \PYG{n}{zero}\PYG{err}{\PYGZbs{}}\PYG{n}{n}\PYG{err}{\PYGZbs{}}\PYG{n}{n}\PYG{l+s}{\PYGZdq{});}
+                \PYG{n}{taskYIELD}\PYG{p}{();} \PYG{c+c1}{//force context switch}
+            \PYG{p}{\PYGZcb{}} \PYG{k}{else} \PYG{k}{if} \PYG{p}{(}\PYG{n}{restartFlag} \PYG{o}{==} \PYG{l+m+mi}{1} 
+                    \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{write\PYGZus{}to\PYGZus{}queue\PYGZus{}value} \PYG{o}{==} \PYG{n}{CHAR\PYGZus{}PERCENT}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            	\PYG{n}{restartFlag} \PYG{o}{=} \PYG{l+m+mi}{2}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}} \PYG{k}{else} \PYG{k}{if} \PYG{p}{(}\PYG{n}{write\PYGZus{}to\PYGZus{}queue\PYGZus{}value} \PYG{o}{==} \PYG{n}{CHAR\PYGZus{}CARRIAGE\PYGZus{}RETURN}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            	\PYG{n}{restartFlag} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}} \PYG{k}{else} \PYG{p}{\PYGZob{}}
+            	\PYG{n}{restartFlag} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+
+\PYG{c+c1}{//print the provided number using driver functions}
+\PYG{k+kt}{void} \PYG{n}{printNumber}\PYG{p}{(}\PYG{k+kt}{char} \PYG{n}{number}\PYG{p}{[])} \PYG{p}{\PYGZob{}}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{10}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{number}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{\PYGZgt{}=} \PYG{l+s+sc}{\PYGZsq{}0\PYGZsq{}} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{number}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{\PYGZlt{}=} \PYG{l+s+sc}{\PYGZsq{}9\PYGZsq{}}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{k}{while} \PYG{p}{(}\PYG{n}{MyIsTransmitFull}\PYG{p}{()} \PYG{o}{==} \PYG{n}{pdTRUE}\PYG{p}{);}
+            \PYG{n}{MySendByte}\PYG{p}{(}\PYG{n}{number}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]);}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{//print the provided string using driver functions}
+\PYG{k+kt}{void} \PYG{n}{printString}\PYG{p}{(}\PYG{k+kt}{char} \PYG{n}{countMessage}\PYG{p}{[])} \PYG{p}{\PYGZob{}}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{countMessage}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{!=} \PYG{l+s+sc}{\PYGZsq{}\PYGZbs{}0\PYGZsq{}}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{while} \PYG{p}{(}\PYG{n}{MyIsTransmitFull}\PYG{p}{()} \PYG{o}{==} \PYG{n}{pdTRUE}\PYG{p}{);}
+        \PYG{n}{MySendByte}\PYG{p}{(}\PYG{n}{countMessage}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]);}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kt}{void} \PYG{n}{Task\PYGZus{}UART\PYGZus{}buffer\PYGZus{}send}\PYG{p}{(}\PYG{k+kt}{void}\PYG{o}{*} \PYG{n}{p}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+
+    \PYG{n}{UBaseType\PYGZus{}t} \PYG{n}{uxPriority}\PYG{p}{;}
+
+    \PYG{k}{for} \PYG{p}{(;;)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{uxPriority} \PYG{o}{=} \PYG{n}{uxTaskPriorityGet}\PYG{p}{(}\PYG{n+nb}{NULL}\PYG{p}{);}
+        \PYG{k}{while} \PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+
+            \PYG{c+c1}{//print the special messages for ending sequence}
+            \PYG{k+kt}{char} \PYG{n}{countArray}\PYG{p}{[}\PYG{l+m+mi}{10}\PYG{p}{];}
+            \PYG{k+kt}{char} \PYG{n}{CountRxIrqArray}\PYG{p}{[}\PYG{l+m+mi}{10}\PYG{p}{];}
+            \PYG{k+kt}{char} \PYG{n}{CountTxIrqArray}\PYG{p}{[}\PYG{l+m+mi}{10}\PYG{p}{];}
+            \PYG{n}{sprintf}\PYG{p}{(}\PYG{n}{countArray}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{Countbytes}\PYG{p}{);}
+            \PYG{n}{sprintf}\PYG{p}{(}\PYG{n}{CountRxIrqArray}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{CountRxIrq}\PYG{p}{);}
+            \PYG{n}{sprintf}\PYG{p}{(}\PYG{n}{CountTxIrqArray}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{n}{CountTxIrq}\PYG{p}{);}
+            \PYG{n}{printString}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Number of bytes processed: \PYGZdq{}}\PYG{p}{);}
+            \PYG{n}{printNumber}\PYG{p}{(}\PYG{n}{countArray}\PYG{p}{);}
+            \PYG{n}{MySendByte}\PYG{p}{(}\PYG{n}{CHAR\PYGZus{}CARRIAGE\PYGZus{}RETURN}\PYG{p}{);}
+            \PYG{n}{printString}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Number of Rx interrupts: \PYGZdq{}}\PYG{p}{);}
+            \PYG{n}{printNumber}\PYG{p}{(}\PYG{n}{CountRxIrqArray}\PYG{p}{);}
+            \PYG{n}{MySendByte}\PYG{p}{(}\PYG{n}{CHAR\PYGZus{}CARRIAGE\PYGZus{}RETURN}\PYG{p}{);}
+            \PYG{n}{printString}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Number of Tx interrupts: \PYGZdq{}}\PYG{p}{);}
+            \PYG{n}{printNumber}\PYG{p}{(}\PYG{n}{CountTxIrqArray}\PYG{p}{);}
+            \PYG{n}{MySendByte}\PYG{p}{(}\PYG{n}{CHAR\PYGZus{}CARRIAGE\PYGZus{}RETURN}\PYG{p}{);}
+
+
+            \PYG{c+c1}{//perform context switch}
+            \PYG{n}{taskYIELD}\PYG{p}{();}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\end{Verbatim}

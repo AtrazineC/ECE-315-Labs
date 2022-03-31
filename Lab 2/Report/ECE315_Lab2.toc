@@ -1,0 +1,14 @@
+\contentsline {section}{\numberline {1}Abstract}{1}{section.1}%
+\contentsline {section}{\numberline {2}Design}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Exercise 1 Design}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Exercise 2 Design}{4}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Testing}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Exercise 1 Tests}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Exercise 2 Tests}{6}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Questions}{8}{section.4}%
+\contentsline {section}{\numberline {5}Conclusion}{9}{section.5}%
+\contentsline {section}{\numberline {6}Appendix}{10}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Exercise 1 Source Code}{10}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Exercise 2 Source Code}{16}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}main}{16}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}uart driver}{20}{subsubsection.6.2.2}%
