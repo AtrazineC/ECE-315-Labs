@@ -39,6 +39,8 @@
 \setlength{\parskip}{0.5cm}
 \setlength{\parindent}{0pt}
 
+\newcolumntype{s}{>{\hsize=.25\hsize}X}
+\newcolumntype{m}{>{\hsize=.6\hsize}X}
 
 \definecolor{bg}{rgb}{0.95,0.95,0.95}
 
@@ -81,53 +83,72 @@ ECE 315 Lab 4 🧀
 \pagenumbering{arabic}
 
 \section{Abstract}
-The purpose of this lab was to 
+The purpose 😷 of this lab 😐 was to 
 \begin{itemize}
-  \item gain experience using a microcontroller, running the FreeRTOS real-time kernel, to control the operation of a small stepper motor
-  \item to enhance the user interface of a stepper motor control application on the Zybo Z7.
-  \item gain experience with measuring experimentally the speed and acceleration limits of a small stepper motor.
+  \item gain experience 💰 using a microcontroller, running the FreeRTOS real-time kernel, to control the operation of a small stepper motor
+  \item to enhance 💰 the user interface of a stepper motor control application on the Zybo Z7.
+  \item gain experience 💰 with measuring experimentally the speed and acceleration limits of a small stepper motor.
 \end{itemize}
-We will be using the Zybo Z7 development board by Digilent. The board is built around the Xilinx Zynq-7010 System-on-Chip silicon chip and contains two 667 MHz ARM Cortex A9 32-bit CPUs. For this lab, we will be using CPU0 to run the FreeRTOS real-time kernel. We will also be using one 28BYJ-48 stepper motor with unipolar drive windings, one 5-V DV power supply, one ULN2003-based driver module, one breadboard, one LTV-847 opto-isolator transistor array, four 220-ohm resistors, four $\SI{10}{k\ohm}$ resistors, and wires
+We will be using the 🚒 Zybo Z7 development board by 🚙 Digilent. The board is built around the 🚗 Xilinx 🚕 Zynq-7010 System-on-Chip silicon chip and contains two 667 MHz ARM Cortex A9 32-bit CPUs. For this lab, we will be using CPU0 to run the FreeRTOS real-time kernel. We will also be using one 28BYJ-48 stepper motor with unipolar drive windings, one 5-V DV power supply, one ULN2003-based driver module, one breadboard, one LTV-847 opto-isolator transistor array, four 220-ohm resistors, four 😤 $\SI{10}{k\ohm}$ 😤 resistors, and various wires. 🍅
 
-In this lab, we will be completing two exercises. In exercise 1, we will be completing the FreeRTOS task \mintinline{text}{_Task_Motor()}, to rotate the stepper motor. This task is responsible for calling the necessary stepper functions to move the motor.
+In this lab, we will be completing two exercises. In exercise 1, we will be completing the FreeRTOS task \mintinline{text}{_Task_Motor()} to rotate the stepper motor. This task is responsible for calling the necessary stepper functions to move the motor.
 
-In exercise 2, we will be providing an emergency stop command for the stepper motor. We are implementing this function using one of the Zybo Z7 board's pushbuttons BTN0.
+In exercise 2, we will be providing an emergency stop command for the stepper motor. We are implementing this functionality using one of the Zybo Z7 board's pushbuttons (BTN0) as an emergency stop button.
 
 \section{Design}
 
 \subsection{Hardware Design}
-We first got the hardware set up. We first set up the wire connections from the Zybo to our breadboard according to the schematics in the lab handout. We connected the appropriate wires and resistors to the slots of the chip. We then connected the motor/motor control to the breadboard as well. It is important to note that the motor is powered by an external 5V connection, not by the Zybo. We verified that 5V was running through the system using a voltmeter.
+We first got the hardware set up. We first set up the wire connections from the 🎱 Zybo to our breadboard according to the schematics in the lab handout. We connected the appropriate wires and resistors to the slots of the chip. We then connected the motor/motor control to the breadboard as well. It is important to note that the motor is powered by an external 5V connection, not by the Zybo. We verified that 5V was running through the system using a voltmeter. 🎱
 
 \subsection{Exercise 1 Design}
-We first completed the \mintinline{text}{_Task_Motor} function in \mintinline{text}{lab4_main.c}. Inside of the \mintinline{text}{while} loop, we wait until we read some motor parameters from FIFO1.
-
-\subsection{Exercise 2 Design}
-
-
-\section{Testing}
-
-\subsection{Exercise 1 Tests}
-
-\subsection{Exercise 2 Tests}
-
-\section{Conclusion}
-The purpose of this lab was to 
+We first completed the 💤 \mintinline{text}{_Task_Motor} function in 💤 \mintinline{text}{lab4_main.c}. Inside of the \mintinline{text}{while} loop, we wait until we read some motor parameters from FIFO1. We read this into a struct containing various motor parameters such as current position, rotational speed, acceleration, and deceleration. After reading these parameters from FIFO1, we call the appropriate stepper functions in the driver files:
 \begin{itemize}
-  \item gain experience using a microcontroller, running the FreeRTOS real-time kernel, to control the operation of a small stepper motor
-  \item to enhance the user interface of a stepper motor control application on the Zybo Z7.
-  \item gain experience with measuring experimentally the speed and acceleration limits of a small stepper motor.
+  \item \mintinline{text}{Stepper_setCurrentPositionInSteps} - to set the current position of the stepper motor,
+  \item \mintinline{text}{Stepper_setSpeedInStepsPerSecond} - to set the speed in steps per second of the stepper motor,
+  \item \mintinline{text}{Stepper_setAccelerationInStepsPerSecondPerSecond} - to set the acceleration in steps per second of the stepper motor, and
+  \item \mintinline{text}{Stepper_setDecelerationInStepsPerSecondPerSecond} - to set the deceleration in steps per second of the stepper motor. 🍞
 \end{itemize}
 
-We believe we have fully completed the objectives of this lab.
+After setting the 💵 parameters, we begin actually moving the motor. Recall that the user input results in a list of destination/delay pairs. We begin iterating through each of these starting at the first one. We first set the \mintinline{text}{target} variable to be the position of the first destination/delay pair. We then call the stepper function provided in the driver file to move the motor to the desired destination. We then disable the motor, again using the function provided in the driver file. Lastly, we call \mintinline{text}{vTaskDelay} using a delay provided in the destination/delay pair. After this, we repeat with the next destination/delay pair until there are no more destination/delay pairs. 🍕
 
-In exercise 1 and 2, we gained experience using a microcontroller, running the FreeRTOS real-time kernel, to control the operation of a small stepper motor. We did this through setting up the microcontroller and stepper motor. We also wrote the \mintinline{text}{_Task_motor()} task which was responsible for calling the necessary stepper functions to move the motor. We also gained experience enhancing the user interface of a stepper motor control application on the Zybo Z7. We also gained experience in exercise 2 with measuring experimentally the speed and acceleration limits of a small stepper motor. We using BTN0 on the Zybo Z7 board's pushbuttons to initiate an emergency stop.
+\subsection{Exercise 2 Design}
+To implement the 🚒 emergency stop, we first read the button value using \mintinline{text}{XGpio_DiscreteRead}. If the button is indeed pressed, then we initiate the emergency stop sequence. How the emergency stop is implemented is discussed below.
+
+To implement the 🚒 emergency stop, we first set the position of the motor to the current target. We then set \mintinline{text}{sequenceIndex} to 0 and disable the stepper motor (using the methods provided in the driver file). We then delete the \mintinline{text}{xMotortask} and \mintinline{text}{xUarttask} to terminate those tasks so that the entire system is stopped and so that the emergency stop cannot be overridden by another task. The motor is now off and no other tasks exist that can restart the movement of the motor.
+
+We next want to flash a 🚒 red LED at 2Hz. In order to do this, we simply create an infinite loop. Similarly to a previous lab, we turn the LED on for half the delay time, turn it off for half the delay time, and repeat this forever. At this point, the emergency sequence is complete and only resetting the system can stop the emergency state.
+
+\section{Testing}
+(yeet 🚗 vroom 🚕 vroom 🚙 car go 💨 brrrrr)
+\begin{tabularx}{\textwidth}{|X|X|s|}
+  \caption{Tests for exercise 1 and 2.} \\
+  \hline
+  \textbf{Description} & \textbf{Expected} & \textbf{Pass} \\ \hline
+  Enter nothing & Motor should not move & Yes \\ \hline
+  Enter default motor position, speed, acceleration, and deceleration. Then enter destination/delay pairs of 2048/1000 and -2048/1000 & Motor turns clockwise, then after an observable delay, begins to turn counterclockwise. At the end, the motor stops moving & Yes \\ \hline
+  Repeat the above steps, but press BTN0 while the motor is turning clockwise & Motor should stop and red LED should flash at 2Hz & Yes \\ \hline
+  Repeat the above steps, but press BTN0 while the motor is turning counterclockwise & Motor should stop and red LED should flash at 2Hz & Yes \\ \hline
+  Enter default motor position, speed, acceleration, and deceleration. Then enter destination/delay pairs of 2048/1000, -2048/1000, and 2048/1000 & Motor turns clockwise, counterclockwise and then clockwise again before stopping& Yes \\ \hline
+\end{tabularx}
+
+\section{Conclusion}
+The purpose 💵 of this lab was to 
+\begin{itemize}
+  \item gain experience 🚀 using a microcontroller, running the FreeRTOS real-time kernel, to control the operation of a small stepper motor
+  \item to enhance 🚀 the user interface of a stepper motor control application on the Zybo Z7.
+  \item gain experience 🚀 with measuring experimentally the speed and acceleration limits of a small stepper motor.
+\end{itemize}
+
+We believe we have fully completed the objectives of this lab. 🎯
+
+In exercise 1 and 2, we gained experience using a microcontroller, running the FreeRTOS real-time kernel, and controlling the operation of a small stepper motor. We did this through setting up the microcontroller and stepper motor. We also wrote the \mintinline{text}{_Task_motor()} task which was responsible for calling the necessary stepper functions to move the motor. We also gained experience enhancing the user interface of a stepper motor control application on the Zybo Z7. We also gained experience in exercise 2 with measuring experimentally the speed and acceleration limits of a small stepper motor. We also set BTN0 on the Zybo Z7 board's pushbuttons to initiate an emergency stop. 🏆
 
 \section{Appendix}
 
 \subsection{Exercise 1 Source Code}
-The source code is in the file \mintinline{text}{lab4_main.c} that was submitted along with this report.
+The source code is in the file \mintinline{text}{lab4_main.c} that was submitted along with this report. 🚰
 
 \subsection{Exercise 2 Source Code}
-The source code is in the file \mintinline{text}{lab4_main.c} that was submitted along with this report.
+The source code is in the file \mintinline{text}{lab4_main.c} that was submitted along with this report. 🧀
 
 \end{document}
